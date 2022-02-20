@@ -17,9 +17,33 @@
   
   <div id="content-body">
     <ProjectCard 
+      title="Lil Widgets"
       src="lilWidgets.png" 
-      alt="Lil Widgets"/>
+      alt="Lil Widgets"
+      github="https://github.com/Chase-William/LilWidgets"
+      nuget="https://www.nuget.org/packages/LilWidgets.Xamarin.Forms/1.1.1-alpha"
+      tags={["C#", "Xaml", "Animation"]}/>
 	</div>
+  <div id="content-body">
+    <ProjectCard
+      title="Blue Query"
+      src="bluequery.png" 
+      alt="Blue Query"
+      github="https://github.com/Chase-William/BlueQuery"
+      nuget=""
+      tags={["C#", "Json", "Discord Bot"]}/>
+	</div>
+  <div id="content-body">
+    <ProjectCard
+      title=""
+      src="" 
+      alt=""
+      github=""
+      nuget=""
+      tags={[]}/>
+	</div>
+
+  
 </main>
 
 <style>

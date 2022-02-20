@@ -20,7 +20,9 @@
   </h2>    
 </div>
 <div id="horizontal-line"/>
-<Tags tags={tags}/>
+<div id="tags">
+  <Tags tags={tags}/>
+</div>
 
 <style>
   /* * { 
@@ -33,8 +35,9 @@
   }	
 
   #horizontal-line {
+    max-width: 1400px;
+    margin: 1.5em auto 0;
     height: 2px;
-    margin-top: 1.5em;
     background-image: linear-gradient(to left, #7D869C00, #7D869C66, #7D869C66, #7D869C00);
   }
 
@@ -45,9 +48,8 @@
 	} 
 
   #selfie-container {
-    max-width: 200px;
-    min-width: 100px;
-    width: 50%;
+    max-width: 120px;
+    min-width: 90px;
     display: flex;
     border-radius: 50%;
 		box-shadow: 5px 5px 5px #BBBD;
@@ -60,8 +62,36 @@
     font-weight: lighter;
 	}
 
-  section {
-    width: 90%;
-    margin: auto;
+  @media only screen and (min-width: 1300px) { 
+    #about-container {
+      position: relative;
+      z-index: 1;
+    }
+
+    #selfie-container {
+      max-width: 200px;
+      position: relative;
+      z-index: 2;
+    }
+
+    img {
+      position: relative;
+      z-index: 3;
+    }
+
+    h2 {
+      margin: 3.5em 0 0 1em;
+    }
+
+    #horizontal-line {
+      position: relative;      
+      margin-top: -6.0em;
+      background-image: linear-gradient(to left, #7D869C00, #7D869C66, #7D869C66, #7D869C00);
+      z-index: 0;
+    }
+
+    #tags {
+      margin: 0.5em 0 0 7.0em;
+    }
   }
 </style>

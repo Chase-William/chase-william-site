@@ -4,9 +4,12 @@
 <script lang="ts">
   import Tags from './Tags.svelte'
 
+  export let title: string;
   export let src: string
   export let alt: string
-  
+  export let tags: string[]
+  export let github: string;
+  export let nuget: string;
 </script>
 
 <div style="display: flex;">
@@ -16,14 +19,20 @@
   <div id="project-info-container">
     <div id="project-header" style="display: flex;">
       <div id="name-with-tags">
-        <h3 style="text-align: left; font-weight: lighter;">
-          Lil Widgets
-        </h3>
-        <Tags tags={["C#", "Xaml", "Animation"]}/>
+        <h2 style="text-align: left; font-weight: lighter;">
+          {title}
+        </h2>
+        <div id="tags">
+          <Tags tags={tags}/>
+        </div>        
       </div>
       <div id="goto-container">
-        <p>Available on Github</p>
-        <p>Published with Nuget</p>
+        {#if github !== ""}
+          <p>Available on <a href="{github}" target="_blank">Github</a>
+        {/if}
+        {#if nuget !== ""}
+          Published with <a href="{nuget}" target="_blank">Nuget</a>
+        {/if}
       </div>  
     </div>
     <div id="project-body">
@@ -69,23 +78,27 @@
     text-align: right;
   }
 
-  #project-header {
-    height: 35%;
-  }
-
   #project-body {
     text-align: left;    
   }
-
 
   #img-container {
     width: 14%;
     padding: 2em;    
   }
 
+  #tags {
+    align-self: flex-start;    
+  }  
+
   img {
     width: 100%;
     box-shadow: 5px 5px 5px #BBBD;
-    border-radius: 25px;
+    border-radius: 10%;
+  }
+
+  a {
+    text-decoration: underline;
+    color: #08070899;
   }
 </style>
