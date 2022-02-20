@@ -1,17 +1,21 @@
 <script lang='ts'>
   import MeetMe from "./MeetMe.svelte"
   import ProjectCard from "./ProjectCard.svelte"
-import Tags from "./Tags.svelte"
+  import Tags from "./Tags.svelte"
 </script>
 
 <main>
-	<div id="content-body">
-		<MeetMe 
+  <div>
+    <MeetMe 
       src="chase.jpg"    
       alt="Chase William Roth"   
       about="Hello, I'm Chase 👋 I'm a 4th year Web and Mobile Computing undergraduate at Rochester Institute of Technology."
       tags={["C#", "Xaml", "Xamarin", "asdasd ", "asdasd", "C#", "Xaml", "Xamarin", "asdasd "]}/>
-    <div class="divider"/>
+  </div>
+
+  <div class="divider"/>
+  
+  <div id="content-body">
     <ProjectCard 
       src="lilWidgets.png" 
       alt="Lil Widgets"/>

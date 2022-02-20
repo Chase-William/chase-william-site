@@ -10,43 +10,27 @@
   export let tags: string[]
 </script>
 
-<section>
-  <div style="width: 70%; margin: auto;">
-    <div id="selfie-container">
-      <img src={src} alt={alt}/>
-    </div>     
-    <h2>
-      {about}
-    </h2>    
-  </div>
-  <div id="horizontal-line"/>
-  <div id="tags">
-    <Tags tags={tags}/>
-  </div>  
-</section>
+
+<div id="about-container">
+  <div id="selfie-container">
+    <img src={src} alt={alt}/>
+  </div>     
+  <h2>
+    {about}
+  </h2>    
+</div>
+<div id="horizontal-line"/>
+<Tags tags={tags}/>
 
 <style>
   /* * { 
     border: solid #5B6DCD 2px;
   } */
 
-  #tags {    
-    width: 80%;
-    margin: 0.7em auto;
-  }
-
-	div {
-		width: 100%;
-		display: flex;
-	}
-
-	#selfie-container {
-    max-width: 100px;
-		width: 30%;
-		margin: auto 1em;
-    border-radius: 50%;
-		box-shadow: 5px 5px 5px #BBBD;    
-	}
+  #about-container {
+    display: flex;
+    justify-content: center;
+  }	
 
   #horizontal-line {
     height: 2px;
@@ -56,9 +40,18 @@
 
   img {
 		width: 100%;
-		margin: 0.2em;
-		border-radius: 50%;
+    margin: 2.5%;
+    border-radius: 50%;
 	} 
+
+  #selfie-container {
+    max-width: 200px;
+    min-width: 100px;
+    width: 50%;
+    display: flex;
+    border-radius: 50%;
+		box-shadow: 5px 5px 5px #BBBD;
+	}
 
 	h2 {
 		margin: auto 1em;

@@ -27,7 +27,8 @@
 
  #tag-container {
    display: flex;
-   justify-content: start;
+   justify-content: center;
    flex-wrap: wrap;
+   margin: auto;
  }
 </style>
