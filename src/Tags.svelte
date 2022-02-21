@@ -19,6 +19,7 @@
     border-radius: 20px;
     padding: 0 1em;
     margin: 0.3em;
+    font-size: smaller;
   }
 
   /* * { 

@@ -10,7 +10,7 @@
       src="chase.jpg"    
       alt="Chase William Roth"   
       about="Hello, I'm Chase 👋 I'm a 4th year Web and Mobile Computing undergraduate at Rochester Institute of Technology."
-      tags={["C#", "Xaml", "Xamarin", "asdasd ", "asdasd", "C#", "Xaml", "Xamarin", "asdasd "]}/>
+      tags={["C#", "TypeScript", "Xamarin", "Svelte ", "Java", "React", "GoLang"]}/>
   </div>
 
   <div class="divider"/>
@@ -22,9 +22,8 @@
       alt="Lil Widgets"
       github="https://github.com/Chase-William/LilWidgets"
       nuget="https://www.nuget.org/packages/LilWidgets.Xamarin.Forms/1.1.1-alpha"
-      tags={["C#", "Xaml", "Animation"]}/>
-	</div>
-  <div id="content-body">
+      tags={["C#", "Xaml", "Library", "Animation", "Nuget"]}/>
+	
     <ProjectCard
       title="Blue Query"
       src="bluequery.png" 
@@ -33,17 +32,6 @@
       nuget=""
       tags={["C#", "Json", "Discord Bot"]}/>
 	</div>
-  <div id="content-body">
-    <ProjectCard
-      title=""
-      src="" 
-      alt=""
-      github=""
-      nuget=""
-      tags={[]}/>
-	</div>
-
-  
 </main>
 
 <style>
@@ -59,6 +47,9 @@
   #content-body {
     max-width: 900px;
     margin: 5em auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 3em;
   }
 
   .divider {
