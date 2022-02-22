@@ -12,8 +12,8 @@
   export let nuget: string;
 </script>
 
-<div style="display: flex;">
-  <div id="img-container">
+<div id="project-card">
+  <div id="project-icon">
     <img src={src} alt={alt}/>
   </div>
   <div id="project-info-container">
@@ -23,7 +23,7 @@
           {title}
         </h2>
         <div id="tags">
-          <Tags tags={tags}/>
+          <Tags style="left" tags={tags}/>
         </div>        
       </div>
       <div id="goto-container">
@@ -54,9 +54,19 @@
     border: solid #5B6DCD 2px;
   } */
 
+  /* Custom global style for left aligning `Tags` */
+  :global([style=left]) {
+    display: flex;
+    flex-wrap: wrap;
+	}
+
   * {
     margin: 0;
     padding: 0;
+  }
+
+  #project-card {
+    display: flex;
   }
 
   #project-info-container {
@@ -82,8 +92,9 @@
     text-align: left;    
   }
 
-  #img-container {
+  #project-icon {
     width: 14%;
+    min-width: 100px;
     padding: 2em;    
   }
 
@@ -100,5 +111,15 @@
   a {
     text-decoration: underline;
     color: #08070899;
+  }
+
+  @media only screen and (max-width: 700px) { 
+    #project-card {
+      display: block;
+    }
+
+    #project-icon {
+      margin: 0 auto;
+    }
   }
 </style>
