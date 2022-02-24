@@ -18,7 +18,7 @@
   <div id="content-body">
     <ProjectCard 
       title="Lil Widgets"
-      src="lilWidgets.png" 
+      src="lilwidgets.png" 
       alt="Lil Widgets"
       github="https://github.com/Chase-William/LilWidgets"
       nuget="https://www.nuget.org/packages/LilWidgets.Xamarin.Forms/1.1.1-alpha"
