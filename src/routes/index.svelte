@@ -1,7 +1,7 @@
 <script lang='ts'>
-  import MeetMe from "../components/MeetMe.svelte"
-  import ProjectCard from "../components/ProjectCard.svelte"
-  import Tags from "../components/Tags.svelte"
+  import MeetMe from "../lib/MeetMe.svelte"
+  import ProjectCard from "../lib/ProjectCard.svelte"
+  import Tags from "../lib/Tags.svelte"
 </script>
 
 <main>
