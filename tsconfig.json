@@ -31,9 +31,9 @@
 			"$lib": ["src/lib"],
 			"$lib/*": ["src/lib/*"]
 		},
-    "typeRoots": [
-      "./node_modules/mdsvex/globals.d.ts" // Add metadata for *.svx for TS
-    ]
+    // "typeRoots": [
+    //   "./node_modules/mdsvex/globals.d.ts" // Add metadata for *.svx for TS
+    // ]
 	},
 	"include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.ts", "src/**/*.svelte"]
 }
