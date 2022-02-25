@@ -36,13 +36,13 @@
       </div>  
     </div>
     <div id="project-body">
-      <p>
+      <p class="font-light">
         The plan for LilWidgets is to empower Xamarin.Forms developers by providing 
         unique custom controls that otherwise would take away from the core app development. 
         This repository will always be open source and under the MIT license. 
         Therefore, future releases and updates will be fully available.
       </p>
-      <p style="margin-top: 0.5em;">
+      <p style="margin-top: 0.5em;" class="font-thin">
         Checkout the readme!
       </p>
     </div>         

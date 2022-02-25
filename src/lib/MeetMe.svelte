@@ -14,7 +14,7 @@
   <div id="selfie-container" class="shadow-lg bg-secondary">
     <img src={src} alt={alt}/>
   </div>     
-  <h2>
+  <h2 class="font-light">
     {about}
   </h2>    
 </div>
@@ -57,9 +57,7 @@
 
 	h2 {
 		margin: 1em;
-    font-size: larger;
 		text-align: center;
-    font-weight: lighter;
 	}
 
   @media only screen and (min-width: 500px) { 

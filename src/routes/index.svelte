@@ -34,7 +34,7 @@
 
 <style>
 	main {
-    font-family: 'Centaur', Courier, monospace;
+    font-family: 'Poppins', 'Roboto', Courier, monospace; /* - 'Centaur' */
 		text-align: center;
 		padding: 1em;
 		margin: 0 auto;    
