@@ -10,7 +10,6 @@
   export let tags: string[]
 </script>
 
-
 <div id="about-container">
   <div id="selfie-container">
     <img src={src} alt={alt}/>

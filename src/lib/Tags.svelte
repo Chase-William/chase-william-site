@@ -12,7 +12,7 @@
 <div {style}>
   <!-- Generate tags from tags collection -->
   {#each tags as tag}
-    <span>{tag}</span>
+    <span class="badge-secondary">{tag}</span>
   {/each}
 </div>
 
