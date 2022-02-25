@@ -96,7 +96,7 @@
     width: 40%;
     min-width: 100px;
     max-width: 200px;
-    padding: 2em;    
+    padding: 2em;
   }
 
   #tags {

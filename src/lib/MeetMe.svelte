@@ -43,7 +43,6 @@
 
   img {
 		width: 100%;
-    margin: 2.5%;
     border-radius: 50%;
 	} 
 
@@ -51,6 +50,8 @@
     max-width: 120px;
     min-width: 90px;
     display: flex;
+    padding: 3px;
+    justify-content: center;
     border-radius: 50%;
     margin: auto;
 	}
