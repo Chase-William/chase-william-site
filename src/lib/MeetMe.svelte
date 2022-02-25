@@ -11,7 +11,7 @@
 </script>
 
 <div id="about-container">
-  <div id="selfie-container">
+  <div id="selfie-container" class="shadow-lg bg-secondary">
     <img src={src} alt={alt}/>
   </div>     
   <h2>
@@ -38,7 +38,7 @@
     max-width: 1400px;
     margin-bottom: 0.2em;
     height: 2px;
-    background-image: linear-gradient(to left, #7D869C00, #7D869C66, #7D869C66, #7D869C00);
+    background-image: linear-gradient(to left, #0000, #FEFEFF, #FEFEFF, #0000);
   }
 
   img {
@@ -52,7 +52,6 @@
     min-width: 90px;
     display: flex;
     border-radius: 50%;
-		box-shadow: 5px 5px 5px #BBBD;
     margin: auto;
 	}
 
@@ -106,7 +105,6 @@
 
     #horizontal-line {
       position: relative;
-      background-image: linear-gradient(to left, #7D869C00, #7D869C66, #7D869C66, #7D869C00);
       z-index: 0;
       margin: -6.0em auto 0 auto;
     }

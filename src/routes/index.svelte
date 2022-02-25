@@ -4,7 +4,7 @@
   import Tags from "../lib/Tags.svelte"
 </script>
 
-<main>
+<main class="bg-base-100 text-base-content">
   <div>
     <MeetMe 
       src="chase.jpg"    
@@ -12,8 +12,6 @@
       about="Hello, I'm Chase 👋 I'm a 4th year Web and Mobile Computing undergraduate at Rochester Institute of Technology."
       tags={["C#", "TypeScript", "Xamarin", "Svelte ", "Java", "React", "GoLang"]}/>
   </div>
-
-  <div class="divider"/>
 
   <div id="content-body">
     <ProjectCard 
@@ -36,9 +34,7 @@
 
 <style>
 	main {
-    font-family: 'Centaur', Courier, monospace;    
-    color: #7D869C;
-    background-color: #FEFEFF;
+    font-family: 'Centaur', Courier, monospace;
 		text-align: center;
 		padding: 1em;
 		margin: 0 auto;    
@@ -52,7 +48,4 @@
     row-gap: 3em;
   }
 
-  .divider {
-    padding: 3em;
-  }
 </style>

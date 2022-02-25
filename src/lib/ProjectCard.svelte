@@ -14,12 +14,12 @@
 
 <div id="project-card">
   <div id="project-icon">
-    <img src={src} alt={alt}/>
+    <img src={src} alt={alt} class="shadow-lg"/>
   </div>
   <div id="project-info-container">
     <div id="project-header" style="display: flex;">
       <div id="name-with-tags">
-        <h2 style="text-align: left; font-weight: lighter;">
+        <h2 class="text-3xl text-left">
           {title}
         </h2>
         <div id="tags">
@@ -28,10 +28,10 @@
       </div>
       <div id="goto-container">
         {#if github !== ""}
-          <p>Available on <a href="{github}" target="_blank">Github</a>
+          <p>Available on <a href="{github}" target="_blank" class="underline">Github</a>
         {/if}
         {#if nuget !== ""}
-          Published with <a href="{nuget}" target="_blank">Nuget</a>
+          Published with <a href="{nuget}" target="_blank" class="underline">Nuget</a>
         {/if}
       </div>  
     </div>
@@ -93,8 +93,9 @@
   }
 
   #project-icon {
-    width: 14%;
+    width: 40%;
     min-width: 100px;
+    max-width: 200px;
     padding: 2em;    
   }
 
@@ -104,13 +105,7 @@
 
   img {
     width: 100%;
-    box-shadow: 5px 5px 5px #BBBD;
     border-radius: 10%;
-  }
-
-  a {
-    text-decoration: underline;
-    color: #08070899;
   }
 
   @media only screen and (max-width: 700px) { 
