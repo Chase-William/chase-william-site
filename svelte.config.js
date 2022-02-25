@@ -6,14 +6,19 @@ import { mdsvex } from "mdsvex";
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 
-  extensions: [
-    '.svelte',
-    '.svx' // support for markdown | svelte integrated files
-  ],
+  // extensions: [
+  //   '.svelte',
+  //   //'.svx' // support for markdown | svelte integrated files
+  // ],
 
 	// Consult https://github.com/sveltejs/svelte-preprocess
 	// for more information about preprocessors
-	preprocess: [mdsvex(), preprocess()],
+	preprocess: [
+    mdsvex({
+      extension: ".svelte"
+    }), 
+    preprocess()
+  ],
   
 	kit: {
 		adapter: adapter() // Adapter for the build-kit we are targeting

@@ -2,7 +2,7 @@
   import MeetMe from "../lib/MeetMe.svelte"
   import ProjectCard from "../lib/ProjectCard.svelte"
   import Tags from "../lib/Tags.svelte"
-  import Recent from '../lib/Recent.svx'
+  import Recent from '../lib/Recent.svelte'
 </script>
 
 <main>

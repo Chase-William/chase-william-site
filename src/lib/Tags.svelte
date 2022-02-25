@@ -23,8 +23,8 @@
     padding: 0 1em;
     margin: 0.3em;
     font-size: smaller;
-  }
-  
+  }    
+
   /* * { 
       border: solid #5B6DCD 2px;
     } */
