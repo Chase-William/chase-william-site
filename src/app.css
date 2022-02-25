@@ -1,0 +1,4 @@
+/* Import tailwind libs */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
