@@ -1,0 +1,6 @@
+<script lang="ts">
+  export let example: string;
+</script>
+
+{example}
+## asdasd asd
