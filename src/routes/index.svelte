@@ -3,6 +3,18 @@
   import ProjectCard from "../lib/ProjectCard.svelte"
   import Tags from "../lib/Tags.svelte"
   import Activity from '../lib/Activity.svelte'
+
+  /* FEEDS */
+  // @ts-ignore
+  import SvelteActivity from '../../static/markdown/feed/svelte-v1.md'
+  // @ts-ignore
+  import HoloLensActivity from '../../static/markdown/feed/hololens2-v1.md'
+
+  /* PROJECTS */
+  // @ts-ignore
+  import LilWidgetsProject from '../../static/markdown/projects/lilwidgets.md'
+  // @ts-ignore
+  import BlueQueryProject from '../../static/markdown/projects/bluequery.md'
 </script>
 
 <main class="bg-base-100 text-base-content">
@@ -15,7 +27,10 @@
   </div>
 
   <div style="margin-top: 30px;">
-    <Activity />
+    <Activity>
+      <SvelteActivity slot="feed-1"/>
+      <HoloLensActivity slot="feed-2"/>
+    </Activity>
   </div>
 
   <div id="content-body">
@@ -25,7 +40,9 @@
       alt="Lil Widgets"
       github="https://github.com/Chase-William/LilWidgets"
       nuget="https://www.nuget.org/packages/LilWidgets.Xamarin.Forms/1.1.1-alpha"
-      tags={["C#", "Xaml", "Library", "Animation", "Nuget"]}/>
+      tags={["C#", "Xaml", "Library", "Animation", "Nuget"]}>
+      <LilWidgetsProject/> <!-- Lil Widgets Markdown -->
+    </ProjectCard>
 	
     <ProjectCard
       title="Blue Query"
@@ -33,7 +50,9 @@
       alt="Blue Query"
       github="https://github.com/Chase-William/BlueQuery"
       nuget=""
-      tags={["C#", "Json", "Discord Bot"]}/>
+      tags={["C#", "Json", "Discord Bot"]}>
+      <BlueQueryProject/> <!-- BlueQuery Markdown -->
+    </ProjectCard>      
 	</div>
 </main>
 

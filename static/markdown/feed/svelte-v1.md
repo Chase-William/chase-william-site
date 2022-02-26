@@ -1,0 +1,3 @@
+## Exploring Svelte
+
+You probably can't tell, but this website is being built with `Svelte` and various other techs. I have been down a long path of  user-interface frameworks, we're talking `Xamarin.Forms`, `Xamarin.Android`, native `iOS` app development, `React` and now `Svelte` *(some frameworks have been omitted ofc)*. So far I am in ❤️ with `Svelte` and especially `SvelteKit` as the **HMR** *(hot module replacement)* is to die for. Lastly, checkout this website's github repo [here](https://github.com/Chase-William/chase-william-site)!
