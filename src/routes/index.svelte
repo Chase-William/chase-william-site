@@ -2,6 +2,7 @@
   import MeetMe from "../lib/MeetMe.svelte"
   import ProjectCard from "../lib/ProjectCard.svelte"
   import Tags from "../lib/Tags.svelte"
+  import Activity from '../lib/Activity.svelte'
 </script>
 
 <main class="bg-base-100 text-base-content">
@@ -11,6 +12,10 @@
       alt="Chase William Roth"   
       about="Hello, I'm Chase 👋 I'm a 4th year Web and Mobile Computing undergraduate at Rochester Institute of Technology."
       tags={["C#", "TypeScript", "Xamarin", "Svelte ", "Java", "React", "GoLang"]}/>
+  </div>
+
+  <div style="margin-top: 30px;">
+    <Activity />
   </div>
 
   <div id="content-body">

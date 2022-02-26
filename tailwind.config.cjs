@@ -20,6 +20,7 @@ module.exports = {
 
           // Base Colors for background | forground
           'base-100': '#7D869C',
+          'base-200': '#636A7C',
           'base-content': '#FEFEFF',
         },
       }
