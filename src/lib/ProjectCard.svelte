@@ -59,6 +59,11 @@
     padding: 0;
   }
 
+  img:hover {
+    transition: all .25s ease-in-out;
+    transform: scale(1.05);
+  }
+
   #project-card {
     display: flex;
   }

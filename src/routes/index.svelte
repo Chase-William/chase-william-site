@@ -3,6 +3,7 @@
   import ProjectCard from "../lib/ProjectCard.svelte"
   import Tags from "../lib/Tags.svelte"
   import Activity from '../lib/Activity.svelte'
+  import Navigation from '../lib/Navigation.svelte'
 
   /* FEEDS */
   // @ts-ignore
@@ -18,15 +19,16 @@
 </script>
 
 <main class="bg-base-100 text-base-content">
+  <Navigation />
   <div>
     <MeetMe 
       src="chase.jpg"    
       alt="Chase William Roth"   
-      about="Hello, I'm Chase 👋 I'm a 4th year Web and Mobile Computing undergraduate at Rochester Institute of Technology."
-      tags={["C#", "TypeScript", "Xamarin", "Svelte ", "Java", "React", "GoLang"]}/>
+      about="Hello, I'm Chase 👋 I'm a 4th year Web and Mobile Computing undergraduate student at Rochester Institute of Technology."
+      tags={["C#", "TypeScript", "Svelte ", "Xamarin", "Java", "React", "Go"]}/>
   </div>
 
-  <div style="margin-top: 30px;">
+  <div id="feed">
     <Activity>
       <SvelteActivity slot="feed-1"/>
       <HoloLensActivity slot="feed-2"/>
@@ -43,7 +45,7 @@
       tags={["C#", "Xaml", "Library", "Animation", "Nuget"]}>
       <LilWidgetsProject/> <!-- Lil Widgets Markdown -->
     </ProjectCard>
-	
+  
     <ProjectCard
       title="Blue Query"
       src="bluequery.png" 
@@ -53,12 +55,11 @@
       tags={["C#", "Json", "Discord Bot"]}>
       <BlueQueryProject/> <!-- BlueQuery Markdown -->
     </ProjectCard>      
-	</div>
+  </div>
 </main>
 
 <style>
 	main {
-    font-family: 'Poppins', 'Roboto', Courier, monospace; /* - 'Centaur' */
 		text-align: center;
 		padding: 1em;
 		margin: 0 auto;    
@@ -72,4 +73,13 @@
     row-gap: 3em;
   }
 
+  #feed {
+    margin-top: 50px;
+  }
+
+  @media only screen and (min-width: 1300px) {
+    #feed {
+      margin-top: 90px;
+    }
+  }
 </style>

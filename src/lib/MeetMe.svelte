@@ -11,7 +11,7 @@
 </script>
 
 <div id="about-container">
-  <div id="selfie-container" class="shadow-lg bg-secondary">
+  <div id="selfie-container" class="shadow-lg bg-primary">
     <img src={src} alt={alt}/>
   </div>     
   <h2 class="font-light">
@@ -20,13 +20,20 @@
 </div>
 <div id="horizontal-line"/>
 <div id="tags">
-  <Tags tags={tags}/>
+  <Tags tags={tags} style='center'/>
 </div>
 
 <style>
   /* * { 
     border: solid #5B6DCD 2px;
   } */
+
+  /* Custom global style for center aligning `Tags` */
+  :global([style=center]) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
   #about-container {
     display: flex;

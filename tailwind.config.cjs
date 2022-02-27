@@ -14,14 +14,18 @@ module.exports = {
     themes: [
       {
         mytheme: {
-          //primary: "#7D869C", // Light Cyan FFD9DA
+          'primary': "#FABC2A",
           //'primary-content': "#FEFEFF",         
-          secondary: "#FABC2A", // Mango
+          // secondary: "#FABC2A", // Mango
 
           // Base Colors for background | forground
           'base-100': '#7D869C',
           'base-200': '#636A7C',
           'base-content': '#FEFEFF',
+
+          'accent': '#445',
+
+          'neutral': '#999'
         },
       }
     ]

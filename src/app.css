@@ -2,4 +2,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@tailwind avatar;
+
+body {
+  font-family: 'Poppins', 'Roboto', Courier, monospace; /* - 'Centaur' */
+}
