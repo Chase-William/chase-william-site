@@ -1,34 +1,40 @@
 <!--
   The `Tags` component displays an array of strings in little bubbles.
 -->
-<script lang="ts">
+<script lang="js">
+  import Tag from './TextTag.svelte'
+  import ImgTag from './ImgTag.svelte';
+
   /* Collection of tags to be displayed */
-  export let tags: string[]
-  export let style: string = undefined;
+  export let tags
+  export let style = undefined
 </script>
 
-<div {style}>
-  <!-- Generate tags from tags collection -->
+<div {style} id="tags">
   {#each tags as tag}
-    <span class="badge-primary shadow-md expand-on-hover">{tag}</span>
-  {/each}
+    <!-- If string[], display as normal tags -->
+    {#if typeof tag === 'string'}
+        <Tag text={tag}/>
+      <!-- Check if this a valid -->
+      {:else if tag.hasOwnProperty('src') && tag.hasOwnProperty('alt')}
+        <ImgTag src={tag.src} alt={tag.alt}/>
+    {/if}
+  {/each}    
 </div>
 
 <style>
-  span {
-    border: solid #7D869C55 2px;
-    border-radius: 20px;
-    padding: 0 1em;
-    margin: 0.3em;
-    font-size: smaller;
-  }
-  
-  span:hover {
-    transition: all .07s ease-in-out;
-    transform: scale(1.05);
-  }
-
   /* * { 
       border: solid #5B6DCD 2px;
-    } */
+  } */
+
+  #tags {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  /* Custom global style for center aligning `Tags` */
+  :global([style=center]) {
+    justify-content: center;
+  }
 </style>

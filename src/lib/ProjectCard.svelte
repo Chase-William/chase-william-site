@@ -23,7 +23,7 @@
           {title}
         </h2>
         <div id="tags">
-          <Tags style="left" tags={tags}/>
+          <Tags tags={tags}/>
         </div>        
       </div>
       <div id="goto-container">
@@ -47,12 +47,6 @@
   /* * { 
     border: solid #5B6DCD 2px;
   } */
-
-  /* Custom global style for left aligning `Tags` */
-  :global([style=left]) {
-    display: flex;
-    flex-wrap: wrap;
-	}
 
   * {
     margin: 0;

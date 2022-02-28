@@ -28,13 +28,6 @@
     border: solid #5B6DCD 2px;
   } */
 
-  /* Custom global style for center aligning `Tags` */
-  :global([style=center]) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
   #about-container {
     display: flex;
     justify-content: center;
