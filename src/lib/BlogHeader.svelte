@@ -14,7 +14,7 @@
     <h2>
       {title}
     </h2>
-    <div id="tags">
+    <div>
       <Tags tags={[
         'C#',
         {src: './mrtk.png', alt: 'Mixed Reality Toolkit'},
@@ -22,7 +22,9 @@
         {src: './microsoft.png', alt: 'Microsoft'},
         'IL2CPP',
         'UWP',
-      ]}/>
+      ]}
+        style='center'
+      />
     </div>    
   </div>  
 </div>
@@ -32,13 +34,10 @@
     border: solid #5B6DCD 2px;
   } */
 
-  /* :global([style=center]) {
-    justify-content: center;
-  } */
-
   #header {
     display: flex;
     justify-content: center;
+    flex-direction: column;
   }
 
   h2 {
@@ -56,14 +55,20 @@
     min-width: 90px;
     display: flex;
     padding: 3px;
-    justify-content: center;
     border-radius: 50%;
-    margin: auto 0;
+    margin: auto;
   }
 
-  #tags {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+  @media only screen and (min-width: 768px) {
+    #header {
+      flex-direction: row;
+    }
+
+    #icon-container {
+      margin: auto 0;
+    }
   }
+
+  @media only screen and (min-width: 992px) { }
+  @media only screen and (min-width: 1200px) { }
 </style>

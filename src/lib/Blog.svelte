@@ -1,5 +1,5 @@
 <script lang="ts">
-  import ThoughtHeader from './PostHeader.svelte'
+  import ThoughtHeader from './BlogHeader.svelte'
 
   /* ThoughtHeader props */
   export let src: string
