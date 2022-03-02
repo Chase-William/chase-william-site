@@ -1,11 +1,17 @@
 <script lang="ts">
-  import ThoughtHeader from './BlogHeader.svelte'
+  import BlogHeader from './BlogHeader.svelte'
 
-  /* ThoughtHeader props */
+  /* BlogHeader props */
   export let src: string
   export let alt: string
   export let title: string;
 </script>
 
-<ThoughtHeader src={src} alt={alt} title={title}/>
-<slot/>
+<BlogHeader src={src} alt={alt} title={title}/>
+<div class="mockup-window bg-base-300 text-left" style="margin-top: 20px;">
+  <div class="flex justify-center px-4 py-2 bg-base-200">
+    <article class="prose max-w-none">  
+      <slot/>
+    </article>
+  </div>  
+</div>
