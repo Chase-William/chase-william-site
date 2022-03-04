@@ -2,8 +2,8 @@
   
 </script>
 
-<div id="activity" class="shadow-md mockup-window bg-base-300">
-  <div class="flex justify-center px-4 py-16 bg-base-200">
+<div id="activity" class="shadow-md mockup-window bg-base-200 border border-primary">
+  <div class="flex justify-center px-4 py-4 bg-base-100 border-t border-primary">
     <div class="text-left">
       <article class="prose max-w-none">
         <slot name="feed-1"></slot>
@@ -21,5 +21,9 @@
   #activity {
     max-width: 1100px;
     margin: 0 auto;
+  }
+
+  blockquote p {
+    color: red;
   }
 </style>

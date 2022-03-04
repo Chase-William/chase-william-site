@@ -15,13 +15,15 @@ module.exports = {
       {
         mytheme: {
           'primary': "#FABC2A",
+          //'primary': "#FABC2A",
           //'primary-content': "#FEFEFF",         
           // secondary: "#FABC2A", // Mango
 
           // Base Colors for background | forground
-          'base-100': '#7D869C',
+          'base-100': '#373A44',
           'base-200': '#636A7C',
-          'base-content': '#FEFEFF',
+          //'base-300': '#373A44',
+          //'base-content': '#FEFEFF',
 
           'accent': '#445',
 
