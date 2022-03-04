@@ -1,6 +1,6 @@
 ## Welcome to my personal site repo
 
-You can visit my site @ `https://chase-william.com` or by clicking this [here](https://chase-william.com).
+You can visit my site @ [`https://chase-william.com`](https://chase-william.com).
 
 ### Why I am developing my own site
 
