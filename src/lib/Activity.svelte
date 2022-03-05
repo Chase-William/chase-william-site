@@ -17,13 +17,10 @@
     </div>
   </div>
 </div>
+
 <style>
   #activity {
     max-width: 1100px;
     margin: 0 auto;
-  }
-
-  blockquote p {
-    color: red;
   }
 </style>

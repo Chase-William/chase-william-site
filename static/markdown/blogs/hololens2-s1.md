@@ -5,20 +5,20 @@ To provide a little context about the device, the HoloLens 2 was released in the
 
 > Read more about the HoloLens 2 [here](https://docs.microsoft.com/en-us/hololens/hololens-release-notes).
 
-### Getting Started
+### Getting Started 🎬
 Generally, getting started with the standalone UWP app for the HoloLens 2 is **much** simplier than Unity. Unity has a learning curve and will set you back with knowing how to navigate their user-interface and also propertly setting up the environment with the `Mixed Reality Toolkit` *(MRTK)*. Lastly, if you are developing the app as a standalone UWP app, you will want to know how to use XAML and UWP specific apis. If you are developing the app using Unity and MRTK, just focus on using Unity correctly and researching the MRTK as that is basically your framework.
 
 - UWP - To get started with UWP for the HoloLens 2 you need the `Univeral Windows Workload` installed for Visual Studios *(preferably 2019|2022 - I use 2022 Preview)*.
 
 - Unity - To get started, I recommend using [`Unity Hub`](https://unity3d.com/get-unity/download) as it allows you to organize your projects and Unity editor installations. Once that is installed you want to use the [MRTK](https://github.com/microsoft/MixedRealityToolkit-Unity) repo to guide you because there is some work to be done here.
 
-### User-Interface Creation
+### User-Interface Creation 🖼️
 
 - Standalone UWP - Creating user-interfaces in a UWP app for the HoloLens 2 is essentially the same as for desktop. No special packages to install or anything which is great! However it is a general rule of thumb to make things larger than one would think. 
 
 - Unity - Creating user-interfaces in Unity was time consuming and rather difficult because of the 3d space. To make user interfaces I used the `Mixed Reality Toolkit` *(MRTK)*; checkout their github [here](https://github.com/microsoft/MixedRealityToolkit-Unity). One of the challenging aspects when getting started making a 3d gui is the ui's distance from the user.
 
-### Compilation/Linking
+### Compilation/Linking 🏗️
 - Standalone UWP - In my experience, compiling and linking in *UWP* is pretty much plug and play. You don't need to do any extra work to get things *up and running*. As you would expect nuget packages also get included in your build and such.
 
 - Unity - In unity for apps that don't require managed plugins, you can expect things to *just work*. I must mention that compilation & linking from your C# scripts to the native app can take awhile *(5 to 9 minutes depending on your level of compilation optimization)*. If you're used to quick compilations and things like hot reload, this is going to be a rough ride.
@@ -31,9 +31,9 @@ Generally, getting started with the standalone UWP app for the HoloLens 2 is **m
 
   At this point you're cruising down a rocky road in a car without suspension; its time to remove your seat. Code stripping is an important part of reducing the size of your app bundle, but when combining managed plugins & Unity's rules regarding reflection; it can be hazardous. I found that using a [`link.xml`](https://github.com/jilleJr/Newtonsoft.Json-for-Unity/wiki/Reference-link.xml) file in my plugins folder helped resolve *some* of my issues with linking. That file allows you omit properties, methods, and entire libraries from code stripping.
 
-  > The MRTK actually uses `link.xml` in their unity package to prevent code stripping of their packages.
+  > The MRTK actually uses [`link.xml`](https://github.com/jilleJr/Newtonsoft.Json-for-Unity/wiki/Reference-link.xml) in their unity package to prevent code stripping of their packages.
 
-### Deployment
+### Deployment 📦
 Deploying my binaries to the HoloLens 2 from a standalone UWP app was a simpler than Unity for obvious reasons mentioned earlier.
 
 - Deployment of standalone UWP apps through Visual Studios is straight forward. Using `Remote Machine` deployment allows you deploy to the device wirelessly and supports live debugging. You can also choose the `Publish` which basically creates a bundle option and that can be quickly deployed to you device using an ad-hoc approach.

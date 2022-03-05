@@ -61,7 +61,7 @@
 <style>
 	main {
 		text-align: center;
-		padding: 1em;
+		padding: 0.2em;
 		margin: 0 auto;    
 	}
 
@@ -77,7 +77,15 @@
     margin-top: 50px;
   }
 
-  @media only screen and (min-width: 1300px) {
+ 
+  @media only screen and (min-width: 768px) {
+    main {
+      padding: 1em;
+    }
+  }
+
+  @media only screen and (min-width: 992px) { }
+  @media only screen and (min-width: 1200px) {
     #feed {
       margin-top: 90px;
     }

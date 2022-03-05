@@ -110,6 +110,9 @@
 
     #tags {
       margin: 0.5em 0 0 7.0em;
+      /* z-index must be raised so children can receive onmouseover and such */
+      position: relative;
+      z-index: 1;
     }
   }
 </style>
