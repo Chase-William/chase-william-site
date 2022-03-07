@@ -1,19 +1,19 @@
 <script lang="ts">
   import Navigation from '../lib/Navigation.svelte'
-  import Blog from '../lib/Blog.svelte'
-  /* Blog Markdown Imports */
-  // @ts-ignore
-  import HoloLens2Blog from '../../static/markdown/blogs/hololens2-s1.md'
+  import ListView from '../lib/ListView.svelte'
 </script>
 
 <main class="bg-base-100 text-base-content">
-  <Navigation />  
-
-  <h2>List of blogs here..</h2>
-  <p>
-    Needs to accept new blogs easily and integration them into a template for display.. this is 
-    basically a listview of sorts.
-  </p>
+  <Navigation />
+  
+  <ListView items={[
+    {
+      title: 'My HoloLens 2 Development Experience',
+      href: './blogs/holoLens2-blog',
+      description: 'I am telling about the blog...',
+      tags: ['C#', 'Unity']
+    }
+  ]}/>
 </main>
 
 <style>

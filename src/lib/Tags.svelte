@@ -11,15 +11,17 @@
 </script>
 
 <div {style} id="tags">
-  {#each tags as tag}
-    <!-- If string[], display as normal tags -->
-    {#if typeof tag === 'string'}
-        <Tag text={tag}/>
-      <!-- Check if this a valid -->
-      {:else if tag.hasOwnProperty('src') && tag.hasOwnProperty('alt')}
-        <ImgTag src={tag.src} alt={tag.alt}/>
-    {/if}
-  {/each}    
+  {#if typeof tags !== 'undefined'}
+    {#each tags as tag}
+      <!-- If string[], display as normal tags -->
+      {#if typeof tag === 'string'}
+          <Tag text={tag}/>
+        <!-- Check if this a valid -->
+        {:else if tag.hasOwnProperty('src') && tag.hasOwnProperty('alt')}
+          <ImgTag src={tag.src} alt={tag.alt}/>
+      {/if}
+    {/each}   
+  {/if} 
 </div>
 
 <style>

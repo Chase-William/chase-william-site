@@ -3,7 +3,8 @@
 
   export let src: string
   export let alt: string
-  export let title: string;
+  export let title: string
+  export let tags: unknown[]
 </script>
 
 <div id="header">
@@ -15,14 +16,7 @@
       {title}
     </h2>
     <div>
-      <Tags tags={[
-        'C#',
-        {src: './mrtk.png', alt: 'Mixed Reality Toolkit'},
-        {src: './unity.png', alt: 'Unity'},
-        {src: './microsoft.png', alt: 'Microsoft'},
-        'IL2CPP',
-        'UWP',
-      ]}
+      <Tags tags={tags}
         style='center'
       />
     </div>    
