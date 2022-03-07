@@ -1,15 +1,12 @@
 <script lang="ts">
-  import Navigation from '../lib/Navigation.svelte'
-  import ListView from '../lib/ListView.svelte'
+  import ListView from '../../lib/ListView.svelte'
 </script>
 
 <main class="bg-base-100 text-base-content">
-  <Navigation />
-  
   <ListView items={[
     {
       title: 'My HoloLens 2 Development Experience',
-      href: './blogs/holoLens2-blog',
+      href:  'blog/holoLens2-blog',
       description: 'I am telling about the blog...',
       tags: ['C#', 'Unity']
     }

@@ -6,9 +6,50 @@
 		<meta name="description" content="" />
 		<link rel="icon" href="%svelte.assets%/favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      nav {
+        max-width: 1200px;
+        margin: auto;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        background-color: inherit;
+      }
+
+      .scrolled-down{
+        transform:translateY(-100%); 
+        transition: all 0.3s ease-in-out;
+      }
+      .scrolled-up{
+        transform:translateY(0); 
+        transition: all 0.3s ease-in-out;
+      }
+    </style>    
 		%svelte.head%
 	</head>
 	<body>
+    <nav class="bg-base-100" id="my-nav">
+      <ul class="menu bg-base-100 menu-horizontal" style="width: 100%;">
+        <li><a href="./">Home</a></li>
+        <li><a href="/blog">Blogs</a></li>
+      </ul>
+    </nav>    
+
     <div>%svelte.body%</div>	
-	</body>  
+	</body>
+  <script>
+    let nav = document.getElementById('my-nav')
+    let lastScrollTop = 0;
+    document.addEventListener('scroll', function() {
+      const currentScrollTop = window.pageYOffset
+      if (currentScrollTop > lastScrollTop){
+        nav.classList.remove('scrolled-up');
+        nav.classList.add('scrolled-down');  
+      } else {
+        nav.classList.remove('scrolled-down');
+        nav.classList.add('scrolled-up');           
+      }
+      lastScrollTop = currentScrollTop
+    }, false)
+  </script>
 </html>

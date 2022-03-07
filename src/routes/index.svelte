@@ -3,7 +3,6 @@
   import ProjectCard from "../lib/ProjectCard.svelte"
   import Tags from "../lib/Tags.svelte"
   import Activity from '../lib/Activity.svelte'
-  import Navigation from '../lib/Navigation.svelte'
 
   /* FEEDS */
   // @ts-ignore
@@ -18,8 +17,11 @@
   import BlueQueryProject from '../../static/markdown/projects/bluequery.md'
 </script>
 
+<svelte:head>
+  <title>Welcome, ☕ Enjoy your stay!</title>
+</svelte:head>
+
 <main class="bg-base-100 text-base-content">
-  <Navigation />
   <div>
     <MeetMe 
       src="chase.jpg"    
