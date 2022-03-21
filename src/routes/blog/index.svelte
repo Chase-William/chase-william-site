@@ -2,12 +2,12 @@
   import ListView from '../../lib/ListView.svelte'
 </script>
 
-<main class="bg-base-100 text-base-content">
+<main class="bg-base-100 text-base-content" style="margin-top: 20px">
   <ListView items={[
     {
       title: 'My HoloLens 2 Development Experience',
       href:  'blog/holoLens2-blog',
-      description: 'I am telling about the blog...',
+      description: 'I share my experiences working on the HoloLens 2 with helpful information for anyone looking into it themselves!',
       tags: ['C#', 'Unity']
     }
   ]}/>
