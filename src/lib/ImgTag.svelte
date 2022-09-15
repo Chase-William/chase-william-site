@@ -11,7 +11,7 @@
   } */
 
   img {
-    border: solid #7D869C55 2px;
+    border: solid #FCCB25 2px;
     border-radius: 20px;
     padding: 0 1em;
     margin: 0.3em;

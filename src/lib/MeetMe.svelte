@@ -14,7 +14,7 @@
   <div id="selfie-container" class="shadow-lg bg-primary">
     <img src={src} alt={alt}/>
   </div>     
-  <h2 class="font-light">
+  <h2>
     {about}
   </h2>    
 </div>
@@ -81,7 +81,7 @@
     }
   }
 
-  @media only screen and (min-width: 1300px) { 
+  @media only screen and (min-width: 1200px) { 
     #about-container {
       position: relative;
       z-index: 1;

@@ -1,1 +1,0 @@
-Lil Widgets is an **open source** user-interface widget library. I built this mainly during the winter of 2021 using `Xamarin.Forms` as a way to learn and also give back to the community. Checkout the demonstrative readme on github <ins>[here](https://github.com/Chase-William/LilWidgets)</ins> to see the various widgets in action and even download the sample!

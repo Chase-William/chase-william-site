@@ -13,21 +13,13 @@ module.exports = {
   daisyui: {
     themes: [
       {
-        mytheme: {
-          'primary': "#FABC2A",
-          //'primary': "#FABC2A",
-          //'primary-content': "#FEFEFF",         
-          // secondary: "#FABC2A", // Mango
-
+        theme: {
+          primary: '#FFC914',
+          secondary: '#59CD90',
+          neutral: '#EDEDF4',
           // Base Colors for background | forground
-          'base-100': '#373A44',
-          'base-200': '#636A7C',
-          //'base-300': '#373A44',
-          //'base-content': '#FEFEFF',
-
-          'accent': '#445',
-
-          'neutral': '#999'
+          'base-100': '#EDEDF4',
+          'base-200': '#636A7C'          
         },
       }
     ]
