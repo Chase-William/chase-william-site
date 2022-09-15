@@ -33,7 +33,7 @@
     <div id="content-body">
       <div>
         <p id="blog-reference-body" class="text-left bg-base-100/75 rounded-md shadow-md prose max-w-none">
-          I was employed by the Center on Culture and Language <em>(CCL)</em> at RIT/NTID and integrated live captioning into the HoloLens 2. My team and after several months of work competed in one of RIT's largest technical showcases / competitions; the RIT Imagine event. My team and 2 others won the event and you can read more about that <a href="https://www.rit.edu/imagine/news/three-student-teams-push-boundaries-improve-society-new-competition" target="_blank">here</a>, otherwise more about my HoloLens 2 development experience <a href="./blogs/hololens2/" target="_blank">here</a>.
+          During the Summer, Fall, and Spring of 2021 I was employed by the Center on Culture and Language <em>(CCL)</em> at RIT/NTID and integrated live captioning into the HoloLens 2. My team and I after several months of prep competed in one of RIT's largest technical showcases / competitions; the RIT Imagine event. My team and two others won the TAD <em>(technology, arts, and design)</em> award, more information available <a href="https://www.rit.edu/imagine/news/three-student-teams-push-boundaries-improve-society-new-competition" target="_blank">here</a>, otherwise information about my HoloLens 2 development experience can be found <a href="./blogs/hololens2/" target="_blank">here</a>.
         </p>
       </div>  
 

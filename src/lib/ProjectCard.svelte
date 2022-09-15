@@ -86,7 +86,7 @@
 
   #project-body {
     text-align: left; 
-    padding: 0.4em;   
+    padding: 0.7em;   
   }
 
   #project-icon {
