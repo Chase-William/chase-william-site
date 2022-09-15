@@ -35,7 +35,7 @@
         {/if}
       </div>  
     </div>
-    <div id="project-body" class="font-light">
+    <div id="project-body" class="bg-base-100/75 rounded-md shadow-md">
       <slot>
         <!-- Passed Components | HTML rendered here -->
       </slot>   
@@ -53,8 +53,11 @@
     padding: 0;
   }
 
-  img:hover {
+  img {
     transition: all .25s ease-in-out;
+  }
+
+  img:hover {    
     transform: scale(1.05);
   }
 
@@ -82,11 +85,12 @@
   }
 
   #project-body {
-    text-align: left;    
+    text-align: left; 
+    padding: 0.4em;   
   }
 
   #project-icon {
-    width: 40%;
+    width: 55%;
     min-width: 100px;
     max-width: 200px;
     padding: 2em;

@@ -2,19 +2,19 @@
   export let text: string
 </script>
 
-<span class="badge-primary shadow-md expand-on-hover">{text}</span>
+<span class="badge-primary shadow-md">{text}</span>
 
 <style>
   span {
-    border: solid #7D869C55 2px;
+    border: solid #FCCB25 2px;
     border-radius: 20px;
     padding: 0 1em;
     margin: 0.3em;
     font-size: smaller;
+    transition: all .1s ease;
   }
   
-  span:hover {
-    transition: all .07s ease-in-out;
+  span:hover {    
     transform: scale(1.05);
   }
 </style>

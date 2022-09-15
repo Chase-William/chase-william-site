@@ -40,7 +40,7 @@
       <a href={href}>{title}</a>
     </h2>
     <Tags tags={tags}/>
-    <p>{description}</p>
+    {description}   
   </div>
 </div>
 
@@ -60,6 +60,4 @@
   h2 {
     font-size: x-large;
   }
-
-
 </style>
