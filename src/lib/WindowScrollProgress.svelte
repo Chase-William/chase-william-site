@@ -1,6 +1,6 @@
 
 <div id="window-progress-container">
-  <progress id="progress-for-window" class="progress progress-secondary w-56 rounded-none" value="0" max="100"></progress>
+  <progress id="progress-for-window" class="progress progress-secondary w-56" value="0" max="100"></progress>
   <script>
     const progressBar = document.getElementById('progress-for-window')
     // Adjust the progress on scroll and on window resize
@@ -25,12 +25,13 @@
     right: 0;
     position: fixed;
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
   }
 
   #progress-for-window {
     margin: 0;
     padding: 0;
     width: 100%;
+    border-radius: 0;
   }
 </style>

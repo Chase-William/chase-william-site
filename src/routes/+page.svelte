@@ -1,16 +1,16 @@
 <script lang='ts'>
+  //import Gamer from "$lib/Gamer.svelte";
   import MeetMe from "$lib/MeetMe.svelte"
   import ProjectCard from "$lib/ProjectCard.svelte"
 	import WindowScrollProgress from "$lib/WindowScrollProgress.svelte";
 </script>
 
 <svelte:head>
-  <title>Welcome, ☕ Enjoy your stay!</title>
+  <title>☕ Welcome to Chase's site!</title>
 </svelte:head>
-<!-- class="bg-gradient-to-r from-primary via-white via-[#5D85B1] via-white via-[#EE6352] via-white to-secondary" -->
 <main>   
     <WindowScrollProgress/>
-  
+
     <div id="meetme">
       <MeetMe 
         src="chase.jpg"    
