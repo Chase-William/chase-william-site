@@ -1,26 +1,16 @@
 <script lang='ts'>
-  import MeetMe from "../lib/MeetMe.svelte"
-  import ProjectCard from "../lib/ProjectCard.svelte"
-  import Tags from "../lib/Tags.svelte"
-  import Activity from '../lib/Activity.svelte'
-  /* FEEDS */
-  // @ts-ignore
-  // import SvelteActivity from '../../static/markdown/feed/svelte-v1.md'
-  // @ts-ignore
-  // import HoloLensActivity from '../../static/markdown/feed/hololens2-v1.md'
-
-  /* PROJECTS */
-  // @ts-ignore
-  // import LilWidgetsProject from '../../static/markdown/projects/lilwidgets.md'
-  // @ts-ignore
-  // import BlueQueryProject from '../../static/markdown/projects/bluequery.md'
+  import MeetMe from "$lib/MeetMe.svelte"
+  import ProjectCard from "$lib/ProjectCard.svelte"
+	import WindowScrollProgress from "$lib/WindowScrollProgress.svelte";
 </script>
 
 <svelte:head>
   <title>Welcome, ☕ Enjoy your stay!</title>
 </svelte:head>
 <!-- class="bg-gradient-to-r from-primary via-white via-[#5D85B1] via-white via-[#EE6352] via-white to-secondary" -->
-<main>
+<main>   
+    <WindowScrollProgress/>
+  
     <div id="meetme">
       <MeetMe 
         src="chase.jpg"    
@@ -111,7 +101,7 @@
 
       ScrollReveal().reveal('#meetme', options)
       ScrollReveal().reveal('#blog-reference-body', options)
-      ScrollReveal().reveal('.project', options)
+      ScrollReveal().reveal('.project', options)      
     </script>
 </main>
 

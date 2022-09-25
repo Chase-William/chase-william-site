@@ -1,7 +1,9 @@
 <script lang="ts">
   import Blog from '../../../lib/Blog.svelte'
+  import WindowScrollProgress from '$lib/WindowScrollProgress.svelte';
 </script>
 
+<WindowScrollProgress/>
 
 <Blog 
   title="My HoloLens 2 Development Experience"
