@@ -37,6 +37,41 @@
         </p>
       </div>  
 
+      <ProjectCard
+        title=".Docs"
+        alt=".Docs"
+        github="https://github.com/Chase-William/.Docs"
+        chocolately="https://community.chocolatey.org/packages/dotdocs"
+        tags={["NodeJs", "TypeScript", "Markdown", "Documentation"]}>
+        <svelte:fragment slot="icon">
+          <img alt=".Docs Icon" src=".docs-yellow-512x.png" class="shadow-lg" style="border-radius: 50%;">
+        </svelte:fragment>
+        <svelte:fragment slot="content">
+          <article>
+            <p>
+              DotDocs is an intuitive & reliable documentation generator library for C# projects. Currently it produces markdown files as documentation and support for website generation is planned.
+            </p>
+          </article>
+        </svelte:fragment>        
+      </ProjectCard>
+
+      <ProjectCard
+      title=".Docs.Core"
+      alt=".Docs.Core Icon"
+      github="https://github.com/Chase-William/.Docs.Core"
+      tags={["XML", "C# Projects", "C#", "BinLog", ".Net 6", "Json", "Recursion"]}>
+      <svelte:fragment slot="icon">
+        <img alt=".Docs Icon" src=".docs.core-purple-512x.png" class="shadow-lg" style="border-radius: 50%;">
+      </svelte:fragment>
+      <svelte:fragment slot="content">
+        <article>
+          <p>
+            This is a supporting library for the .Docs project. DocDocs.Core builds a .csproj and it's dependencies and extracts, organizes and exports types, assemblies, and project metadata to JSON files. 
+          </p>
+        </article>
+      </svelte:fragment>        
+    </ProjectCard>
+
       <ProjectCard 
         title="Lil Widgets"
         src="lilwidgets.png" 
@@ -44,11 +79,13 @@
         github="https://github.com/Chase-William/LilWidgets"
         nuget="https://www.nuget.org/packages/LilWidgets.Xamarin.Forms/1.1.1-alpha"
         tags={["C#", "Xaml", "Library", "Animation", "Nuget"]}>
-        <article class="prose">
-          <p>
-            Lil Widgets is an open source user-interface widget library. I built this mainly during the winter of 2021 using Xamarin.Forms as a way to learn and also give back to the community. Checkout the demonstrative readme on github <a href="https://github.com/Chase-William/LilWidgets">here</a> to see the various widgets in action and even download the sample!
-          </p>
-        </article>
+        <svelte:fragment slot="content">
+          <article class="prose">
+            <p>
+              Lil Widgets is an open source user-interface widget library. I built this mainly during the winter of 2021 using Xamarin.Forms as a way to learn and also give back to the community. Checkout the demonstrative readme on github <a href="https://github.com/Chase-William/LilWidgets">here</a> to see the various widgets in action and even download the sample!
+            </p>
+          </article>
+        </svelte:fragment>      
       </ProjectCard>
       
       <ProjectCard
@@ -56,13 +93,14 @@
         src="bluequery.png" 
         alt="Blue Query"
         github="https://github.com/Chase-William/BlueQuery"
-        nuget=""
         tags={["C#", "Json", "Discord Bot"]}>
-        <article class="prose">
-          <p>
-            Blue Query is a resource calculator discord bot I created during the summer of 2020. The name comes from the need to query blueprints and calculate their total cost using recursion. This was a fun build as I recall discovering and implementing recursion before I was made aware of the concept in school. Checkout the readme <a href="https://github.com/Chase-William/BlueQuery">here</a> on github to learn more!
-          </p>
-        </article>
+        <svelte:fragment slot="content">
+          <article class="prose">
+            <p>
+              Blue Query is a resource calculator discord bot I created during the summer of 2020. The name comes from the need to query blueprints and calculate their total cost using recursion. This was a fun build as I recall discovering and implementing recursion before I was made aware of the concept in school. Checkout the readme <a href="https://github.com/Chase-William/BlueQuery">here</a> on github to learn more!
+            </p>
+          </article>
+        </svelte:fragment>        
       </ProjectCard>      
     </div>
 </main>

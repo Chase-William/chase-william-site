@@ -4,17 +4,28 @@
 <script lang="ts">
   import Tags from './Tags.svelte'
 
-  export let title: string;
-  export let src: string
+  export let title: string
+  /**
+   * Omit src and provide a <svelte:fragment> to customize img rendering
+   */
+  export let src: string | null = null
   export let alt: string
   export let tags: string[]
-  export let github: string;
-  export let nuget: string;
+  export let github: string
+  export let nuget: string | null = null
+  export let chocolately: string | null = null
 </script>
 
 <div id="project-card">
   <div id="project-icon">
-    <img src={src} alt={alt} class="shadow-lg"/>
+    {#if src}
+      <img src={src} alt={alt} class="shadow-lg animated-icon"/>
+    {:else}
+    <!-- This div has been added purely so the children elements still receive the hover animation -->
+      <div class="animated-icon">
+        <slot name="icon" class="icon"></slot>
+      </div>      
+    {/if}
   </div>
   <div id="project-info-container">
     <div id="project-header" style="display: flex;">
@@ -27,18 +38,19 @@
         </div>        
       </div>
       <div id="goto-container">
-        {#if github !== ""}
-          <p>Available on <a href="{github}" target="_blank" class="underline">Github</a>
+        {#if github}
+          <p>Available on <a href="{github}" target="_blank" class="underline">Github</a></p>
         {/if}
-        {#if nuget !== ""}
-          Published with <a href="{nuget}" target="_blank" class="underline">Nuget</a>
+        {#if nuget}
+          <p>Published with <a href="{nuget}" target="_blank" class="underline">Nuget</a></p>
+        {/if}
+        {#if chocolately}
+          <p>Available through <a href="{chocolately}" target="_blank" class="underline">Chocolately</a></p>
         {/if}
       </div>  
     </div>
     <div id="project-body" class="bg-base-100/75 rounded-md shadow-md">
-      <slot>
-        <!-- Passed Components | HTML rendered here -->
-      </slot>   
+      <slot name="content"></slot>  
     </div>         
   </div>
 </div>
@@ -53,13 +65,21 @@
     padding: 0;
   }
 
-  img {
+  .animated-icon {
+    transition: all .25s ease-in-out;
+  }
+
+  .animated-icon:hover {
+    transform: scale(1.05);
+  }
+
+  /* img {
     transition: all .25s ease-in-out;
   }
 
   img:hover {    
     transform: scale(1.05);
-  }
+  } */
 
   #project-card {
     display: flex;
