@@ -101,8 +101,7 @@
           </article>
         </svelte:fragment>        
       </ProjectCard>      
-    </div>
-    <script src="https://unpkg.com/scrollreveal"></script>
+    </div>    
     <script>
       const options = {
         delay: 40,
