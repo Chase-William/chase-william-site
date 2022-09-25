@@ -3,7 +3,6 @@
   import ProjectCard from "../lib/ProjectCard.svelte"
   import Tags from "../lib/Tags.svelte"
   import Activity from '../lib/Activity.svelte'
-
   /* FEEDS */
   // @ts-ignore
   // import SvelteActivity from '../../static/markdown/feed/svelte-v1.md'
@@ -22,12 +21,12 @@
 </svelte:head>
 <!-- class="bg-gradient-to-r from-primary via-white via-[#5D85B1] via-white via-[#EE6352] via-white to-secondary" -->
 <main>
-    <div>
+    <div id="meetme">
       <MeetMe 
         src="chase.jpg"    
         alt="Chase William Roth"   
         about="Hello, I'm Chase 👋 I'm a 4th year Web and Mobile Computing undergraduate student at Rochester Institute of Technology."
-        tags={["C#", "TypeScript", "Svelte ", "Xamarin", "Java", "React", "Go"]}/>
+        tags={["C#", "TypeScript", "JavaScript ", "Xamarin", "Java", "Swift", "Kotlin"]}/>
     </div>
 
     <div id="content-body">
@@ -103,6 +102,18 @@
         </svelte:fragment>        
       </ProjectCard>      
     </div>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+      const options = {
+        delay: 40,
+        duration: 350,
+        reset: true
+      }
+
+      ScrollReveal().reveal('#meetme', options)
+      ScrollReveal().reveal('#blog-reference-body', options)
+      ScrollReveal().reveal('.project', options)
+    </script>
 </main>
 
 <style>

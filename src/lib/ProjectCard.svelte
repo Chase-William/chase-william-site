@@ -16,7 +16,7 @@
   export let chocolately: string | null = null
 </script>
 
-<div id="project-card">
+<div class="project" id="project-card">
   <div id="project-icon">
     {#if src}
       <img src={src} alt={alt} class="shadow-lg animated-icon"/>
@@ -51,7 +51,7 @@
     </div>
     <div id="project-body" class="bg-base-100/75 rounded-md shadow-md">
       <slot name="content"></slot>  
-    </div>         
+    </div>
   </div>
 </div>
 
