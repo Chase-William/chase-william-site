@@ -44,7 +44,7 @@
         chocolately="https://community.chocolatey.org/packages/dotdocs"
         tags={["NodeJs", "TypeScript", "Markdown", "Documentation"]}>
         <svelte:fragment slot="icon">
-          <img alt=".Docs Icon" src=".docs-yellow-512x.png" class="shadow-lg" style="border-radius: 50%;">
+          <img alt=".Docs Icon" src="../../static/.docs-yellow-512x.png" class="shadow-lg" style="border-radius: 50%;">
         </svelte:fragment>
         <svelte:fragment slot="content">
           <article>
@@ -61,7 +61,7 @@
       github="https://github.com/Chase-William/.Docs.Core"
       tags={["XML", "C# Projects", "C#", "BinLog", ".Net 6", "Json", "Recursion"]}>
       <svelte:fragment slot="icon">
-        <img alt=".Docs Icon" src=".docs.core-purple-512x.png" class="shadow-lg" style="border-radius: 50%;">
+        <img alt=".Docs.Core Icon" src=".docs.core-purple-512x.png" class="shadow-lg" style="border-radius: 50%;">
       </svelte:fragment>
       <svelte:fragment slot="content">
         <article>
