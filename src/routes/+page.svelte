@@ -44,7 +44,7 @@
         chocolately="https://community.chocolatey.org/packages/dotdocs"
         tags={["NodeJs", "TypeScript", "Markdown", "Documentation"]}>
         <svelte:fragment slot="icon">
-          <img alt=".Docs Icon" src="../../static/dotdocs-yellow-512x.png" class="shadow-lg" style="border-radius: 50%;">
+          <img alt=".Docs Icon" src="dotdocs-yellow-512x.png" class="shadow-lg" style="border-radius: 50%;">
         </svelte:fragment>
         <svelte:fragment slot="content">
           <article>
