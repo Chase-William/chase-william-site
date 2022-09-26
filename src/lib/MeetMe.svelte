@@ -20,9 +20,7 @@
   </h2>    
 </div>
 <div id="horizontal-line"/>
-<div id="tags">
-  <Tags tags={tags} style='center'/>
-</div>
+<Tags tags={tags} style='center'/>
 
 <style>
   /* * { 
@@ -107,13 +105,6 @@
       position: relative;
       z-index: 0;
       margin: -6.0em auto 0 auto;
-    }
-
-    #tags {
-      margin: 0.5em 0 0 7.0em;
-      /* z-index must be raised so children can receive onmouseover and such */
-      position: relative;
-      z-index: 1;
     }
   }
 </style>

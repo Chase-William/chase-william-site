@@ -4,7 +4,7 @@
 </script>
 
 {#if tooltip}
-  <div class="tooltip badge-primary shadow-md hoverable-tag" data-tip={tooltip}>
+  <div class="badge-primary shadow-md hoverable-tag">
     <span>{text}</span>
   </div>
 {:else}
