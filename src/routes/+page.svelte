@@ -62,7 +62,7 @@
 			</p>
 		</div>
 
-		<ProjectCard
+		<!-- <ProjectCard
 			title=".Docs"
 			alt=".Docs"
 			isNew={true}
@@ -190,13 +190,13 @@
 					</p>
 				</article>
 			</svelte:fragment>
-		</ProjectCard>
+		</ProjectCard> -->
 	</div>
 	<script>
 		const options = {
 			delay: 40,
 			duration: 350,
-			reset: true
+			reset: false
 		};
 
 		ScrollReveal().reveal('#meetme', options);
