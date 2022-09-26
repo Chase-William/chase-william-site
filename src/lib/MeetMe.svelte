@@ -30,10 +30,9 @@ import { query_selector_all } from "svelte/internal";
   <script>
     const TEXTUAL_AREA_DIV = this.document.getElementById('textual-content')
     const MAIN_AREA_DIV = this.document.getElementById('main-about-container')
-    const HR_TAGS = document.getElementById('hr-tags')
-
-    this.onresize = () => {
-      console.log(this.innerWidth)
+    const HR_TAGS = document.getElementById('hr-tags')    
+    
+    function update() {
       // If the screen is small and the hr and tags are within the main area
       // Move them into the main area for small displays
       if (this.innerWidth < 900 && HR_TAGS.parentElement == TEXTUAL_AREA_DIV) {
@@ -48,6 +47,9 @@ import { query_selector_all } from "svelte/internal";
         console.log('adding to text area')
       }
     }
+
+    this.onresize = () => update();
+    update();
   </script>
 </div>
 
