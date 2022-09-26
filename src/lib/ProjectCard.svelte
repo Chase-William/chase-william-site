@@ -47,13 +47,13 @@
       </div>
       <div id="goto-container">
         {#if github}
-          <p>Available&nbsp;on&nbsp;<a href="{github}" target="_blank" class="underline">Github</a></p>
+          <p>Available on <a href="{github}" target="_blank" class="underline">Github</a></p>
         {/if}
         {#if nuget}
-          <p>Published&nbsp;with&nbsp;<a href="{nuget}" target="_blank" class="underline">Nuget</a></p>
+          <p>Published with <a href="{nuget}" target="_blank" class="underline">Nuget</a></p>
         {/if}
         {#if chocolately}
-          <p>Available&nbsp;through&nbsp;<a href="{chocolately}" target="_blank" class="underline">Chocolately</a></p>
+          <p>Available on <a href="{chocolately}" target="_blank" class="underline">Chocolately</a></p>
         {/if}
       </div>  
     </div>
@@ -109,11 +109,12 @@
   #name-with-tags {
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
+    width: 70%;
   }
 
   #goto-container {   
     text-align: right;
+    width: 30%;
   }
 
   #project-body {
