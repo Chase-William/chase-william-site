@@ -218,7 +218,6 @@
 
 	@media only screen and (min-width: 768px) {
 		#blog-reference-body {
-			margin: 0 0 0 2em;
 			padding: 1em;
 		}
 	}
