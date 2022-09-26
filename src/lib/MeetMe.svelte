@@ -2,17 +2,18 @@
   The `MeetMe` component displays information about a person.
 -->
 <script lang="ts">
+	import type Tag from "src/types/Tag";
   import Tags from "./Tags.svelte"
 
   export let src: string
   export let alt: string
   export let about: string
-  export let tags: string[]
+  export let tags: Tag[]
 </script>
 
 <div id="about-container">
   <div id="selfie-container" class="shadow-lg bg-primary">
-    <img src={src} alt={alt}/>
+    <img src={src} alt={alt} />
   </div>     
   <h2>
     {about}

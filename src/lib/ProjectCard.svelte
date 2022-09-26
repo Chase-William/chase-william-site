@@ -2,15 +2,18 @@
   The `ProjectCard` component displays information about a project.
 -->
 <script lang="ts">
+	import type Tag from 'src/types/Tag';
+  import NewBadge from './NewBadge.svelte';
   import Tags from './Tags.svelte'
 
   export let title: string
+  export let isNew: boolean = false
   /**
    * Omit src and provide a <svelte:fragment> to customize img rendering
    */
   export let src: string | null = null
   export let alt: string
-  export let tags: string[]
+  export let tags: Tag[]
   export let github: string
   export let nuget: string | null = null
   export let chocolately: string | null = null
@@ -29,10 +32,15 @@
   </div>
   <div id="project-info-container">
     <div id="project-header" style="display: flex;">
-      <div id="name-with-tags">
-        <h2 class="text-3xl text-left">
-          {title}
-        </h2>
+      <div id="name-with-tags">     
+        <div style="display: flex;">          
+          <h2 class="text-3xl text-left">
+            {title}
+          </h2>
+          {#if isNew}
+            <NewBadge/>
+          {/if}          
+        </div>         
         <div id="tags">
           <Tags tags={tags}/>
         </div>        

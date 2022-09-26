@@ -1,20 +1,27 @@
 <script lang="ts">
   export let text: string
+  export let tooltip: string | null = null
 </script>
 
-<span class="badge-primary shadow-md">{text}</span>
+{#if tooltip}
+  <div class="tooltip badge-primary shadow-md hoverable-tag" data-tip={tooltip}>
+    <span>{text}</span>
+  </div>
+{:else}
+  <span class="badge-primary shadow-md hoverable-tag">{text}</span>
+{/if}
 
 <style>
-  span {
-    border: solid #FCCB25 2px;
-    border-radius: 20px;
+  .hoverable-tag {
+    transition: all .1s ease;
     padding: 0 1em;
     margin: 0.3em;
+    border: solid #FCCB25 2px;
+    border-radius: 20px;
     font-size: smaller;
-    transition: all .1s ease;
   }
-  
-  span:hover {    
+
+  .hoverable-tag:hover {    
     transform: scale(1.05);
   }
 </style>

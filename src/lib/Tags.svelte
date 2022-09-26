@@ -1,24 +1,23 @@
 <!--
   The `Tags` component displays an array of strings in little bubbles.
 -->
-<script lang="js">
-  import Tag from './TextTag.svelte'
+<script lang="ts">
+  import TextTag from './TextTag.svelte'
   import ImgTag from './ImgTag.svelte';
+	import type Tag from 'src/types/Tag';
 
   /* Collection of tags to be displayed */
-  export let tags
-  export let style = undefined
+  export let tags: Tag[]
+  export let style: string | null = null
 </script>
 
 <div {style} id="tags">
-  {#if typeof tags !== 'undefined'}
+  {#if tags}
     {#each tags as tag}
-      <!-- If string[], display as normal tags -->
-      {#if typeof tag === 'string'}
-          <Tag text={tag}/>
-        <!-- Check if this a valid -->
-        {:else if tag.hasOwnProperty('src') && tag.hasOwnProperty('alt')}
-          <ImgTag src={tag.src} alt={tag.alt}/>
+      {#if !tag?.src} <!-- If an img src is not defined, display as text using alt -->
+        <TextTag text={tag.alt} tooltip={tag.tooltip}/>
+      {:else} <!-- Display img src based tag -->
+        <ImgTag src={tag.src} alt={tag.alt}/>
       {/if}
     {/each}   
   {/if} 
