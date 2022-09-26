@@ -10,7 +10,7 @@
 <main>
 	<WindowScrollProgress />
 
-	<!-- <div id="meetme">
+	<div id="meetme">
 		<MeetMe
 			src="chase.jpg"
 			alt="Chase William Roth"
@@ -40,7 +40,7 @@
 				{ alt: 'Kotlin' }
 			]}
 		/>
-	</div> -->
+	</div>
 
 	<div id="content-body">
 			<p
