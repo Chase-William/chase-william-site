@@ -10,7 +10,7 @@
 <main>
 	<WindowScrollProgress />
 
-	<div id="meetme">
+	<div id="meetme" style="margin-top: 1em;">
 		<MeetMe
 			src="chase.jpg"
 			alt="Chase William Roth"
@@ -220,13 +220,15 @@
 		#blog-reference-body {
 			padding: 1em;
 		}
+		
+		#content-body {
+			margin-top: 2em;
+		}
 	}
 
 	@media only screen and (min-width: 992px) {
 	}
 	@media only screen and (min-width: 1200px) {
-		#blog-reference-body {
-			margin-top: 5em;
-		}
+		
 	}
 </style>

@@ -3,6 +3,7 @@
 -->
 <script lang="ts">
 	import type Tag from "src/types/Tag";
+import { query_selector_all } from "svelte/internal";
   import Tags from "./Tags.svelte"
 
   export let src: string
@@ -11,16 +12,44 @@
   export let tags: Tag[]
 </script>
 
-<div id="about-container">
-  <div id="selfie-container" class="shadow-lg bg-primary">
-    <img src={src} alt={alt} />
-  </div>     
-  <h2>
-    {about}
-  </h2>    
+<div id="main-about-container">
+  <div id="about-container">
+    <div id="selfie-container" class="shadow-lg bg-primary">
+      <img src={src} alt={alt} />
+    </div>
+    <div id="textual-content">
+      <h2>
+        {about}
+      </h2> 
+    </div>   
+  </div>
+  <div id="hr-tags">
+    <div id="horizontal-line"/>
+    <Tags tags={tags} style='center'/>
+  </div>
+  <script>
+    const TEXTUAL_AREA_DIV = this.document.getElementById('textual-content')
+    const MAIN_AREA_DIV = this.document.getElementById('main-about-container')
+    const HR_TAGS = document.getElementById('hr-tags')
+
+    this.onresize = () => {
+      console.log(this.innerWidth)
+      // If the screen is small and the hr and tags are within the main area
+      // Move them into the main area for small displays
+      if (this.innerWidth < 900 && HR_TAGS.parentElement == TEXTUAL_AREA_DIV) {
+        TEXTUAL_AREA_DIV?.removeChild(HR_TAGS)
+        MAIN_AREA_DIV?.appendChild(HR_TAGS)
+        console.log('adding below')
+        // If the screen is big and the textual area contains the hr and tags
+        // Move them into the textual area for large displays
+      } else if (this.innerWidth > 900 && HR_TAGS.parentElement == MAIN_AREA_DIV) {
+        MAIN_AREA_DIV?.removeChild(HR_TAGS)
+        TEXTUAL_AREA_DIV?.appendChild(HR_TAGS)
+        console.log('adding to text area')
+      }
+    }
+  </script>
 </div>
-<div id="horizontal-line"/>
-<Tags tags={tags} style='center'/>
 
 <style>
   /* * { 
@@ -66,6 +95,15 @@
       margin: auto 1em;
     }
 
+    #selfie-container {
+      min-width: 110px;
+    }
+
+    #textual-content {
+      display: flex;
+      justify-content: baseline;
+    }
+
     #about-container {
       display: flex;      
       flex-direction: row;
@@ -77,6 +115,17 @@
 
     #horizontal-line { 
       margin-top: 1em;
+    }
+  }
+
+  @media only screen and (min-width: 900px) {
+    #textual-content {
+      flex-direction: column;
+    }
+
+    h2 {
+      margin: 0 auto;
+      width: 80%;
     }
   }
 
@@ -104,7 +153,7 @@
     #horizontal-line {
       position: relative;
       z-index: 0;
-      margin: -6.0em auto 0 auto;
+      /* margin: -6.0em auto 0 auto; */
     }
   }
 </style>
