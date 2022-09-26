@@ -206,33 +206,6 @@
 </main>
 
 <style>
-	/* main::before {
-    content: '';
-    position: absolute;
-    width: 200%;
-    height: 200%;
-    top: -50%;
-    left: -50%;
-    z-index: -1;
-    filter: blur(1.5rem);
-    transform: rotate(30deg);
-    background: rgb(237,237,244);
-    
-background: linear-gradient(90deg, rgba(237,237,244,1) 17%, rgba(255,201,20,0.5) 22%, rgba(237,237,244,1) 28%, rgba(237,237,244,1) 40%, rgba(89,205,144,0.5) 44%, rgba(237,237,244,1) 49%, rgba(237,237,244,1) 66%, rgba(93,133,177,0.5) 71%, rgba(237,237,244,1) 75%);
-  } */
-
-	/* #textured {
-    top: 0;
-    bottom: 0;
-    z-index: -1;
-    background-image: 
-      linear-gradient(white 2px, transparent 2px),
-      linear-gradient(90deg, white 2px, transparent 2px),
-      linear-gradient(rgba(255,255,255,.3) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,255,255,.3) 1px, transparent 1px);
-    background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
-    background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px;
-  } */
 
 	#content-body {
 		display: flex;
