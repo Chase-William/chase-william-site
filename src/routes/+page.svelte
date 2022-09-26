@@ -60,7 +60,7 @@
 				<a href="./blogs/hololens2/" target="_blank">here</a>.
 			</p>
 
-		<!-- <ProjectCard
+		<ProjectCard
 			title=".Docs"
 			alt=".Docs"
 			isNew={true}
@@ -188,7 +188,7 @@
 					</p>
 				</article>
 			</svelte:fragment>
-		</ProjectCard> -->
+		</ProjectCard>
 	</div>
 	<script>
 		const options = {

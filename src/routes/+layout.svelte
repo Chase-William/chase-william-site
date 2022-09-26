@@ -4,6 +4,7 @@
   import "../app.css"
 </script>
 
+
 <div id="background"/>
 <div id="responsive-padded-container">
   <slot />
