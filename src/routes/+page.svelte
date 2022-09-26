@@ -10,7 +10,7 @@
 <main>
 	<WindowScrollProgress />
 
-	<div id="meetme">
+	<!-- <div id="meetme">
 		<MeetMe
 			src="chase.jpg"
 			alt="Chase William Roth"
@@ -40,10 +40,9 @@
 				{ alt: 'Kotlin' }
 			]}
 		/>
-	</div>
+	</div> -->
 
 	<div id="content-body">
-		<div>
 			<p
 				id="blog-reference-body"
 				class="text-left bg-base-100/75 rounded-md shadow-md prose max-w-none"
@@ -60,7 +59,6 @@
 				>, otherwise information about my HoloLens 2 development experience can be found
 				<a href="./blogs/hololens2/" target="_blank">here</a>.
 			</p>
-		</div>
 
 		<!-- <ProjectCard
 			title=".Docs"

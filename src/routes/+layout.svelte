@@ -4,10 +4,12 @@
   import "../app.css"
 </script>
 
-<div id="background"/>
+<slot />
+
+<!-- <div id="background"/>
 <div id="responsive-padded-container">
   <slot />
-</div>
+</div> -->
 
 <style>
   #background {
