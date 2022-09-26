@@ -31,7 +31,7 @@
     {/if}
   </div>
   <div id="project-info-container">
-    <div id="project-header" style="display: flex;">
+    <div id="project-header">
       <div id="name-with-tags">     
         <div style="display: flex;">          
           <h2 class="text-3xl text-left">
@@ -47,13 +47,13 @@
       </div>
       <div id="goto-container">
         {#if github}
-          <p>Available on <a href="{github}" target="_blank" class="underline">Github</a></p>
+          <p>Available&nbsp;on&nbsp;<a href="{github}" target="_blank" class="underline">Github</a></p>
         {/if}
         {#if nuget}
-          <p>Published with <a href="{nuget}" target="_blank" class="underline">Nuget</a></p>
+          <p>Published&nbsp;with&nbsp;<a href="{nuget}" target="_blank" class="underline">Nuget</a></p>
         {/if}
         {#if chocolately}
-          <p>Available through <a href="{chocolately}" target="_blank" class="underline">Chocolately</a></p>
+          <p>Available&nbsp;through&nbsp;<a href="{chocolately}" target="_blank" class="underline">Chocolately</a></p>
         {/if}
       </div>  
     </div>
@@ -101,14 +101,18 @@
     margin: auto 0;
   }
 
+  #project-header {
+    display: flex;
+    flex-direction: row;
+  }
+
   #name-with-tags {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    flex-grow: 1;
   }
 
-  #goto-container {    
-    width: 50%;
+  #goto-container {   
     text-align: right;
   }
 

@@ -1,5 +1,4 @@
 <script lang="ts">
-	//import Gamer from "$lib/Gamer.svelte";
 	import MeetMe from '$lib/MeetMe.svelte';
 	import ProjectCard from '$lib/ProjectCard.svelte';
 	import WindowScrollProgress from '$lib/WindowScrollProgress.svelte';
@@ -15,14 +14,29 @@
 		<MeetMe
 			src="chase.jpg"
 			alt="Chase William Roth"
-			about="Hello, I'm Chase 👋 I'm a 4th year Web and Mobile Computing undergraduate student at Rochester Institute of Technology."
+			about="Hello, I'm Chase 👋 I'm a 5th year Web and Mobile Computing undergraduate student at Rochester Institute of Technology."
 			tags={[
-				{ alt: 'C#', tooltip: 'C# was my first ❤️ and is my go to for anything not strictly web related.' },
-				{ alt: 'TypeScript', tooltip: 'I like compile-time checks, type safety, and maintainability.. TypeScript is awesome!' },
+				{
+					alt: 'C#',
+					tooltip: 'C# was my first ❤️ and is my go to for anything not strictly web related.'
+				},
+				{
+					alt: 'TypeScript',
+					tooltip:
+						'I like compile-time checks, type safety, and maintainability.. TypeScript is awesome!'
+				},
 				{ alt: 'JavaScript' },
-				{ alt: 'Xamarin', tooltip: 'I learned my mobile fundamentals with Xamarin in school. I have since then learned how to use SwiftUI and Android\'s Jetpack Compose to build mobile apps too!' },
+				{
+					alt: 'Xamarin',
+					tooltip:
+						"I learned my mobile fundamentals with Xamarin in school. I have since then learned how to use SwiftUI and Android's Jetpack Compose to build mobile apps too!"
+				},
 				{ alt: 'Java' },
-				{ alt: 'Swift', tooltip: 'I really like how swift enforces nullables even on reference types. My time writing Swift has made me a better coder when it comes to considering nullables.' },
+				{
+					alt: 'Swift',
+					tooltip:
+						'I really like how swift enforces nullables even on reference types. My time writing Swift has made me a better coder when it comes to considering nullables.'
+				},
 				{ alt: 'Kotlin' }
 			]}
 		/>
@@ -100,7 +114,7 @@
 				{
 					alt: 'BinLog',
 					tooltip:
-						"I found the new BinLog file msbuild produces is a great choice for collection build information easily and quickly!"
+						'I found the new BinLog file msbuild produces is a great choice for collection build information easily and quickly!'
 				},
 				{ alt: '.Net 6' },
 				{ alt: 'Json' },
