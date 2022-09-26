@@ -125,7 +125,7 @@ import { query_selector_all } from "svelte/internal";
 
     h2 {
       margin: 0 auto;
-      width: 80%;
+      text-align: center;
     }
   }
 
