@@ -3,7 +3,6 @@
 -->
 <script lang="ts">
 	import type Tag from "src/types/Tag";
-import { query_selector_all } from "svelte/internal";
   import Tags from "./Tags.svelte"
 
   export let src: string
@@ -17,17 +16,16 @@ import { query_selector_all } from "svelte/internal";
     <div id="selfie-container" class="shadow-lg bg-primary">
       <img src={src} alt={alt} />
     </div>
-    <div id="textual-content">
-      <h2>
-        {about}
-      </h2> 
-    </div>   
+    <h2>
+      {about}
+    </h2>    
   </div>
   <div id="hr-tags">
     <div id="horizontal-line"/>
     <Tags tags={tags} style='center'/>
-  </div>
-  <script>
+  </div> 
+
+  <!-- <script defer>
     const TEXTUAL_AREA_DIV = this.document.getElementById('textual-content')
     const MAIN_AREA_DIV = this.document.getElementById('main-about-container')
     const HR_TAGS = document.getElementById('hr-tags')    
@@ -48,9 +46,9 @@ import { query_selector_all } from "svelte/internal";
       }
     }
 
-    this.onresize = () => update();
-    update();
-  </script>
+    // this.onresize = () => update()
+    // update()
+  </script> -->
 </div>
 
 <style>
@@ -87,16 +85,12 @@ import { query_selector_all } from "svelte/internal";
 	}
 
 	h2 {
-		margin: 1em;
+		margin: auto 1em;
 		text-align: center;
+    text-align: left;
 	}
 
   @media only screen and (min-width: 500px) { 
-    h2 {
-      text-align: left;
-      margin: auto 1em;
-    }
-
     #selfie-container {
       min-width: 110px;
     }
@@ -120,16 +114,7 @@ import { query_selector_all } from "svelte/internal";
     }
   }
 
-  @media only screen and (min-width: 900px) {
-    #textual-content {
-      flex-direction: column;
-    }
-
-    h2 {
-      margin: 0 auto;
-      text-align: center;
-    }
-  }
+  @media only screen and (min-width: 900px) { }
 
   @media only screen and (min-width: 1200px) { 
     #about-container {
@@ -146,10 +131,6 @@ import { query_selector_all } from "svelte/internal";
     img {
       position: relative;
       z-index: 3;
-    }
-
-    h2 {
-      margin: 3.5em 0 0 1em;
     }
 
     #horizontal-line {
