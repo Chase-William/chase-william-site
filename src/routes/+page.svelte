@@ -1,4 +1,6 @@
 <script lang="ts">
+	import Card from '$lib/cards/Card.svelte';
+	import CardGrid from '$lib/cards/CardGrid.svelte';
 	import MeetMe from '$lib/MeetMe.svelte';
 	import ProjectCard from '$lib/ProjectCard.svelte';
 	import WindowScrollProgress from '$lib/WindowScrollProgress.svelte';
@@ -12,7 +14,7 @@
 
 	<div id="meetme" style="margin-top: 1em;">
 		<MeetMe
-			src="chase.jpg"
+			src="me.jpg"
 			alt="Chase William Roth"
 			about="Hello, I'm Chase 👋 I'm a 5th year Web and Mobile Computing undergraduate student at Rochester Institute of Technology."
 			tags={[
@@ -43,22 +45,43 @@
 	</div>
 
 	<div id="content-body">
-			<p
-				id="blog-reference-body"
-				class="text-left bg-base-100/75 rounded-md shadow-md prose max-w-none"
-			>
-				During the Summer, Fall, and Spring of 2021 I was employed by the Center on Culture and
-				Language <em>(CCL)</em> at RIT/NTID and integrated live captioning into the HoloLens 2. My
-				team and I after several months of prep competed in one of RIT's largest technical showcases
-				/ competitions; the RIT Imagine event. My team and two others won the TAD
-				<em>(technology, arts, and design)</em>
-				award, more information available
-				<a
-					href="https://www.rit.edu/imagine/news/three-student-teams-push-boundaries-improve-society-new-competition"
-					target="_blank">here</a
-				>, otherwise information about my HoloLens 2 development experience can be found
-				<a href="./blogs/hololens2/" target="_blank">here</a>.
-			</p>
+		<!-- <p
+			id="blog-reference-body"
+			class="text-left bg-base-100/75 rounded-md shadow-md prose max-w-none"
+		>
+			During the Summer, Fall, and Spring of 2021 I was employed by the Center on Culture and
+			Language <em>(CCL)</em> at RIT/NTID and integrated live captioning into the HoloLens 2. My
+			team and I after several months of prep competed in one of RIT's largest technical showcases /
+			competitions; the RIT Imagine event. My team and two others won the TAD
+			<em>(technology, arts, and design)</em>
+			award, more information available
+			<a
+				href="https://www.rit.edu/imagine/news/three-student-teams-push-boundaries-improve-society-new-competition"
+				target="_blank">here</a
+			>, otherwise information about my HoloLens 2 development experience can be found
+			<a href="./blogs/hololens2/" target="_blank">here</a>.
+		</p> -->
+
+		<CardGrid>
+      <Card
+				title="Pivoting DotDocs 📃"
+				to="blogs/dotdocs"
+				description="I am pivoting my open source documentation generator for C# developers to operate from the cloud. Furthermore, I am developing a system that can connect project metadata so that their hosted documentation automatically links to others."
+        date="10/5/2022"
+			/>
+			<Card 
+        title="HoloLens 2 Development 👓" 
+        to="blogs/hololens2"
+      >
+				<p>
+					During the Summer, Fall, and Spring of 2021 I was employed by the Center on Culture and
+					Language <em>(CCL)</em> at RIT/NTID and integrated live captioning into the HoloLens 2. My
+					team and I after several months of prep competed in one of RIT's largest technical
+					showcases / competitions; the RIT Imagine event. My team and two others won the TAD
+					<em>(technology, arts, and design)</em>.
+				</p>
+			</Card>			
+		</CardGrid>
 
 		<ProjectCard
 			title=".Docs"
@@ -86,7 +109,7 @@
 				/>
 			</svelte:fragment>
 			<svelte:fragment slot="content">
-				<article>
+				<article class="prose">
 					<p>
 						DotDocs is an intuitive & reliable documentation generator library for C# projects.
 						Currently it produces markdown files as documentation and support for website generation
@@ -132,7 +155,7 @@
 				/>
 			</svelte:fragment>
 			<svelte:fragment slot="content">
-				<article>
+				<article class="prose">
 					<p>
 						This is a supporting library for the .Docs project. DocDocs.Core builds a .csproj and
 						it's dependencies and extracts, organizes and exports types, assemblies, and project
@@ -183,7 +206,7 @@
 						name comes from the need to query blueprints and calculate their total cost using
 						recursion. This was a fun build as I recall discovering and implementing recursion
 						before I was made aware of the concept in school. Checkout the readme <a
-							href="https://github.com/Chase-William/BlueQuery">here</a
+							href="https://github.com/Chase-William/BlueQuery" target="_blank">here</a
 						> on github to learn more!
 					</p>
 				</article>
@@ -204,7 +227,6 @@
 </main>
 
 <style>
-
 	#content-body {
 		display: flex;
 		flex-direction: column;
@@ -220,7 +242,7 @@
 		#blog-reference-body {
 			padding: 1em;
 		}
-		
+
 		#content-body {
 			margin-top: 2em;
 		}
@@ -229,6 +251,5 @@
 	@media only screen and (min-width: 992px) {
 	}
 	@media only screen and (min-width: 1200px) {
-		
 	}
 </style>

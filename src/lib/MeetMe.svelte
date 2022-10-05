@@ -23,32 +23,7 @@
   <div id="hr-tags">
     <div id="horizontal-line"/>
     <Tags tags={tags} style='center'/>
-  </div> 
-
-  <!-- <script defer>
-    const TEXTUAL_AREA_DIV = this.document.getElementById('textual-content')
-    const MAIN_AREA_DIV = this.document.getElementById('main-about-container')
-    const HR_TAGS = document.getElementById('hr-tags')    
-    
-    function update() {
-      // If the screen is small and the hr and tags are within the main area
-      // Move them into the main area for small displays
-      if (this.innerWidth < 900 && HR_TAGS.parentElement == TEXTUAL_AREA_DIV) {
-        TEXTUAL_AREA_DIV?.removeChild(HR_TAGS)
-        MAIN_AREA_DIV?.appendChild(HR_TAGS)
-        console.log('adding below')
-        // If the screen is big and the textual area contains the hr and tags
-        // Move them into the textual area for large displays
-      } else if (this.innerWidth > 900 && HR_TAGS.parentElement == MAIN_AREA_DIV) {
-        MAIN_AREA_DIV?.removeChild(HR_TAGS)
-        TEXTUAL_AREA_DIV?.appendChild(HR_TAGS)
-        console.log('adding to text area')
-      }
-    }
-
-    // this.onresize = () => update()
-    // update()
-  </script> -->
+  </div>
 </div>
 
 <style>
@@ -85,9 +60,8 @@
 	}
 
 	h2 {
-		margin: auto 1em;
+		margin: 0.5em 1em auto 1em;
 		text-align: center;
-    text-align: left;
 	}
 
   @media only screen and (min-width: 500px) { 
@@ -111,6 +85,11 @@
 
     #horizontal-line { 
       margin-top: 1em;
+    }
+
+    h2 {
+      text-align: left;
+      margin: auto 1em;
     }
   }
 

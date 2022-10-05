@@ -6,7 +6,7 @@
 <WindowScrollProgress />
 
 <Blog
-	title="Pivoting My DotDocs Personal Project"
+	title="Pivoting My Personal Project"
 	src="../dotdocs-yellow-512x.png"
 	tags={[
 		{ alt: 'NodeJs' },

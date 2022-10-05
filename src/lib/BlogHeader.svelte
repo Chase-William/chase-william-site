@@ -36,7 +36,7 @@
   }
 
   h2 {
-    margin: auto;
+    margin: 0.5em auto;
     font-size: x-large;
     text-align: center;
   }
@@ -58,6 +58,10 @@
   @media only screen and (min-width: 768px) {
     #header {
       flex-direction: row;
+    }
+
+    h2 {
+      margin: auto;
     }
 
     #icon-container {

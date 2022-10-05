@@ -17,9 +17,14 @@ module.exports = {
           primary: '#FFC914',
           secondary: '#59CD90',
           neutral: '#EDEDF4',
+          accent: '#2364AA',
+          //accent: '#F15025',
           // Base Colors for background | forground
           'base-100': '#EDEDF4',
-          'base-200': '#636A7C'          
+          'base-200': '#555B6E',
+          'base-300': '#343434',
+          'base-400': '#303633',
+          'base-500': '#191919'          
         },
       }
     ]

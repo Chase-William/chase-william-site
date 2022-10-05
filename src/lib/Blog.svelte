@@ -14,7 +14,7 @@
   alt={alt} 
   title={title}
   tags={tags}/>
-<div class="mockup-window bg-base-300 text-left border border-primary drop-shadow-md" style="margin-top: 20px">
+<div class="mockup-window bg-base-200 text-left border border-primary drop-shadow-md" style="margin-top: 20px">
   <div class="flex justify-center px-4 py-2 bg-base-100 border-t border-primary">
     <article class="prose max-w-none">
       <slot/>

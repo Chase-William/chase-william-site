@@ -191,21 +191,7 @@
 </Blog>
 
 <style>
-	main {
-		text-align: center;
-		padding: 0.2em;
-		margin: 0 auto;
-		max-width: 900px;
-	}
-
-	@media only screen and (min-width: 768px) {
-		main {
-			padding: 1em;
-		}
-	}
-
-	@media only screen and (min-width: 992px) {
-	}
-	@media only screen and (min-width: 1200px) {
-	}
+	@media only screen and (min-width: 768px) { }
+	@media only screen and (min-width: 992px) { }
+	@media only screen and (min-width: 1200px) { }
 </style>
