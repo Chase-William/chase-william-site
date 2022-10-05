@@ -1,10 +1,11 @@
 <script lang="ts">
+	import type Tag from "src/types/Tag";
   import Tags from "./Tags.svelte";
 
   export let src: string
   export let alt: string
   export let title: string
-  export let tags: unknown[]
+  export let tags: Tag[]
 </script>
 
 <div id="header">
@@ -37,6 +38,7 @@
   h2 {
     margin: auto;
     font-size: x-large;
+    text-align: center;
   }
 
   img {
