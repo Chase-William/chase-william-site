@@ -63,16 +63,13 @@
 		</p> -->
 
 		<CardGrid>
-      <Card
+			<Card
 				title="Pivoting DotDocs 📃"
 				to="blogs/dotdocs"
 				description="I am pivoting my open source documentation generator for C# developers to operate from the cloud. Furthermore, I am developing a system that can connect project metadata so that their hosted documentation automatically links to others."
-        date="10/5/2022"
+				date="10/5/2022"
 			/>
-			<Card 
-        title="HoloLens 2 Development 👓" 
-        to="blogs/hololens2"
-      >
+			<Card title="HoloLens 2 Development 👓" to="blogs/hololens2">
 				<p>
 					During the Summer, Fall, and Spring of 2021 I was employed by the Center on Culture and
 					Language <em>(CCL)</em> at RIT/NTID and integrated live captioning into the HoloLens 2. My
@@ -80,8 +77,22 @@
 					showcases / competitions; the RIT Imagine event. My team and two others won the TAD
 					<em>(technology, arts, and design)</em>.
 				</p>
-			</Card>			
+			</Card>
+      <Card 
+        title="DotDocs - Initial Graph Database" 
+        to="blogs/dotdocs/neo/v1"
+        date="2/4/2023"
+      >
+        <p>
+          After further development of the DotDocs project, the need of a library providing
+          persistent storage has arrived. Therefore, and after much consideration, I will be using
+          a graph database as the primary storage for assembly info. This update outlines my goals
+          for the first iteration of implementation using Neo4j.
+        </p>
+      </Card>
 		</CardGrid>
+
+    <div id="divider"></div>
 
 		<ProjectCard
 			title=".Docs"
@@ -206,7 +217,8 @@
 						name comes from the need to query blueprints and calculate their total cost using
 						recursion. This was a fun build as I recall discovering and implementing recursion
 						before I was made aware of the concept in school. Checkout the readme <a
-							href="https://github.com/Chase-William/BlueQuery" target="_blank">here</a
+							href="https://github.com/Chase-William/BlueQuery"
+							target="_blank">here</a
 						> on github to learn more!
 					</p>
 				</article>
@@ -237,6 +249,10 @@
 		margin: 0 0.2em;
 		padding: 0.7em;
 	}
+
+  #divider {
+    margin-top: 450px;
+  }
 
 	@media only screen and (min-width: 768px) {
 		#blog-reference-body {

@@ -64,9 +64,9 @@
 				<h5>Cross-Platform Capabilities</h5>
 				<p>
 					Dotdocs depends on two technologies: node.js and NET 6.0. Both of these are compatible
-					with all major platforms and my framework approach makes .NET 6.0 compatible too <em
-						>(users have .NET 6.0 assemblies for their platform installed)</em
-					>. However, I use a tool to compile my node.js project into an exe… yea, so that means I
+					with all major platforms and my framework approach makes .NET 6.0 compatible too <em>
+          (users have .NET 6.0 assemblies for their platform installed)</em>. However, I use a 
+          tool to compile my node.js project into an exe… yea, so that means I
 					would need to generate different assemblies for the node.js project for each platform.
 					Moreover, I cannot be certain my platform agnostic C# codebase will work well on all
 					platforms as I do a lot of pathing and IO operations. It would sure be great if I could
@@ -101,6 +101,3 @@
 		</blockquote>
 	</article>
 </Blog>
-
-<style>
-</style>

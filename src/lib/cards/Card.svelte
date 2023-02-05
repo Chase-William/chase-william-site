@@ -7,7 +7,9 @@
   export let alt: string | null = null
 </script>
 
-<div class="card bg-base-100 shadow-xl image-full" style="min-width: 230px;">
+<div 
+  class="card bg-base-100 shadow-xl image-full" 
+  style="min-width: 350px; min-height: 400px; max-width: 450px;">
   <figure><img src={src} alt={alt} /></figure>
   <div class="card-body">
     <h2 class="card-title">{title}</h2>
