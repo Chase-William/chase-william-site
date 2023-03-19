@@ -78,21 +78,27 @@
 					<em>(technology, arts, and design)</em>.
 				</p>
 			</Card>
-      <Card 
-        title="DotDocs - Initial Graph Database" 
-        to="blogs/dotdocs/neo/v1"
-        date="2/4/2023"
-      >
-        <p>
-          After further development of the DotDocs project, the need of a library providing
-          persistent storage has arrived. Therefore, and after much consideration, I will be using
-          a graph database as the primary storage for assembly info. This update outlines my goals
-          for the first iteration of implementation using Neo4j.
-        </p>
-      </Card>
+			<Card title="DotDocs - Initial Graph Database" to="blogs/dotdocs/neo/v1" date="2/4/2023">
+				<p>
+					After further development of the DotDocs project, the need of a library providing
+					persistent storage has arrived. Therefore, and after much consideration, I will be using a
+					graph database as the primary storage for assembly info. This update outlines my goals for
+					the first iteration of implementation using Neo4j.
+				</p>
+			</Card>
+			<Card
+				title="DotDocs - 1st Neo4j Implementation Results"
+				to="blogs/dotdocs/neo/v2"
+				date="3/18/2023"
+			>
+				<p>
+					With much careful planning, I am proud to say I have implemented neo4j into `DotDocs`.
+					Storage of `Repository`, `Project`, `Assembly`, and `Type` nodes with the appropriate relationships now exist. Checkout this blog to read more and see some screenshots of the results.
+				</p>
+			</Card>
 		</CardGrid>
 
-    <div id="divider"></div>
+		<div id="divider" />
 
 		<ProjectCard
 			title=".Docs"
@@ -250,9 +256,9 @@
 		padding: 0.7em;
 	}
 
-  #divider {
-    margin-top: 450px;
-  }
+	#divider {
+		margin-top: 525px;
+	}
 
 	@media only screen and (min-width: 768px) {
 		#blog-reference-body {

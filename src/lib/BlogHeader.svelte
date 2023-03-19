@@ -52,7 +52,7 @@
     display: flex;
     padding: 3px;
     border-radius: 50%;
-    margin: auto;
+    margin: 15px auto;
   }
 
   @media only screen and (min-width: 768px) {
