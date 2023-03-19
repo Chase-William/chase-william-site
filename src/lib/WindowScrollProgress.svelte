@@ -7,8 +7,7 @@
     this.onscroll = () => updateWindowScrollPercentage();
     this.onresize = () => updateWindowScrollPercentage();
 
-    function updateWindowScrollPercentage() {
-      console.log('asd')
+    function updateWindowScrollPercentage() {  
       // this.innerHeight returns the content height of the viewport
       // this.document.documentElement.scrollHeight returns the entire scrollable height of the document
       // Difference in viewport height to document height... what if the document is smaller than the viewport?

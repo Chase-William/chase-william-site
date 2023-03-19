@@ -78,7 +78,10 @@
 					<em>(technology, arts, and design)</em>.
 				</p>
 			</Card>
-			<Card title="DotDocs - Initial Graph Database" to="blogs/dotdocs/neo/v1" date="2/4/2023">
+			<Card 
+				title="DotDocs - Initial Graph Database Plan" 
+				to="blogs/dotdocs/neo/v1" 
+				date="2/4/2023">
 				<p>
 					After further development of the DotDocs project, the need of a library providing
 					persistent storage has arrived. Therefore, and after much consideration, I will be using a
@@ -89,11 +92,10 @@
 			<Card
 				title="DotDocs - 1st Neo4j Implementation Results"
 				to="blogs/dotdocs/neo/v2"
-				date="3/18/2023"
-			>
+				date="3/18/2023">
 				<p>
-					With much careful planning, I am proud to say I have implemented neo4j into `DotDocs`.
-					Storage of `Repository`, `Project`, `Assembly`, and `Type` nodes with the appropriate relationships now exist. Checkout this blog to read more and see some screenshots of the results.
+					With much careful planning, I am proud to say I have implemented neo4j into DotDocs.
+					Storage of <code>Repository</code>, <code>Project</code>, <code>Assembly</code>, and <code>Type</code> nodes with the appropriate relationships now exist. Checkout this blog to read more and see some screenshots of the results.
 				</p>
 			</Card>
 		</CardGrid>

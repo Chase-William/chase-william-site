@@ -1,6 +1,7 @@
 <script>
 	import Blog from '$lib/Blog.svelte';
 	import WindowScrollProgress from '$lib/WindowScrollProgress.svelte';
+	import Gist from "$lib/Gist.svelte";
 </script>
 
 <WindowScrollProgress />
@@ -20,12 +21,13 @@
 		</p>
 
 		<p>
-			During my last Spring semester at RIT, I spent a vast majority of my Spring Break [3/11/2023 -
-			3/19/2023] planning this implementation. The documentation I am referring to can be checked
-			out here on my project’s github wiki. I meticulously designed each node, its properties, and
-			its core relationships. With all this planning, I still, however, wasn’t sure about how
-			everything may work. Therefore, instead of documenting/planning based on assumptions, I took
-			what concrete knowledge I knew and began experimenting.
+			During my last Spring semester at RIT, I spent a vast majority of my Spring Break <em
+				>[3/11/2023 - 3/19/2023]</em
+			> planning this implementation. The documentation I am referring to can be checked out here on
+			my project’s github wiki. I meticulously designed each node, its properties, and its core relationships.
+			With all this planning, I still, however, wasn’t sure about how everything may work. Therefore,
+			instead of documenting/planning based on assumptions, I took what concrete knowledge I knew and
+			began experimenting.
 		</p>
 
 		<p>
@@ -41,15 +43,15 @@
 			Introducing Cypher’s Unwind clause allowing a collection to be unwound into individual nodes
 			where each be operated on in sequence. At the time of its discovery, I didn’t know this
 			functionality would be my bread and butter as currently, I was taking the original approach
-			already discussed. After testing, I found the asynchronous Neo4j.Driver was behaving
-			unpredictable even when using the async/await pattern. For example, setting a breakpoint and
-			manually stepping through execution would yield different results than otherwise. A key
-			takeaway I have coined from this experience in my head is as follows:
+			already discussed. After testing, I found the asynchronous <code>Neo4j.Driver</code> was behaving
+			unpredictable even when using the async/await pattern. For example, setting a breakpoint and manually
+			stepping through execution would yield different results than otherwise. A key takeaway I have
+			coined from this experience in my head is as follows:
 		</p>
 
 		<blockquote>
 			<p>If the use of breakpoints alter execution results, it’s likely an asynchronous issue.</p>
-      - Chase R.
+			- Chase R.
 		</blockquote>
 
 		<p>
@@ -62,14 +64,14 @@
 		</p>
 
 		<p>
-			Introducing the Neo4jClient adding compile-time checks and an API that blends well with the C#
-			landscape. This package vastly improved my developer experience through several key means
-			illustrated below:
+			Introducing the <code>Neo4jClient</code> adding compile-time checks and an API that blends well
+			with the C# landscape. This package vastly improved my developer experience through several key
+			means illustrated below:
 		</p>
 
 		<p>
 			Below is an example of me inserting multiple .csproj file contents or C# Projects into the
-			neo4j instance using the Neo4j.Driver package.
+			neo4j instance using the <code>Neo4j.Driver</code> package.
 
 			<img
 				alt="Example usage of the Neo4j.Driver package."
@@ -79,7 +81,7 @@
 		<p>Here are my pain points with the approach above:</p>
 		<ol>
 			<li>Manually managing a session (this should be optional in imho)</li>
-			<li>Using `StringBuilder` to form queries.</li>
+			<li>Using <code>StringBuilder</code> to form queries.</li>
 			<li>
 				Using external code I found to serialize and deserialize objects to a dictionary that Neo4j
 				can actually understand.
@@ -87,9 +89,11 @@
 			<li>No typing for returned result types.</li>
 			<li>No real compile time checks.</li>
 		</ol>
-		<p>Now checkout the same query, but using the Neo4jClient instead below:</p>
+		<p>Now checkout the same query, but using the <code>Neo4jClient</code> instead below:</p>
 
-		<img alt="Example usage of the Neo4jClient package." src="../../../neo4jclient-example.png" />
+		<div class="center-flex">
+			<img alt="Example usage of the Neo4jClient package." src="../../../neo4jclient-example.png" />
+		</div>
 
 		<p>This is a thing of beauty as:</p>
 		<ol>
@@ -106,19 +110,16 @@
 		</p>
 
 		<p>
-			There is one issue though, I seem unable to use the async/await pattern as using it on any
-			query or the connect driver method results in my applications termination without an exception
+			There is one issue though, I seem unable to use the <em>async/await</em> pattern as using it on
+			any query or the connect driver method results in my applications termination without an exception
 			or even console logging. This problem is evident via the code example below:
 		</p>
 
 		<h4>Approach #1 - <em>async/await</em></h4>
-		<script
-			src="https://gist.github.com/Chase-William/9d70f3457d178519043bfe876f92bb1c.js"></script>
+		<Gist gistUrl="https://gist.github.com/Chase-William/9d70f3457d178519043bfe876f92bb1c"/>
 
 		<h4>Approach #2 - <em>sync</em></h4>
-
-		<script
-			src="https://gist.github.com/Chase-William/67ce9e68528d18a47afde3cb55303009.js"></script>
+		<Gist gistUrl="https://gist.github.com/Chase-William/67ce9e68528d18a47afde3cb55303009"/>
 
 		<p>
 			The first approach doesn’t work, yet the second does, to clarify, the first approach is
