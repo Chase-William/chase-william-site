@@ -4,5 +4,5 @@
 @tailwind utilities;
 
 body {
-  font-family: 'Poppins', 'Roboto', Courier, monospace; /* - 'Centaur' */
+  font-family: 'Roboto', Courier, monospace; /* - 'Centaur' */
 }

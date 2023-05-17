@@ -1,58 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-    <title>Chase William</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
-    <!-- <style>
-      nav {
-        max-width: 1200px;
-        margin: auto;
-        position: sticky;
-        top: 0;
-        z-index: 1;
-        background-color: inherit;
-      }
 
-      .scrolled-down{
-        transform:translateY(-100%); 
-        transition: all 0.3s ease-in-out;
-      }
-      .scrolled-up{
-        transform:translateY(0); 
-        transition: all 0.3s ease-in-out;
-      }
-    </style>   -->
-		%sveltekit.head%
-	</head>
-	<body>
+<head>
+  <title>Chase William</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  %sveltekit.head%
+</head>
 
-    <!-- Navigation -->
-    <!-- <nav class="bg-base-100" id="my-nav">
-      <ul class="menu bg-base-100 menu-horizontal" style="width: 100%;">
-        <li><a href="./">Home</a></li>
-        <li><a href="/blog">Blogs</a></li>
-      </ul>
-    </nav>  -->
+<body style="min-height: 100vh; display: flex; flex-direction: column;">
+  <div class="w-full">%sveltekit.body%</div>
+</body>
+<footer class="flex p-5 mt-auto">
+  <p id="footer-p" class="m-auto text-slate-500"></p>
+</footer>
 
-		<div>%sveltekit.body%</div>
-	</body>
-  <!-- Navigation Animation Script -->
-  <!-- <script>
-    let nav = document.getElementById('my-nav')
-    let lastScrollTop = 0;
-    document.addEventListener('scroll', function() {
-      const currentScrollTop = window.pageYOffset
-      if (currentScrollTop > lastScrollTop){
-        nav.classList.remove('scrolled-up');
-        nav.classList.add('scrolled-down');  
-      } else {
-        nav.classList.remove('scrolled-down');
-        nav.classList.add('scrolled-up');           
-      }
-      lastScrollTop = currentScrollTop
-    }, false)
-  </script> -->
+<script>
+  document.getElementById('footer-p').textContent = `Copyright © 2021 - ${new Date().getFullYear()}`
+</script>
+
 </html>

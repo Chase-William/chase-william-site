@@ -31,7 +31,7 @@
   <div style="margin: auto;">
     <FunShape toggled={toggled}/>  
   </div>  
-  <div style="margin: auto 1em">
+  <div>
     <h2 
       on:mouseover={activate} 
       on:focus="{activate}" 

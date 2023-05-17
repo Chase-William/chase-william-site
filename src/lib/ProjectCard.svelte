@@ -70,10 +70,6 @@
 </div>
 
 <style>
-	/* * { 
-    border: solid #5B6DCD 2px;
-  } */
-
 	* {
 		margin: 0;
 		padding: 0;

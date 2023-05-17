@@ -8,8 +8,7 @@
 </script>
 
 <div 
-  class="card bg-base-100 shadow-xl image-full" 
-  style="min-width: 350px; min-height: 400px; max-width: 450px;">
+  class="card bg-base-100 shadow-xl image-full">
   <figure><img src={src} alt={alt} /></figure>
   <div class="card-body">
     <h2 class="card-title">{title}</h2>
