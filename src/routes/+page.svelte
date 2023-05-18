@@ -55,13 +55,6 @@
 			</p>
 		</div>				
 
-    <p class="m-auto text-3xl">Page Road Map</p>
-    <ul class="steps">
-      <li class="step step-primary">Personal Projects</li>
-      <li class="step step-primary">Experience</li>
-      <li class="step step-primary">Frameworks</li>
-    </ul>
-
     <Title text=' Personal Projects' emoji='🚧'/>
 
 		<ProjectCard
