@@ -1,9 +1,12 @@
 <script lang="ts">
 	import Card from '$lib/cards/Card.svelte';
 	import CardGrid from '$lib/cards/CardGrid.svelte';
+	import Experiences from '$lib/Experiences.svelte';
 	import MeetMe from '$lib/MeetMe.svelte';
 	import ProjectCard from '$lib/ProjectCard.svelte';
+	import Title from '$lib/Title.svelte';
 	import WindowScrollProgress from '$lib/WindowScrollProgress.svelte';
+	import { experience } from '../types/Experience';
 </script>
 
 <svelte:head>
@@ -45,12 +48,21 @@
 	</div>
 
 	<div id="content-body">
-	
-    <div class="bg-base-100 shadow-md p-5 rounded-md">
-      <p>
-        This website is where I post updates regarding my personal projects and more! Feel free to checkout the <code>Blogs</code> page to see my recent coding adventures.
-      </p>
-    </div>
+		<div class="bg-base-100 shadow-md p-5 rounded-md">
+			<p>
+				This website is where I post updates regarding my personal projects and more! Feel free to
+				checkout the <code>Blogs</code> page to see my recent coding adventures.
+			</p>
+		</div>				
+
+    <p class="m-auto text-3xl">Page Road Map</p>
+    <ul class="steps">
+      <li class="step step-primary">Personal Projects</li>
+      <li class="step step-primary">Experience</li>
+      <li class="step step-primary">Frameworks</li>
+    </ul>
+
+    <Title text=' Personal Projects' emoji='🚧'/>
 
 		<ProjectCard
 			title=".Docs"
@@ -182,7 +194,44 @@
 				</article>
 			</svelte:fragment>
 		</ProjectCard>
+
+    <Experiences
+			experiences={[
+				experience(
+					'HoloLens 2 App Developer',
+					'Research and develop technologies to integrate interpreting & captioning services into the HoloLens 2 space.',
+					'Rochester Institute of Technology, NTID Research Center on Culture and Language',
+					'May 26th',
+					'May 14th'
+				),
+				experience(
+					'Human Resource IT Intern',
+					'Optimize HR interactions through automation by evaluating requirements and performing test in an isolated tenant.',
+					'The Dow Chemical Company, Human Resources IT Department',
+					'May 16th',
+					'August 5th'
+				),
+				experience(
+					'Teaching Assistant',
+					'Provide instructional support to students and professors (C#, Github, general coding skills).',
+					'Rochester Institute of Technology',
+					'January 21st',
+					'April 25th'
+				),
+				experience(
+					'Lead Tutor',
+					'Support student learning by explaining concepts and how to apply them.',
+					'Rochester Institute of Technology, ICS Department Peer Tutoring Program',
+					'January 20th',
+					'May 5th'
+				),
+        experience('Mobile App Developer', 'Built an Android and iOS application professionally for a client with the application, BabyFingers, published to both Google & Apple app stores.', 'Rochester Institute of Technology, ICS Department', 'August 20th', 'January 21st')
+			]}
+		/>
 	</div>
+
+  <div class="p-10"></div>
+
 	<script>
 		const options = {
 			delay: 40,

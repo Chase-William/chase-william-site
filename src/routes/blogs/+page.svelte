@@ -5,18 +5,12 @@
 <div>
   <CardGrid>
     <Card
-      title="Pivoting DotDocs 📃"
-      to="blogs/dotdocs"
-      description="I am pivoting my open source documentation generator for C# developers to operate from the cloud. Furthermore, I am developing a system that can connect project metadata so that their hosted documentation automatically links to others."
-      date="10/5/2022"
-    />
-    <Card title="HoloLens 2 Development 👓" to="blogs/hololens2">
+      title="DotDocs - 1st Neo4j Implementation Results"
+      to="blogs/dotdocs/neo/v2"
+      date="3/18/2023">
       <p>
-        During the Summer, Fall, and Spring of 2021 I was employed by the Center on Culture and
-        Language <em>(CCL)</em> at RIT/NTID and integrated live captioning into the HoloLens 2. My
-        team and I after several months of prep competed in one of RIT's largest technical
-        showcases / competitions; the RIT Imagine event. My team and two others won the TAD
-        <em>(technology, arts, and design)</em>.
+        With much careful planning, I am proud to say I have implemented neo4j into DotDocs.
+        Storage of <code>Repository</code>, <code>Project</code>, <code>Assembly</code>, and <code>Type</code> nodes with the appropriate relationships now exist. Checkout this blog to read more and see some screenshots of the results.
       </p>
     </Card>
     <Card 
@@ -31,12 +25,18 @@
       </p>
     </Card>
     <Card
-      title="DotDocs - 1st Neo4j Implementation Results"
-      to="blogs/dotdocs/neo/v2"
-      date="3/18/2023">
+      title="Pivoting DotDocs 📃"
+      to="blogs/dotdocs"
+      description="I am pivoting my open source documentation generator for C# developers to operate from the cloud. Furthermore, I am developing a system that can connect project metadata so that their hosted documentation automatically links to others."
+      date="10/5/2022"
+    />           
+    <Card title="HoloLens 2 Development 👓" to="blogs/hololens2">
       <p>
-        With much careful planning, I am proud to say I have implemented neo4j into DotDocs.
-        Storage of <code>Repository</code>, <code>Project</code>, <code>Assembly</code>, and <code>Type</code> nodes with the appropriate relationships now exist. Checkout this blog to read more and see some screenshots of the results.
+        During the Summer, Fall, and Spring of 2021 I was employed by the Center on Culture and
+        Language <em>(CCL)</em> at RIT/NTID and integrated live captioning into the HoloLens 2. My
+        team and I after several months of prep competed in one of RIT's largest technical
+        showcases / competitions; the RIT Imagine event. My team and two others won the TAD
+        <em>(technology, arts, and design)</em>.
       </p>
     </Card>
   </CardGrid>
