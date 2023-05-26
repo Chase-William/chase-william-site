@@ -34,5 +34,6 @@
 	</div>
 	<div class="navbar-end">
 		<a class="btn" href="https://github.com/Chase-William" target="_blank">Github</a>
+		<a class="btn" href="https://www.linkedin.com/in/chase-roth/" target="_blank">LinkedIn</a>
 	</div>
 </div>

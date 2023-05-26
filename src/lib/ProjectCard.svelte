@@ -31,7 +31,7 @@
 		{/if}
 	</a>
 	<div id="project-info-container">
-		<div id="project-header">
+		<div class="flex sm:p-0 p-4">
 			<div id="name-with-tags">
 				<div style="display: flex;">
 					<h2 class="text-3xl text-left">
@@ -45,7 +45,7 @@
 					<Tags {tags} />
 				</div>
 			</div>
-			<div id="goto-container">
+			<div class="flex flex-col items-end gap-1 grow">
 				{#if github}
 					<a
 						class="github-button"
@@ -70,11 +70,6 @@
 </div>
 
 <style>
-	* {
-		margin: 0;
-		padding: 0;
-	}
-
   .adjusted-btn {
     padding: 0 1em;
   }
@@ -97,25 +92,12 @@
 		flex-direction: column;
 		width: 100%;
 		margin: auto 0;
-	}
-
-	#project-header {
-		display: flex;
-		flex-direction: row;
-	}
+	}	
 
 	#name-with-tags {
 		display: flex;
 		flex-direction: column;
 		width: 70%;
-	}
-
-	#goto-container {
-		text-align: right;
-		width: 30%;
-    display: flex;
-    align-items: flex-end;
-    flex-direction: column;
 	}
 
 	#project-body {
