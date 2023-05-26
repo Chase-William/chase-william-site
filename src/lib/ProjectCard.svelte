@@ -31,7 +31,7 @@
 		{/if}
 	</a>
 	<div id="project-info-container">
-		<div class="flex sm:p-0 p-4">
+		<div class="flex lg:p-0 p-4">
 			<div id="name-with-tags">
 				<div style="display: flex;">
 					<h2 class="text-3xl text-left">
