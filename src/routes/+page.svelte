@@ -1,11 +1,10 @@
 <script lang="ts">
-	import Card from '$lib/cards/Card.svelte';
-	import CardGrid from '$lib/cards/CardGrid.svelte';
 	import Experiences from '$lib/Experiences.svelte';
 	import MeetMe from '$lib/MeetMe.svelte';
 	import ProjectCard from '$lib/ProjectCard.svelte';
 	import Title from '$lib/Title.svelte';
 	import WindowScrollProgress from '$lib/WindowScrollProgress.svelte';
+	import Scene from '$lib/three/scene.svelte';
 	import { experience } from '../types/Experience';
 </script>
 
@@ -14,6 +13,8 @@
 </svelte:head>
 <main>
 	<WindowScrollProgress />
+
+	<Scene/>
 
 	<div id="meetme" style="margin-top: 1em;">
 		<MeetMe
