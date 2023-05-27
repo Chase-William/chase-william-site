@@ -4,7 +4,6 @@
 	import ProjectCard from '$lib/ProjectCard.svelte';
 	import Title from '$lib/Title.svelte';
 	import WindowScrollProgress from '$lib/WindowScrollProgress.svelte';
-	import Scene from '$lib/three/scene.svelte';
 	import { experience } from '../types/Experience';
 </script>
 
@@ -12,9 +11,7 @@
 	<title>☕ Welcome to Chase's site!</title>
 </svelte:head>
 <main>
-	<WindowScrollProgress />
-
-	<Scene/>
+	<WindowScrollProgress />	
 
 	<div id="meetme" style="margin-top: 1em;">
 		<MeetMe

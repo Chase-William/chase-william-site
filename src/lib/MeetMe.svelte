@@ -12,8 +12,8 @@
 </script>
 
 <div id="main-about-container">
-  <div id="about-container">
-    <div id="selfie-container" class="shadow-lg bg-primary">
+  <div id="about-container">  
+    <div id="selfie-container" class="shadow-lg bg-primary">         
       <img src={src} alt={alt} />
     </div>
     <h2>

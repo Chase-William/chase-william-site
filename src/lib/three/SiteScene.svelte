@@ -9,4 +9,14 @@
   });
 </script>
 
-<canvas bind:this={el}></canvas>
+<canvas 
+  bind:this={el}
+  id="bg"
+  class="fixed w-full h-full">
+</canvas>
+
+<style>
+  #bg {
+    z-index: -1;
+  }
+</style>

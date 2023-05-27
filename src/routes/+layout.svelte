@@ -1,10 +1,12 @@
 <!-- Required for tailwind -->
 <script>
 	import Navbar from '$lib/Navbar.svelte';
+	import SiteScene from '$lib/three/SiteScene.svelte';
 	import '../app.css';
 </script>
 
 <div id="background" />
+<SiteScene/>
 <header>
 	<Navbar />
 </header>
