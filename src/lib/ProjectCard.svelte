@@ -63,7 +63,7 @@
 				{/if}
 			</div>
 		</div>
-		<div id="project-body" class="bg-base-100/75 rounded-md shadow-md">
+		<div id="project-body" class="bg-base-100 rounded-md shadow-md">
 			<slot name="content" />
 		</div>
 	</div>

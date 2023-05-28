@@ -6,7 +6,7 @@
 </script>
 
 <Title text='Experience' emoji='💼'/>
-<div class="flex flex-nowrap flex-col gap-5 p-4">
+<div class="flex flex-nowrap flex-col gap-5 p-4 bg-base-100 rounded-md shadow-md">
 	{#each experiences as experience}
 		<div>
 			<p class="text-xl font-semibold">{experience.title}</p>
