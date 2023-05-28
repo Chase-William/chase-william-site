@@ -1,16 +1,16 @@
-// @ts-nocheck
+//// @ts-nocheck
 import * as THREE from 'three';
 
-let renderer, scene, camera;
+let renderer: THREE.WebGLRenderer, scene: THREE.Scene, camera: THREE.PerspectiveCamera
 
-let line;
+let line: THREE.Line<THREE.BufferGeometry<THREE.NormalBufferAttributes>, THREE.LineBasicMaterial>
 const MAX_POINTS = 1500;
-let drawCount;
+let drawCount: number;
 
 
-function init(canvas) {
+function init(canvas: HTMLCanvasElement) {
   // renderer
-  renderer = new THREE.WebGLRenderer({ alpha: 0, canvas: canvas });
+  renderer = new THREE.WebGLRenderer({ alpha: true, canvas: canvas });
   renderer.setPixelRatio(window.devicePixelRatio);
   renderer.setSize(window.innerWidth, window.innerHeight);
   renderer.setClearColor(0x000, 0)
@@ -46,8 +46,11 @@ function updatePositions() {
   x = y = z = index = 0;
 
   for (let i = 0, l = MAX_POINTS; i < l; i++) {
+    // @ts-ignore
     positions[index++] = x;
+    // @ts-ignore
     positions[index++] = y;
+    // @ts-ignore
     positions[index++] = z;
 
     x += (Math.random() - 0.5) * 30;
@@ -82,7 +85,7 @@ const resize = () => {
   camera.updateProjectionMatrix();
 };
 
-export const createScene = (canvas) => {
+export const createScene = (canvas: HTMLCanvasElement) => {
   init(canvas)
   resize();
   animate();
