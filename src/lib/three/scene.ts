@@ -1,12 +1,14 @@
-//// @ts-nocheck
 import * as THREE from 'three';
 
-let renderer: THREE.WebGLRenderer, scene: THREE.Scene, camera: THREE.PerspectiveCamera
+let renderer: THREE.WebGLRenderer, 
+    scene: THREE.Scene, 
+    camera: THREE.PerspectiveCamera;
+let worm: Worm
 
-let line: THREE.Line<THREE.BufferGeometry<THREE.NormalBufferAttributes>, THREE.LineBasicMaterial>
-const MAX_POINTS = 1500;
-let drawCount: number;
+// instantiate a loader
+// const loader = new SVGLoader();
 
+// const loader = new GLTFLoader();
 
 function init(canvas: HTMLCanvasElement) {
   // renderer
@@ -20,63 +22,21 @@ function init(canvas: HTMLCanvasElement) {
   // camera
   camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 10000);
   camera.position.set(0, 0, 1000);
-  // geometry
-  const geometry = new THREE.BufferGeometry();
-  // attributes
-  const positions = new Float32Array(MAX_POINTS * 3); // 3 vertices per point
-  geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
-  // drawcalls
-  drawCount = 2; // draw the first 2 points, only
-  geometry.setDrawRange(0, drawCount);
   // material
   const material = new THREE.LineBasicMaterial({
     color: 0xff0000
-  });
-  // line
-  line = new THREE.Line(geometry, material);
-  scene.add(line);
-  // update positions
-  updatePositions();
-}
-
-// update positions
-function updatePositions() {
-  const positions = line.geometry.attributes.position.array;
-  let x, y, z, index;
-  x = y = z = index = 0;
-
-  for (let i = 0, l = MAX_POINTS; i < l; i++) {
-    // @ts-ignore
-    positions[index++] = x;
-    // @ts-ignore
-    positions[index++] = y;
-    // @ts-ignore
-    positions[index++] = z;
-
-    x += (Math.random() - 0.5) * 30;
-    y += (Math.random() - 0.5) * 30;
-    z += (Math.random() - 0.5) * 30;
-  }
-}
-
-// render
-function render() {
-  renderer.render(scene, camera);
+  })
+  // create the worm
+  worm = new Worm(material)
+  scene.add(worm.line)
+  worm.move()
 }
 
 // animate
 function animate() {
-  requestAnimationFrame(animate);
-  drawCount = (drawCount + 1) % MAX_POINTS;
-  line.geometry.setDrawRange(0, drawCount);
-  if (drawCount === 0) {
-    console.log('first render')
-    // periodically, generate new data
-    updatePositions();
-    line.geometry.attributes.position.needsUpdate = true; // required after the first render
-    line.material.color.setHSL(Math.random(), 1, 0.5);
-  }
-  render();
+  requestAnimationFrame(animate)
+  worm.move()
+  renderer.render(scene, camera);
 }
 
 const resize = () => {
@@ -89,4 +49,39 @@ export const createScene = (canvas: HTMLCanvasElement) => {
   init(canvas)
   resize();
   animate();
+}
+
+const MAX_POINTS = 2
+
+export class Worm {
+  line: THREE.Line<THREE.BufferGeometry<THREE.NormalBufferAttributes>, THREE.LineBasicMaterial>
+
+  constructor(material: THREE.LineBasicMaterial) {
+    // geometry
+    const geometry = new THREE.BufferGeometry()
+    // attributes
+    const positions = new Float32Array(MAX_POINTS * 3) // 3 vertices per point
+    geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3))
+    // set the line used for rendering
+    this.line = new THREE.Line(geometry, material)
+  }
+
+  move() {
+    const positions = this.line.geometry.attributes.position.array;
+    let x, y, z, index;
+    x = y = z = index = 0;
+  
+    for (let i = 0, l = MAX_POINTS; i < l; i++) {
+      // @ts-ignore
+      positions[index++] = x;
+      // @ts-ignore
+      positions[index++] = y;
+      // @ts-ignore
+      positions[index++] = z;
+  
+      x += (Math.random() - 0.5) * 30;
+      y += (Math.random() - 0.5) * 30;
+      z += (Math.random() - 0.5) * 30;
+    }
+  }
 }
