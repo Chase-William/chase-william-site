@@ -2,61 +2,52 @@
   The `MeetMe` component displays information about a person.
 -->
 <script lang="ts">
-	import type Tag from "src/types/Tag";
-  import Tags from "./Tags.svelte"
+	import type Tag from 'src/types/Tag';
+	import Tags from './Tags.svelte';
 
-  export let src: string
-  export let alt: string
-  export let about: string
-  export let tags: Tag[]
+	export let src: string;
+	export let alt: string;
+	export let about: string;
+	export let tags: Tag[];
 </script>
 
-<div id="main-about-container">
-  <div id="about-container">
-    <div id="selfie-container" class="shadow-lg bg-primary">
-      <img src={src} alt={alt} />
-    </div>
-    <h2>
-      {about}
-    </h2>    
-  </div>
-  <div id="hr-tags">
-    <div id="horizontal-line"/>
-    <Tags tags={tags} style='center'/>
-  </div>
+<div>
+	<div class="md:flex">
+		<div class="flex relative w-40 md:w-96 m-auto md:ml-4">
+			<div class="drop-shadow-lg absolute w-full h-full">
+				<img id="blob" alt="A moving blog shape behind my avatar." src="avatar-bg.svg" />
+			</div>
+			<div class="flex justify-center rounded-full m-2 z-50">
+				<img {src} {alt} class="p-2" />
+			</div>
+		</div>
+		<h2>
+			{about}
+		</h2>
+	</div>
+	<div id="hr-tags">
+		<div id="horizontal-line" />
+		<Tags {tags} style="center" />
+	</div>
 </div>
 
 <style>
-  /* * { 
-    border: solid #5B6DCD 2px;
-  } */
+	#blob {
+		-webkit-animation: spin 4s linear infinite;
+		-moz-animation: spin 4s linear infinite;
+		animation: spin 4s linear infinite;
+	}
 
-  #about-container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-  }	
+	#horizontal-line {
+		max-width: 1400px;
+		margin-bottom: 0.2em;
+		height: 2px;
+		background-image: linear-gradient(to left, #0000, #fefeff, #fefeff, #0000);
+	}
 
-  #horizontal-line {
-    max-width: 1400px;
-    margin-bottom: 0.2em;
-    height: 2px;
-    background-image: linear-gradient(to left, #0000, #FEFEFF, #FEFEFF, #0000);
-  }
-
-  img {
+	img {
 		width: 100%;
-    border-radius: 50%;
-	} 
-
-  #selfie-container {
-    max-width: 120px;
-    min-width: 90px;
-    display: flex;
-    padding: 3px;
-    justify-content: center;
-    border-radius: 50%;
-    margin: auto;
+		border-radius: 50%;
 	}
 
 	h2 {
@@ -64,58 +55,22 @@
 		text-align: center;
 	}
 
-  @media only screen and (min-width: 500px) { 
-    #selfie-container {
-      min-width: 110px;
-    }
+	@media only screen and (min-width: 500px) {
+		#horizontal-line {
+			margin-top: 1em;
+		}
 
-    #textual-content {
-      display: flex;
-      justify-content: baseline;
-    }
+		h2 {
+			text-align: left;
+			margin: auto 1em;
+		}
+	}
 
-    #about-container {
-      display: flex;      
-      flex-direction: row;
-    }
-
-    #selfie-container {
-      margin: 0;
-    }
-
-    #horizontal-line { 
-      margin-top: 1em;
-    }
-
-    h2 {
-      text-align: left;
-      margin: auto 1em;
-    }
-  }
-
-  @media only screen and (min-width: 900px) { }
-
-  @media only screen and (min-width: 1200px) { 
-    #about-container {
-      position: relative;
-      z-index: 1;
-    }
-
-    #selfie-container {
-      max-width: 200px;
-      position: relative;
-      z-index: 2;
-    }
-
-    img {
-      position: relative;
-      z-index: 3;
-    }
-
-    #horizontal-line {
-      position: relative;
-      z-index: 0;
-      /* margin: -6.0em auto 0 auto; */
-    }
-  }
+	@media only screen and (min-width: 1200px) {
+		#horizontal-line {
+			position: relative;
+			z-index: 0;
+			/* margin: -6.0em auto 0 auto; */
+		}
+	}
 </style>
