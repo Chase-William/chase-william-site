@@ -1,13 +1,34 @@
 import * as THREE from 'three';
+import { SVGLoader } from 'three/examples/jsm/loaders/SVGLoader';
 
-let renderer: THREE.WebGLRenderer, 
-    scene: THREE.Scene, 
-    camera: THREE.PerspectiveCamera;
+let renderer: THREE.WebGLRenderer,
+  scene: THREE.Scene,
+  camera: THREE.PerspectiveCamera;
 let worm: Worm
 
 // instantiate a loader
-// const loader = new SVGLoader();
+const loader = new SVGLoader();
+loader.load('hex.svg', (data) => {
+  const paths = data.paths;
+  const group = new THREE.Group();
 
+  for (let i = 0; i < paths.length; i++) {
+    const path = paths[i];
+    const material = new THREE.MeshBasicMaterial({
+      color: path.color,
+      side: THREE.DoubleSide,
+      depthWrite: false
+    })
+    const shapes = SVGLoader.createShapes(path);
+    for (let j = 0; j < shapes.length; j++) {
+      const shape = shapes[j];
+      const geometry = new THREE.ShapeGeometry(shape);
+      const mesh = new THREE.Mesh(geometry, material);
+      group.add(mesh);
+    }
+  }
+  scene.add(group);
+})
 // const loader = new GLTFLoader();
 
 function init(canvas: HTMLCanvasElement) {
@@ -70,7 +91,7 @@ export class Worm {
     const positions = this.line.geometry.attributes.position.array;
     let x, y, z, index;
     x = y = z = index = 0;
-  
+
     for (let i = 0, l = MAX_POINTS; i < l; i++) {
       // @ts-ignore
       positions[index++] = x;
@@ -78,7 +99,7 @@ export class Worm {
       positions[index++] = y;
       // @ts-ignore
       positions[index++] = z;
-  
+
       x += (Math.random() - 0.5) * 30;
       y += (Math.random() - 0.5) * 30;
       z += (Math.random() - 0.5) * 30;
