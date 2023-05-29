@@ -15,9 +15,12 @@
 	<div class="md:flex">
 		<div class="flex relative w-40 md:w-96 m-auto md:ml-4">
 			<div class="drop-shadow-lg absolute w-full h-full">
-				<img id="blob" alt="A moving blog shape behind my avatar." src="avatar-bg.svg" />
+				<img
+          id="blob" 
+          alt="A moving blog shape behind my avatar." 
+          src="avatar-bg.svg" />
 			</div>
-			<div class="flex justify-center rounded-full m-2 z-50">
+			<div class="flex justify-center rounded-full m-2 z-10">
 				<img {src} {alt} class="p-2" />
 			</div>
 		</div>
