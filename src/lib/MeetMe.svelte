@@ -4,7 +4,7 @@
 <script lang="ts">
 	import type Tag from 'src/types/Tag';
 	import Tags from './Tags.svelte';
-	import IntroScene from './three/IntroScene.svelte';
+  import IntroScene from './three/IntroScene.svelte';
 
 	export let src: string;
 	export let alt: string;
@@ -29,10 +29,6 @@
 </div>
 
 <style>
-	/* * { 
-    border: solid #5B6DCD 2px;
-  } */
-
 	#about-container {
 		display: flex;
 		justify-content: center;
@@ -88,9 +84,6 @@
 			text-align: left;
 			margin: auto 1em;
 		}
-	}
-
-	@media only screen and (min-width: 900px) {
 	}
 
 	@media only screen and (min-width: 1200px) {
