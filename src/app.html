@@ -7,6 +7,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <script src="https://unpkg.com/scrollreveal"></script>
   <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <style>
+    footer {
+      animation: fadeInAnimation ease 3s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+      animation-delay: 3s;
+      opacity: 0;
+    }
+
+    @keyframes fadeInAnimation {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+  </style>
   %sveltekit.head%
 </head>
 

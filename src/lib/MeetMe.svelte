@@ -4,6 +4,7 @@
 <script lang="ts">
 	import type Tag from 'src/types/Tag';
 	import Tags from './Tags.svelte';
+  import IntroScene from './three/IntroScene.svelte';
 
 	export let src: string;
 	export let alt: string;
@@ -11,18 +12,11 @@
 	export let tags: Tag[];
 </script>
 
-<div>
-	<div class="md:flex">
-		<div class="flex relative w-40 md:w-96 m-auto md:ml-4">
-			<div class="drop-shadow-lg absolute w-full h-full">
-				<img
-          id="blob" 
-          alt="A moving blog shape behind my avatar." 
-          src="avatar-bg.svg" />
-			</div>
-			<div class="flex justify-center rounded-full m-2 z-10">
-				<img {src} {alt} class="p-2" />
-			</div>
+<div id="meetme-container" class="h-screen flex flex-col justify-center relative border-b-8 shadow">
+  <IntroScene/>
+	<div id="about-container" class="max-w-4xl ml-auto mr-auto z-50">
+		<div id="selfie-container" class="shadow-lg bg-primary">
+			<img {src} {alt} />
 		</div>
 		<h2>
 			{about}
@@ -35,10 +29,10 @@
 </div>
 
 <style>
-	#blob {
-		-webkit-animation: spin 4s linear infinite;
-		-moz-animation: spin 4s linear infinite;
-		animation: spin 4s linear infinite;
+	#about-container {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
 	}
 
 	#horizontal-line {
@@ -53,12 +47,35 @@
 		border-radius: 50%;
 	}
 
+	#selfie-container {
+		max-width: 120px;
+		min-width: 90px;
+		display: flex;
+		padding: 3px;
+		justify-content: center;
+		border-radius: 50%;
+		margin: auto;
+	}
+
 	h2 {
 		margin: 0.5em 1em auto 1em;
 		text-align: center;
 	}
 
 	@media only screen and (min-width: 500px) {
+		#selfie-container {
+			min-width: 110px;
+		}
+
+		#about-container {
+			display: flex;
+			flex-direction: row;
+		}
+
+		#selfie-container {
+			margin: 0;
+		}
+
 		#horizontal-line {
 			margin-top: 1em;
 		}
@@ -70,10 +87,25 @@
 	}
 
 	@media only screen and (min-width: 1200px) {
+		#about-container {
+			position: relative;
+			z-index: 1;
+		}
+
+		#selfie-container {
+			max-width: 200px;
+			position: relative;
+			z-index: 2;
+		}
+
+		img {
+			position: relative;
+			z-index: 3;
+		}
+
 		#horizontal-line {
 			position: relative;
 			z-index: 0;
-			/* margin: -6.0em auto 0 auto; */
 		}
 	}
 </style>

@@ -74,14 +74,6 @@
     padding: 0 1em;
   }
 
-	.animated-icon {
-		transition: all 0.25s ease-in-out;
-	}
-
-	.animated-icon:hover {
-		transform: scale(1.05);
-	}
-
 	#project-card {
 		display: flex;
 	}

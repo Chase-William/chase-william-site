@@ -8,7 +8,7 @@
 <header>
 	<Navbar />
 </header>
-<div id="responsive-padded-container" class="ml-auto mr-auto max-w-4xl pt-5">
+<div class="ml-auto mr-auto"> 
 	<slot />
 </div>
 
