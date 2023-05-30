@@ -154,7 +154,7 @@ class Cloud {
         this.#group.position.x = -1 * (this.#width + this.#width / 3)
       }
       else 
-        this.#group.translateX(3)
+        this.#group.translateX(0.5)
     }
   }
 }
