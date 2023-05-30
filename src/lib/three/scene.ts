@@ -9,6 +9,24 @@ let canvas: HTMLCanvasElement
 
 // instantiate a loader
 const loader = new SVGLoader();
+const cloud_x1 = 'cloud-x1.svg'
+const cloud_x2 = 'cloud-x2.svg'
+
+export function setCanvasDimensions(
+  canvas: HTMLCanvasElement, 
+  width: number, 
+  height: number, 
+  set2dTransform = false
+  ) {
+  const ratio = window.devicePixelRatio;
+  canvas.width = width * ratio;
+  canvas.height = height * ratio;
+  canvas.style.width = `${width}px`;
+  canvas.style.height = `${height}px`;
+  if (set2dTransform) {
+    canvas.getContext('2d')?.setTransform(ratio, 0, 0, ratio, 0, 0);
+  }
+}
 
 function init(_canvas: HTMLCanvasElement) {
   canvas = _canvas
@@ -20,7 +38,7 @@ function init(_canvas: HTMLCanvasElement) {
     console.log(canvas.width)
   }
   // renderer
-  renderer = new THREE.WebGLRenderer({ alpha: true, canvas: canvas });
+  renderer = new THREE.WebGLRenderer({ alpha: true, canvas: canvas, antialias: true });
   renderer.setPixelRatio(window.devicePixelRatio);
   renderer.setSize(window.innerWidth, window.innerHeight);
   renderer.setClearColor(0x000, 0)
@@ -29,15 +47,16 @@ function init(_canvas: HTMLCanvasElement) {
   scene = new THREE.Scene();
   // camera
   camera = new THREE.PerspectiveCamera();
-
-  camera.position.set(canvas.width / 2, 0, 1000);
   
   clouds = [
-    new Cloud(0, 0, 4),
-    new Cloud(-100, -400, 3.5),
-    // new Cloud(-400, 0, 3),
-    // new Cloud(-900, -350, 4),
-    // new Cloud(-1000, 200, 1),
+    new Cloud(1300, -200, 3, cloud_x1),
+    new Cloud(1000, 0, 3, cloud_x1),
+    new Cloud(600, -400, 3.5, cloud_x2),
+    new Cloud(300, 200, 3, cloud_x2),
+    new Cloud(0, -350, 4, cloud_x1),
+    new Cloud(-400, 200, 3, cloud_x1),
+    new Cloud(-600, -600, 4.5, cloud_x2),
+    new Cloud(-800, 400, 3, cloud_x1),
   ]
 }
 
@@ -49,9 +68,12 @@ function animate() {
 }
 
 const resize = () => {
+  console.log(camera.position)
+  camera.position.set(canvas.width / 2, 0, 1000);
   renderer.setSize(window.innerWidth, window.innerHeight)
   camera.aspect = window.innerWidth / window.innerHeight
   camera.updateProjectionMatrix()
+  setCanvasDimensions(renderer.domElement, window.innerWidth, window.innerHeight);
   // First call to following line is pointless as callback is still running
   clouds.forEach(cloud => cloud.resize())
 };
@@ -62,9 +84,6 @@ export const createScene = (canvas: HTMLCanvasElement) => {
   animate();
 }
 
-// Prevents animated objects from being moved to the start of animation immediately
-const returnPadding = 70
-
 class Cloud {
   #group: THREE.Group | undefined
   #width: number = 0
@@ -72,8 +91,13 @@ class Cloud {
 
   getGroup(): THREE.Group | undefined { return this.#group }
 
-  constructor(x: number, y: number, scale: number) {
-    loader.load('bg/cloud-x1.svg', (data) => {
+  constructor(
+    x: number, 
+    y: number, 
+    scale: number,
+    asset: string
+    ) {
+    loader.load(`bg/${asset}`, (data) => {
       const paths = data.paths;
       this.#group = new THREE.Group();
 
@@ -112,20 +136,22 @@ class Cloud {
     const bbox = new THREE.Box3().setFromObject(this.#group)
     this.#width = bbox.max.x - bbox.min.x
     this.#height = bbox.max.y - bbox.min.y
+    console.log('resetting position')
+    // this.#group.position.x = 0;
   }
 
   getDebug(): string {
     return `
       x: ${this.#group?.position.x} 
       y: ${this.#group?.position.y} 
-      z: ${this.#group?.position.z}`;
+      z: ${this.#group?.position.z}`
   }
 
   move() {
     if (this.#group) {
       if (this.#group.position.x > canvas.width + this.#width / 3) {
         console.log(`cx: ${canvas.width}, x: ${this.#group.position.x}, x: ${-1 * this.#width}`)
-        this.#group.position.x = -1 * this.#width
+        this.#group.position.x = -1 * (this.#width + this.#width / 3)
       }
       else 
         this.#group.translateX(3)
