@@ -12,21 +12,21 @@ const loader = new SVGLoader();
 const cloud_x1 = 'cloud-x1.svg'
 const cloud_x2 = 'cloud-x2.svg'
 
-export function setCanvasDimensions(
-  canvas: HTMLCanvasElement, 
-  width: number, 
-  height: number, 
-  set2dTransform = false
-  ) {
-  const ratio = window.devicePixelRatio;
-  canvas.width = width * ratio;
-  canvas.height = height * ratio;
-  canvas.style.width = `${width}px`;
-  canvas.style.height = `${height}px`;
-  if (set2dTransform) {
-    canvas.getContext('2d')?.setTransform(ratio, 0, 0, ratio, 0, 0);
-  }
-}
+// export function setCanvasDimensions(
+//   canvas: HTMLCanvasElement, 
+//   width: number, 
+//   height: number, 
+//   set2dTransform = false
+//   ) {
+//   const ratio = window.devicePixelRatio;
+//   canvas.width = width * ratio;
+//   canvas.height = height * ratio;
+//   canvas.style.width = `${width}px`;
+//   canvas.style.height = `${height}px`;
+//   if (set2dTransform) {
+//     canvas.getContext('2d')?.setTransform(ratio, 0, 0, ratio, 0, 0);
+//   }
+// }
 
 function init(_canvas: HTMLCanvasElement) {
   canvas = _canvas
@@ -70,10 +70,10 @@ function animate() {
 const resize = () => {
   console.log(camera.position)
   camera.position.set(canvas.width / 2, 0, 1000);
-  renderer.setSize(window.innerWidth, window.innerHeight)
+  renderer.setSize(document.documentElement.clientWidth, document.documentElement.clientHeight)
   camera.aspect = window.innerWidth / window.innerHeight
   camera.updateProjectionMatrix()
-  setCanvasDimensions(renderer.domElement, window.innerWidth, window.innerHeight);
+  // setCanvasDimensions(renderer.domElement, window.innerWidth, window.innerHeight);
   // First call to following line is pointless as callback is still running
   clouds.forEach(cloud => cloud.resize())
 };
@@ -136,7 +136,6 @@ class Cloud {
     const bbox = new THREE.Box3().setFromObject(this.#group)
     this.#width = bbox.max.x - bbox.min.x
     this.#height = bbox.max.y - bbox.min.y
-    console.log('resetting position')
     // this.#group.position.x = 0;
   }
 
@@ -150,7 +149,7 @@ class Cloud {
   move() {
     if (this.#group) {
       if (this.#group.position.x > canvas.width + this.#width / 3) {
-        console.log(`cx: ${canvas.width}, x: ${this.#group.position.x}, x: ${-1 * this.#width}`)
+        // console.log(`cx: ${canvas.width}, x: ${this.#group.position.x}, x: ${-1 * this.#width}`)
         this.#group.position.x = -1 * (this.#width + this.#width / 3)
       }
       else 
