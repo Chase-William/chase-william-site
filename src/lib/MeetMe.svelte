@@ -14,8 +14,8 @@
 
 <div id="meetme-container" class="h-screen flex flex-col justify-center relative border-b-8 shadow">
   <IntroScene/>
-	<div id="about-container" class="max-w-4xl ml-auto mr-auto z-50">
-		<div id="selfie-container" class="shadow-lg bg-primary">
+	<div id="about-container" class="max-w-4xl ml-4 lg:ml-auto lg:mr-auto z-50">
+		<div id="selfie-container" class="shadow-lg bg-primary m-auto">
 			<img {src} {alt} />
 		</div>
 		<h2>
@@ -53,8 +53,7 @@
 		display: flex;
 		padding: 3px;
 		justify-content: center;
-		border-radius: 50%;
-		margin: auto;
+		border-radius: 50%;	
 	}
 
 	h2 {
