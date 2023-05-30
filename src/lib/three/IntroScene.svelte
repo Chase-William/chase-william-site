@@ -15,6 +15,6 @@
   Debug
 </button> -->
 <canvas bind:this={el} id="bg" class="absolute w-full h-full z-0" />
-<div class="absolute w-full h-full acrylic z-0 shadow"></div>
+<div class="absolute w-full h-full z-0 shadow"></div>
 
 
