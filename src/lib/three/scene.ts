@@ -4,34 +4,15 @@ import { SVGLoader } from 'three/examples/jsm/loaders/SVGLoader';
 let renderer: THREE.WebGLRenderer,
   scene: THREE.Scene,
   camera: THREE.PerspectiveCamera;
-let worm: Worm
+let cloud: Cloud
 
 // instantiate a loader
 const loader = new SVGLoader();
-loader.load('hex.svg', (data) => {
-  const paths = data.paths;
-  const group = new THREE.Group();
-
-  for (let i = 0; i < paths.length; i++) {
-    const path = paths[i];
-    const material = new THREE.MeshBasicMaterial({
-      color: path.color,
-      side: THREE.DoubleSide,
-      depthWrite: false
-    })
-    const shapes = SVGLoader.createShapes(path);
-    for (let j = 0; j < shapes.length; j++) {
-      const shape = shapes[j];
-      const geometry = new THREE.ShapeGeometry(shape);
-      const mesh = new THREE.Mesh(geometry, material);
-      group.add(mesh);
-    }
-  }
-  scene.add(group);
-})
-// const loader = new GLTFLoader();
 
 function init(canvas: HTMLCanvasElement) {
+  canvas.onclick = () => {
+    console.log(cloud.getDebug())
+  }
   // renderer
   renderer = new THREE.WebGLRenderer({ alpha: true, canvas: canvas });
   renderer.setPixelRatio(window.devicePixelRatio);
@@ -43,20 +24,13 @@ function init(canvas: HTMLCanvasElement) {
   // camera
   camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 10000);
   camera.position.set(0, 0, 1000);
-  // material
-  const material = new THREE.LineBasicMaterial({
-    color: 0xff0000
-  })
-  // create the worm
-  worm = new Worm(material)
-  scene.add(worm.line)
-  worm.move()
+  cloud = new Cloud()
 }
 
 // animate
 function animate() {
   requestAnimationFrame(animate)
-  worm.move()
+  cloud.move()
   renderer.render(scene, camera);
 }
 
@@ -72,37 +46,47 @@ export const createScene = (canvas: HTMLCanvasElement) => {
   animate();
 }
 
-const MAX_POINTS = 2
+class Cloud {
+  #group: THREE.Group | undefined
 
-export class Worm {
-  line: THREE.Line<THREE.BufferGeometry<THREE.NormalBufferAttributes>, THREE.LineBasicMaterial>
+  constructor() {
+    loader.load('bg/cloud-x1.svg', (data) => {
+      const paths = data.paths;
+      this.#group = new THREE.Group();
 
-  constructor(material: THREE.LineBasicMaterial) {
-    // geometry
-    const geometry = new THREE.BufferGeometry()
-    // attributes
-    const positions = new Float32Array(MAX_POINTS * 3) // 3 vertices per point
-    geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3))
-    // set the line used for rendering
-    this.line = new THREE.Line(geometry, material)
+      for (let i = 0; i < paths.length; i++) {
+        const path = paths[i];
+        const material = new THREE.MeshBasicMaterial({
+          color: path.color,
+          side: THREE.DoubleSide,
+          depthWrite: false
+        })
+        const shapes = SVGLoader.createShapes(path);
+        for (let j = 0; j < shapes.length; j++) {
+          const shape = shapes[j];
+          const geometry = new THREE.ShapeGeometry(shape);
+          const mesh = new THREE.Mesh(geometry, material);
+          this.#group.add(mesh);
+        }
+      }
+      this.#group.scale.set(4, 4, 4)
+      scene.add(this.#group)
+    })
+  }
+
+  getDebug(): string {
+    return `
+      x: ${this.#group?.position.x} 
+      y: ${this.#group?.position.y} 
+      z: ${this.#group?.position.z}`;
   }
 
   move() {
-    const positions = this.line.geometry.attributes.position.array;
-    let x, y, z, index;
-    x = y = z = index = 0;
-
-    for (let i = 0, l = MAX_POINTS; i < l; i++) {
-      // @ts-ignore
-      positions[index++] = x;
-      // @ts-ignore
-      positions[index++] = y;
-      // @ts-ignore
-      positions[index++] = z;
-
-      x += (Math.random() - 0.5) * 30;
-      y += (Math.random() - 0.5) * 30;
-      z += (Math.random() - 0.5) * 30;
+    if (this.#group) {
+      if (this.#group.position.x > window.innerWidth / 1.2)
+        this.#group.position.x = window.innerWidth * 1.5 * (-1)
+      else 
+        this.#group.translateX(1)
     }
   }
 }

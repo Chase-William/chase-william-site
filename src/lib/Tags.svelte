@@ -11,7 +11,7 @@
   export let style: string | null = null
 </script>
 
-<div {style} id="tags">
+<div {style} id="tags" class="relative z-50">
   {#if tags}
     {#each tags as tag}
       {#if !tag?.src} <!-- If an img src is not defined, display as text using alt -->

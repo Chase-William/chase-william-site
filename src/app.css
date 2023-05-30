@@ -6,3 +6,17 @@
 body {
   font-family: 'Roboto', Courier, monospace; /* - 'Centaur' */
 }
+
+.animated-icon {
+  transition: all 0.25s ease-in-out;
+}
+
+.animated-icon:hover {
+  transform: scale(1.05);
+}
+
+.acrylic {
+  background: rgba(0, 0, 0, 0.15);
+  -webkit-backdrop-filter: blur(7px);
+  backdrop-filter: blur(7px);
+}
