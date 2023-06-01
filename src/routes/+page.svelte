@@ -29,18 +29,10 @@
 						'I like compile-time checks, type safety, and maintainability.. TypeScript is awesome!'
 				},
 				{ alt: 'JavaScript' },
-				{
-					alt: 'Xamarin',
-					tooltip:
-						"I learned my mobile fundamentals with Xamarin in school. I have since then learned how to use SwiftUI and Android's Jetpack Compose to build mobile apps too!"
-				},
-				{ alt: 'Java' },
-				{
-					alt: 'Swift',
-					tooltip:
-						'I really like how swift enforces nullables even on reference types. My time writing Swift has made me a better coder when it comes to considering nullables.'
-				},
-				{ alt: 'Kotlin' }
+				{ alt: 'Web' },
+				{ alt: 'Tailwind' },
+				{ alt: 'Svelte' },
+				{ alt: 'NextJS' }
 			]}
 		/>
 	</div>

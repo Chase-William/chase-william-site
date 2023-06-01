@@ -12,7 +12,7 @@
 	export let tags: Tag[];
 </script>
 
-<div id="meetme-container" class="h-screen flex flex-col justify-center relative border-b-8 shadow">
+<div id="meetme-container" class="h-screen flex flex-col justify-center relative border-b-8 border-base-100 shadow">
   <IntroScene/>
 	<div id="about-container" class="max-w-4xl ml-4 lg:ml-auto lg:mr-auto z-50">
 		<div id="selfie-container" class="shadow-lg bg-primary m-auto">
