@@ -10,8 +10,8 @@
 		"sourceMap": true,
 		"strict": true,
 		// Fixes indirect ambigious imports
-		"module": "ESNext",
-		"target": "esnext",
+		// "module": "ESNext",
+		// "target": "esnext",
 	}
 	// Path aliases are handled by https://kit.svelte.dev/docs/configuration#alias
 	//
