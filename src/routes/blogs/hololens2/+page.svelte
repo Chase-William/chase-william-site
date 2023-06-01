@@ -7,12 +7,12 @@
 
 <Blog
 	title="My HoloLens 2 Development Experience"
-	src="../chase-hololens2.jpg"
+	src="/chase-hololens2.jpg"
 	tags={[
 		{ alt: 'C#' },
-		{ src: '../mrtk.png', alt: 'Mixed Reality Toolkit' },
-		{ src: '../unity.png', alt: 'Unity' },
-		{ src: '../microsoft.png', alt: 'Microsoft' },
+		{ src: '/mrtk.png', alt: 'Mixed Reality Toolkit' },
+		{ src: '/unity.png', alt: 'Unity' },
+		{ src: '/microsoft.png', alt: 'Microsoft' },
 		{ alt: 'IL2CPP' },
 		{ alt: 'UWP' }
 	]}

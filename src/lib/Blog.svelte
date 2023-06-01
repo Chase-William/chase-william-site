@@ -1,6 +1,7 @@
 <script lang="ts">
-	import type Tag from 'src/types/Tag';
-  import BlogHeader from './BlogHeader.svelte'
+	import type Tag from "src/types/Tag";
+	import BlogHeader from "./BlogHeader.svelte";
+
 
   /* BlogHeader props */
   export let src: string
