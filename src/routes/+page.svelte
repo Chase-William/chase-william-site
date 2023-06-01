@@ -28,11 +28,10 @@
 					tooltip:
 						'I like compile-time checks, type safety, and maintainability.. TypeScript is awesome!'
 				},
-				{ alt: 'JavaScript' },
-				{ alt: 'Web' },
 				{ alt: 'Tailwind' },
 				{ alt: 'Svelte' },
-				{ alt: 'NextJS' }
+				{ alt: 'NextJS' },
+				{ alt: 'Three.js' }
 			]}
 		/>
 	</div>
@@ -50,7 +49,7 @@
 				<li><p>Hiking</p></li>
 				<li><p>Reading <em>(am currently reading the Wheel of Time by Robert Jordan)</em></p></li>
 				<li><p>Playing the guitar 🎸</p></li>
-				<li><p>Memorizing powerfull quotes</p></li>
+				<li><p>Memorizing powerful quotes</p></li>
 			</ul>
 			<p class="text-2xl font-semibold">Weight Lifting?</p>
 			<p>
