@@ -37,13 +37,13 @@ const cloudSpeed = 0.2
 
 function init(_canvas: HTMLCanvasElement) {
   canvas = _canvas
-  canvas.onclick = () => {
-    // not safe
-    var bbox = new THREE.Box3().setFromObject(clouds[0].getGroup() as THREE.Group);
-    console.log(bbox)
-    console.log(clouds[0].getDebug())
-    console.log(canvas.width)
-  }
+  // canvas.onclick = () => {
+  //   // not safe
+  //   var bbox = new THREE.Box3().setFromObject(clouds[0].getGroup() as THREE.Group);
+  //   console.log(bbox)
+  //   console.log(clouds[0].getDebug())
+  //   console.log(canvas.width)
+  // }
   // renderer
   renderer = new THREE.WebGLRenderer({ alpha: true, canvas: canvas, antialias: true });
   renderer.setPixelRatio(window.devicePixelRatio);
@@ -84,7 +84,7 @@ function animate() {
 }
 
 const resize = () => {
-  console.log(camera.position)
+  // console.log(camera.position)
   camera.position.set(canvas.width / 2, 0, 1000);
   renderer.setSize(document.documentElement.clientWidth, document.documentElement.clientHeight)
   camera.aspect = window.innerWidth / window.innerHeight
