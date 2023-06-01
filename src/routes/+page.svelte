@@ -10,7 +10,7 @@
 <svelte:head>
 	<title>☕ Welcome to Chase's site!</title>
 </svelte:head>
-<main>
+<main class="flex flex-col gap-8">
 	<WindowScrollProgress />
 
 	<div id="meetme" style="margin-top: 1em;">
@@ -36,42 +36,42 @@
 		/>
 	</div>
 
-	<div id="content-body" class="max-w-4xl m-auto">
-		<div class="bg-base-100 shadow-md p-5 rounded-md">
-			<p>
-				Feel free to read below to learn more about me and head to the <code>Blogs</code> page to see
-				my recent coding adventures.
-			</p>
-			<p class="text-2xl font-semibold mt-4">My Hobbies</p>
-			<ul class="list-disc p-4 pt-2">
-				<li><p>Weight Lifting 💪 / Calisthenics 🤸</p></li>
-				<li><p>Coding</p></li>
-				<li><p>Hiking</p></li>
-				<li><p>Reading <em>(am currently reading the Wheel of Time by Robert Jordan)</em></p></li>
-				<li><p>Playing the guitar 🎸</p></li>
-				<li><p>Memorizing powerful quotes</p></li>
-			</ul>
-			<p class="text-2xl font-semibold">Weight Lifting?</p>
-			<p>
-				Growing up I've always been that extremely skinny kid who looked like <em>skin and bones</em
-				>. Wanting to change this, during my fourth year of college a friend and I went to the
-				weight room together. I bought protein powder and started <em>*eating big to get big*</em>.
-				It was tough and not very rewarding in the beginning, however, as time drew on the impact of
-				my consistent labor became apparent. Therefore, I have been lifting ever since and exploring
-				new related avenues.
-			</p>
-			<p class="text-2xl font-semibold mt-4">The Wheel of Time? 📖</p>
-			<p class="pt-2">
-				If you like <strong>The Lord of the Rings</strong> trilogy or <strong>The Hobbit</strong>, I
-				highly recommend checking out <strong>The Wheel of Time</strong> series by
-				<em>Robert Jordan</em>. Robert Jordan sheds a new light on the fantasy J. R. R. Tolkien
-				created. The best part is, there are 14 long books to enjoy with a writing style I found
-				more palatable than Tolkien's.
-			</p>
-		</div>
+	<div class="bg-base-100 shadow-md p-5 rounded-md max-w-4xl m-auto">
+		<p>
+			Feel free to read below to learn more about me and head to the <code>Blogs</code> page to see my
+			recent coding adventures.
+		</p>
+		<p class="text-2xl font-semibold mt-4">My Hobbies</p>
+		<ul class="list-disc p-4 pt-2">
+			<li><p>Weight Lifting 💪 / Calisthenics 🤸</p></li>
+			<li><p>Coding</p></li>
+			<li><p>Hiking</p></li>
+			<li><p>Reading <em>(am currently reading the Wheel of Time by Robert Jordan)</em></p></li>
+			<li><p>Playing the guitar 🎸</p></li>
+			<li><p>Memorizing powerful quotes</p></li>
+		</ul>
+		<p class="text-2xl font-semibold">Weight Lifting?</p>
+		<p>
+			Growing up I've always been that extremely skinny kid who looked like <em>skin and bones</em>.
+			Wanting to change this, during my fourth year of college a friend and I went to the weight
+			room together. I bought protein powder and started <em>*eating big to get big*</em>. It was
+			tough and not very rewarding in the beginning, however, as time drew on the impact of my
+			consistent labor became apparent. Therefore, I have been lifting ever since and exploring new
+			related avenues.
+		</p>
+		<p class="text-2xl font-semibold mt-4">The Wheel of Time? 📖</p>
+		<p class="pt-2">
+			If you like <strong>The Lord of the Rings</strong> trilogy or <strong>The Hobbit</strong>, I
+			highly recommend checking out <strong>The Wheel of Time</strong> series by
+			<em>Robert Jordan</em>. Robert Jordan sheds a new light on the fantasy J. R. R. Tolkien
+			created. The best part is, there are 14 long books to enjoy with a writing style I found more
+			palatable than Tolkien's.
+		</p>
+	</div>
 
-		<Title text="Personal Projects" emoji="🚧" />
+	<Title text="Personal Projects" emoji="🚧" large={true} />
 
+	<div class="max-w-4xl m-auto flex flex-col gap-8">
 		<ProjectCard
 			title=".Docs"
 			alt=".Docs"
@@ -202,7 +202,9 @@
 				</article>
 			</svelte:fragment>
 		</ProjectCard>
+	</div>
 
+	<div class="max-w-4xl m-auto">
 		<Experiences
 			experiences={[
 				experience(
@@ -276,11 +278,11 @@
 		}
 	}
 
-	#content-body {
+	/* #content-body {
 		display: flex;
 		flex-direction: column;
 		row-gap: 3em;
-	}
+	} */
 
 	@media only screen and (min-width: 768px) {
 		#content-body {
