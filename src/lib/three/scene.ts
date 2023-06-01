@@ -2,9 +2,6 @@ import * as THREE from 'three';
 import { SVGLoader } from 'three/examples/jsm/loaders/SVGLoader';
 import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer.js';
 import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass';
-import { GlitchPass } from 'three/examples/jsm/postprocessing/GlitchPass';
-import { FilmPass } from 'three/examples/jsm/postprocessing/FilmPass';
-import { BloomPass } from 'three/examples/jsm/postprocessing/BloomPass';
 import { RenderPixelatedPass } from 'three/examples/jsm/postprocessing/RenderPixelatedPass';
 
 let renderer: THREE.WebGLRenderer,
