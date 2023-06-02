@@ -1,23 +1,24 @@
 <script lang="ts">
 	export let text: string;
-	export let emoji: string;
 	export let large: boolean = false;
 </script>
 
 {#if !large}
-	{#if emoji}
-		<div class="flex w-full justify-between p-4 rounded-md shadow-md bg-base-100">
-			<p class="text-4xl">{text}</p>
-			<p class="text-2xl mt-auto mb-auto">{emoji}</p>
-		</div>
-	{:else}
-		<p class="text-4xl p-4 rounded-md shadow-md bg-base-100">{text}</p>
-	{/if}
+	<div class="w-5/6 p-4 m-auto rounded-md shadow-md bg-base-100">
+		<p class="text-4xl text-center">{text}</p>
+	</div>
 {:else}
-	<div class="h-screen w-screen bg-base-100 shadow-md flex flex-col justify-center items-center">
-		<img src="bg/projects-bg-50x-o.png" alt="Blurred code as a backdrop." class="h-screen w-screen absolute p-2 blur" />
+	<div
+		class="w-5/6 p-2 m-auto bg-base-100 rounded shadow-md flex flex-col justify-center items-center"
+	>
+		<!-- <img
+			src="bg/projects-bg-50x-o.png"
+			alt="Blurred code as a backdrop."
+			class="h-screen w-screen absolute p-8 blur"
+		/> -->
 		<p class="text-4xl z-10">{text}</p>
-		<p id="demo" class="z-10">&nbsp;</p> <!-- Added non-breaking space to prevent layout shift when animation starts -->
+		<p id="demo" class="z-10">&nbsp;</p>
+		<!-- Added non-breaking space to prevent layout shift when animation starts -->
 		<script>
 			var i = 0;
 			const txt = 'Brewing more coffee!';

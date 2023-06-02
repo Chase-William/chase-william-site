@@ -69,7 +69,7 @@
 		</p>
 	</div>
 
-	<Title text="Personal Projects" emoji="🚧" large={true} />
+	<Title text="Personal Projects 🚧" large={true} />
 
 	<div class="max-w-4xl m-auto flex flex-col gap-8">
 		<ProjectCard
@@ -204,47 +204,45 @@
 		</ProjectCard>
 	</div>
 
-	<div class="max-w-4xl m-auto">
-		<Experiences
-			experiences={[
-				experience(
-					'HoloLens 2 App Developer',
-					'Research and develop technologies to integrate interpreting & captioning services into the HoloLens 2 space.',
-					'Rochester Institute of Technology, NTID Research Center on Culture and Language',
-					'May 26th',
-					'May 14th'
-				),
-				experience(
-					'Human Resource IT Intern',
-					'Optimize HR interactions through automation by evaluating requirements and performing test in an isolated tenant.',
-					'The Dow Chemical Company, Human Resources IT Department',
-					'May 16th',
-					'August 5th'
-				),
-				experience(
-					'Teaching Assistant',
-					'Provide instructional support to students and professors (C#, Github, general coding skills).',
-					'Rochester Institute of Technology',
-					'January 21st',
-					'April 25th'
-				),
-				experience(
-					'Lead Tutor',
-					'Support student learning by explaining concepts and how to apply them.',
-					'Rochester Institute of Technology, ICS Department Peer Tutoring Program',
-					'January 20th',
-					'May 5th'
-				),
-				experience(
-					'Mobile App Developer',
-					'Built an Android and iOS application professionally for a client with the application, BabyFingers, published to both Google & Apple app stores.',
-					'Rochester Institute of Technology, ICS Department',
-					'August 20th',
-					'January 21st'
-				)
-			]}
-		/>
-	</div>
+	<Experiences
+		experiences={[
+			experience(
+				'HoloLens 2 App Developer',
+				'Research and develop technologies to integrate interpreting & captioning services into the HoloLens 2 space.',
+				'Rochester Institute of Technology, NTID Research Center on Culture and Language',
+				'May 26th',
+				'May 14th'
+			),
+			experience(
+				'Human Resource IT Intern',
+				'Optimize HR interactions through automation by evaluating requirements and performing test in an isolated tenant.',
+				'The Dow Chemical Company, Human Resources IT Department',
+				'May 16th',
+				'August 5th'
+			),
+			experience(
+				'Teaching Assistant',
+				'Provide instructional support to students and professors (C#, Github, general coding skills).',
+				'Rochester Institute of Technology',
+				'January 21st',
+				'April 25th'
+			),
+			experience(
+				'Lead Tutor',
+				'Support student learning by explaining concepts and how to apply them.',
+				'Rochester Institute of Technology, ICS Department Peer Tutoring Program',
+				'January 20th',
+				'May 5th'
+			),
+			experience(
+				'Mobile App Developer',
+				'Built an Android and iOS application professionally for a client with the application, BabyFingers, published to both Google & Apple app stores.',
+				'Rochester Institute of Technology, ICS Department',
+				'August 20th',
+				'January 21st'
+			)
+		]}
+	/>
 
 	<div class="p-10" />
 
@@ -275,18 +273,6 @@
 		}
 		100% {
 			opacity: 1;
-		}
-	}
-
-	/* #content-body {
-		display: flex;
-		flex-direction: column;
-		row-gap: 3em;
-	} */
-
-	@media only screen and (min-width: 768px) {
-		#content-body {
-			margin-top: 2em;
 		}
 	}
 </style>

@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 body {
-  font-family: 'Roboto', Courier, monospace; /* - 'Centaur' */
+  font-family:  'Roboto', 'Geologica', Courier, monospace; /* - 'Centaur' */
 }
 
 .animated-icon {
