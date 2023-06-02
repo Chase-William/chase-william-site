@@ -1,5 +1,8 @@
 <script lang="ts">
-	import Experiences from '$lib/Experiences.svelte';
+	import Activity from '$lib/Activity.svelte';
+	import Experience from '$lib/experience/Experience.svelte';
+	import Screenshot from '$lib/experience/Screenshot.svelte';
+	import VideoPlayer from '$lib/experience/VideoPlayer.svelte';
 	import MeetMe from '$lib/MeetMe.svelte';
 	import ProjectCard from '$lib/ProjectCard.svelte';
 	import Title from '$lib/Title.svelte';
@@ -69,7 +72,95 @@
 		</p>
 	</div>
 
-	<Title text="Personal Projects 🚧" large={true} />
+	<Title text="Experience 💼" large={true} />
+
+	<div class="max-w-4xl m-auto flex flex-col gap-8">
+		<Experience
+			experience={experience(
+				'HoloLens 2 App Developer',
+				'Research and develop technologies to integrate interpreting & captioning services into the HoloLens 2 space.',
+				'Rochester Institute of Technology, NTID Research Center on Culture and Language',
+				'May 26th',
+				'May 14th'
+			)}
+		>
+			<svelte:fragment slot="content">
+				<div class="flex p-4">
+					<figure class="w-2/6">
+						<img
+							class="rounded shadow"
+							src="experience/hololens2/the_young_man.jpg"
+							alt="Chase wearing a hololens 2 covered by a beanie and also drinking coffee."
+						/>
+					</figure>
+					<p class="pl-4">Text about why I am wearing a beanie and stuff here.</p>
+				</div>
+				<section>
+					<VideoPlayer url="https://www.youtube.com/embed/Bv_y8Jvgq3A" />
+					<VideoPlayer invert={true} url="https://www.youtube.com/embed/3VzgaB38mPw" />
+				</section>
+			</svelte:fragment>
+		</Experience>
+		<Experience
+			experience={experience(
+				'Mobile App Developer',
+				'Built an Android and iOS application professionally for a client with the application, BabyFingers, published to both Google & Apple app stores.',
+				'Rochester Institute of Technology, ICS Department',
+				'August 20th',
+				'January 21st'
+			)}
+		>
+			<svelte:fragment slot="content">
+				<p class="text-4xl text-center p-4">Final Product Screenshots</p>
+				<div class="flex flex-wrap">
+					<Screenshot
+						src="experience/babyfingers/home_page.png"
+						alt="Babyfingers homepage."
+						caption="So this is just a caption above the above image is all. Just some simple words about the work."
+					/>
+					<Screenshot
+						src="experience/babyfingers/quiz_attempts_page.png"
+						alt="Babyfingers quiz attempts page."
+						caption="So this is just a caption above the above image is all. Just some simple words about the work."
+					/>
+					<Screenshot
+						src="experience/babyfingers/taking_quiz_page.png"
+						alt="Babyfingers taking quiz page."
+						caption="So this is just a caption above the above image is all. Just some simple words about the work."
+					/>
+				</div>
+			</svelte:fragment>
+		</Experience>
+		<Experience
+			experience={experience(
+				'Human Resource IT Intern',
+				'Optimize HR interactions through automation by evaluating requirements and performing test in an isolated tenant.',
+				'The Dow Chemical Company, Human Resources IT Department',
+				'May 16th',
+				'August 5th'
+			)}
+		/>
+		<Experience
+			experience={experience(
+				'Teaching Assistant',
+				'Provide instructional support to students and professors (C#, Github, general coding skills).',
+				'Rochester Institute of Technology',
+				'January 21st',
+				'April 25th'
+			)}
+		/>
+		<Experience
+			experience={experience(
+				'Lead Tutor',
+				'Support student learning by explaining concepts and how to apply them. Maintenance of tutoring website.',
+				'Rochester Institute of Technology, ICS Department Peer Tutoring Program',
+				'January 20th',
+				'May 5th'
+			)}
+		/>
+	</div>
+
+	<Title text="Personal Projects 🚧" />
 
 	<div class="max-w-4xl m-auto flex flex-col gap-8">
 		<ProjectCard
@@ -204,46 +295,6 @@
 		</ProjectCard>
 	</div>
 
-	<Experiences
-		experiences={[
-			experience(
-				'HoloLens 2 App Developer',
-				'Research and develop technologies to integrate interpreting & captioning services into the HoloLens 2 space.',
-				'Rochester Institute of Technology, NTID Research Center on Culture and Language',
-				'May 26th',
-				'May 14th'
-			),
-			experience(
-				'Human Resource IT Intern',
-				'Optimize HR interactions through automation by evaluating requirements and performing test in an isolated tenant.',
-				'The Dow Chemical Company, Human Resources IT Department',
-				'May 16th',
-				'August 5th'
-			),
-			experience(
-				'Teaching Assistant',
-				'Provide instructional support to students and professors (C#, Github, general coding skills).',
-				'Rochester Institute of Technology',
-				'January 21st',
-				'April 25th'
-			),
-			experience(
-				'Lead Tutor',
-				'Support student learning by explaining concepts and how to apply them.',
-				'Rochester Institute of Technology, ICS Department Peer Tutoring Program',
-				'January 20th',
-				'May 5th'
-			),
-			experience(
-				'Mobile App Developer',
-				'Built an Android and iOS application professionally for a client with the application, BabyFingers, published to both Google & Apple app stores.',
-				'Rochester Institute of Technology, ICS Department',
-				'August 20th',
-				'January 21st'
-			)
-		]}
-	/>
-
 	<div class="p-10" />
 
 	<script>
@@ -256,7 +307,7 @@
 		ScrollReveal().reveal('#meetme', options);
 		ScrollReveal().reveal('#blog-reference-body', options);
 		ScrollReveal().reveal('.project', options);
-		ScrollReveal().reveal('.experience-anim', options);
+		ScrollReveal().reveal('.experience', options);
 	</script>
 </main>
 
