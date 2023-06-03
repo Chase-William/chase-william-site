@@ -14,7 +14,6 @@
 	<title>☕ Welcome to Chase's site!</title>
 </svelte:head>
 <main class="flex flex-col gap-8">
-	<WindowScrollProgress />
 
 	<div id="meetme" style="margin-top: 1em;">
 		<MeetMe

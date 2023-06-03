@@ -3,8 +3,6 @@
 	import WindowScrollProgress from '$lib/WindowScrollProgress.svelte';
 </script>
 
-<WindowScrollProgress />
-
 <Blog
 	title="My HoloLens 2 Development Experience"
 	src="/chase-hololens2.jpg"

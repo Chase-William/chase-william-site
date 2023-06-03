@@ -1,9 +1,11 @@
 <!-- Required for tailwind -->
 <script>
 	import Navbar from '$lib/Navbar.svelte';
+	import WindowScrollProgress from '$lib/WindowScrollProgress.svelte';
 	import '../app.css';
 </script>
 
+<WindowScrollProgress />
 <div id="background" />
 <header>
 	<Navbar />

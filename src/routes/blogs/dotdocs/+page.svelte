@@ -3,8 +3,6 @@
 	import WindowScrollProgress from '$lib/WindowScrollProgress.svelte';
 </script>
 
-<WindowScrollProgress />
-
 <Blog
 	title="Pivoting My Personal Project"
 	src="../dotdocs-yellow-512x.png"

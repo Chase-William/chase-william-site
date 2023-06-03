@@ -3,8 +3,6 @@
 	import WindowScrollProgress from '$lib/WindowScrollProgress.svelte';
 </script>
 
-<WindowScrollProgress />
-
 <Blog
 	title="Initial Graph Database Implementation"
 	src="../../../../nodes.png"

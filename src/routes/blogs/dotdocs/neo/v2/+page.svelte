@@ -4,8 +4,6 @@
 	import Gist from "$lib/Gist.svelte";
 </script>
 
-<WindowScrollProgress />
-
 <Blog
 	title="My Neo4j C# Project Database"
 	src="../../../../neo4j-v1-entire-cluster.png"
