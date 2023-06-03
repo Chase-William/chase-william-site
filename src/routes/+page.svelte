@@ -85,7 +85,7 @@
 				<div>
 					<figure class="pb-2">
 						<img class="max-w-md m-auto p-4 w-full" src="experience/dow/dow_logo.png" alt="Dow logo." />
-						<figcaption>
+						<figcaption class="pl-2 pr-2">
 							During the summer of 2022, I had the opportunity to be employed by The Dow Chemical
 							Company as a Human Resources IT Intern. Throughout my stay near Dow's head quarters in
 							Midland Michigan, I learned about their culture, values, and more.
