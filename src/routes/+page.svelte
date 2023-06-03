@@ -17,7 +17,7 @@
 	<WindowScrollProgress />
 
 	<div id="meetme" style="margin-top: 1em;">
-		<MeetMe
+		<!-- <MeetMe
 			src="me-base.jpg"
 			alt="Chase William Roth"
 			about="Hello, My name is Chase 👋 I'm a 2023 graduate of Rochester Institute of Technology with a bachelor's degree in Web & Mobile Computing."
@@ -36,7 +36,7 @@
 				{ alt: 'NextJS' },
 				{ alt: 'Three.js' }
 			]}
-		/>
+		/> -->
 	</div>
 
 	<div class="bg-base-100 shadow-md p-5 rounded-md max-w-4xl m-auto">
@@ -85,19 +85,33 @@
 			)}
 		>
 			<svelte:fragment slot="content">
-				<div class="flex p-4">
-					<figure class="w-2/6">
+				<div class="flex flex-wrap p-4">
+					<figure class="sm:w-2/6">
 						<img
 							class="rounded shadow"
 							src="experience/hololens2/the_young_man.jpg"
 							alt="Chase wearing a hololens 2 covered by a beanie and also drinking coffee."
 						/>
 					</figure>
-					<p class="pl-4">Text about why I am wearing a beanie and stuff here.</p>
+					<div class="pt-4 sm:pl-4 sm:w-4/6">
+						<p>
+							I took this picture as a joke as it would often take several minutes for building and deployment to finish. Therefore, my running gag was, "you gotta get comfy when working on the HoloLens 2.". This gag is most applicative when building apps with Unity, not so much standalone UWP.
+						</p>
+						<p class="pt-2">
+							It was an iteresting experience and could often be frustrating as I had not much experience prior with Unity, and moreover being "early adopters". If you want to know more, checkout my HoloLens 2 blog!
+						</p>
+					</div>
 				</div>
 				<section>
-					<VideoPlayer url="https://www.youtube.com/embed/Bv_y8Jvgq3A" />
-					<VideoPlayer invert={true} url="https://www.youtube.com/embed/3VzgaB38mPw" />
+					<VideoPlayer
+						url="https://www.youtube.com/embed/Bv_y8Jvgq3A"
+						description="In this video I demonstrate live captioning where my computer acts as the sender and the HoloLens 2 the receiver. On my computer, I was running an RIT captioning program sending my captions to a server. The HoloLens 2 was connected to a session and received captions via a Socket.IO connection."
+					/>
+					<VideoPlayer
+						invert={true}
+						url="https://www.youtube.com/embed/3VzgaB38mPw"
+						description="In this video I showcase a live interpreting demonstration through the HoloLens 2. This application was built using Unity and Microsoft's Mixed Reality Took Kit (MRTK). I reverse engineered Microsoft's debug panel which uses quaternions and expanded on it to create the functionality seen."
+					/>
 				</section>
 			</svelte:fragment>
 		</Experience>
@@ -111,22 +125,28 @@
 			)}
 		>
 			<svelte:fragment slot="content">
+				<p class="text-3xl pt-2">Primary Features</p>
+				<ul>
+					<li>asasd</li>
+					<li>asasd</li>
+					<li>asasd</li>
+				</ul>
 				<p class="text-4xl text-center p-4">Final Product Screenshots</p>
 				<div class="flex flex-wrap">
 					<Screenshot
 						src="experience/babyfingers/home_page.png"
 						alt="Babyfingers homepage."
-						caption="So this is just a caption above the above image is all. Just some simple words about the work."
+						caption="The homepage is where users can select their prefered category to explore. "
 					/>
 					<Screenshot
 						src="experience/babyfingers/quiz_attempts_page.png"
 						alt="Babyfingers quiz attempts page."
-						caption="So this is just a caption above the above image is all. Just some simple words about the work."
+						caption="The Quiz Attempts page provided users with a list of quiz results and the option to take another."
 					/>
 					<Screenshot
 						src="experience/babyfingers/taking_quiz_page.png"
 						alt="Babyfingers taking quiz page."
-						caption="So this is just a caption above the above image is all. Just some simple words about the work."
+						caption="The Quiz page is where users actually quiz themselves."
 					/>
 				</div>
 			</svelte:fragment>
@@ -191,9 +211,7 @@
 			<svelte:fragment slot="content">
 				<article class="prose">
 					<p>
-						DotDocs is an intuitive & reliable documentation generator library for C# projects.
-						Currently it produces markdown files as documentation and support for website generation
-						is planned.
+						DotDocs is an intuitive & reliable documentation generator library for C# projects. Currently it produces markdown files as documentation and support for website generation is planned.
 					</p>
 				</article>
 			</svelte:fragment>
