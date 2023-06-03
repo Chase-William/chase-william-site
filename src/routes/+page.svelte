@@ -1,22 +1,20 @@
 <script lang="ts">
-	import Activity from '$lib/Activity.svelte';
 	import Experience from '$lib/experience/Experience.svelte';
 	import Screenshot from '$lib/experience/Screenshot.svelte';
 	import VideoPlayer from '$lib/experience/VideoPlayer.svelte';
 	import MeetMe from '$lib/MeetMe.svelte';
 	import ProjectCard from '$lib/ProjectCard.svelte';
 	import Title from '$lib/Title.svelte';
-	import WindowScrollProgress from '$lib/WindowScrollProgress.svelte';
 	import { experience } from '../types/Experience';
 </script>
 
 <svelte:head>
 	<title>☕ Welcome to Chase's site!</title>
 </svelte:head>
-<main class="flex flex-col gap-8">
 
+<main class="flex flex-col gap-8">
 	<div id="meetme" style="margin-top: 1em;">
-		<MeetMe
+		<!-- <MeetMe
 			src="me-base.jpg"
 			alt="Chase William Roth"
 			about="Hello, My name is Chase 👋 I'm a 2023 graduate of Rochester Institute of Technology with a bachelor's degree in Web & Mobile Computing."
@@ -35,7 +33,7 @@
 				{ alt: 'NextJS' },
 				{ alt: 'Three.js' }
 			]}
-		/>
+		/> -->
 	</div>
 
 	<div class="bg-base-100 shadow-md rounded-md max-w-4xl m-auto p-2 sm:p-4">
@@ -45,8 +43,8 @@
 		</p>
 		<p class="text-2xl font-semibold">My Hobbies</p>
 		<ul class="list-disc pl-6 pr-2 pb-4">
-			<li>Weight Lifting 💪 / Calisthenics 🤸</li>
 			<li>Coding</li>
+			<li>Weight Lifting 💪 / Calisthenics 🤸</li>
 			<li>Hiking</li>
 			<li>Reading <em>(am currently reading the Wheel of Time by Robert Jordan)</em></li>
 			<li>Playing the guitar 🎸</li>
@@ -76,6 +74,57 @@
 	<div class="max-w-4xl m-auto flex flex-col gap-8">
 		<Experience
 			experience={experience(
+				'Human Resource IT Intern',
+				'Optimize HR interactions through automation by evaluating requirements and performing test in an isolated tenant.',
+				'The Dow Chemical Company, Human Resources IT Department',
+				'May 16th',
+				'August 5th'
+			)}
+		>
+			<svelte:fragment slot="content">
+				<div>
+					<figure class="pb-2">
+						<img class="max-w-md m-auto p-4 w-full" src="experience/dow/dow_logo.png" alt="Dow logo." />
+						<figcaption>
+							During the summer of 2022, I had the opportunity to be employed by The Dow Chemical
+							Company as a Human Resources IT Intern. Throughout my stay near Dow's head quarters in
+							Midland Michigan, I learned about their culture, values, and more.
+						</figcaption>
+					</figure>
+					<VideoPlayer
+						description="During my intership, I participated in an event known as the createathon where 7 teams of interns presented their ideas on how to improve the company to an auidence with only 1 week to prepare. Only three teams could win, and my team was one of the three winning the popular vote."
+						url="https://youtube.com/embed/iviDBpIG-RA"
+					/>
+					<section class="pl-2 pr-2 pb-4">
+						<p>
+							Our idea was an app allowing Dow employees to easily acquire more information about
+							batches of product being sent to and from Dow facilities. An employee could simply
+							scan a QR code with their phone and have all the information they need about a batch
+							of product at their finger tips. This app would be beneficial as the current system
+							doesn't allow easy lookups on product information across different facilities.
+						</p>
+						<p class="pt-2">
+							During my team's presentation, I had a segment where I conducted a live demo with
+							audience interaction. To acheive this, I asked for everyone to scan a QR code
+							available on the current slide with their phone routing them to <a
+								class="underline"
+								target="_blank"
+								href="https://dow-tracking-example.netlify.app/">our site</a
+							>. Then, I had them click the <strong>Scan to Start</strong> button to scan another QR
+							containing the ID of a batch. They were then presented with the demo shown above.
+						</p>
+					</section>
+					<figure>
+						<img class="rounded shadow" src="experience/dow/dow_plant.jpg" alt="Dow's facility from a distance." />
+					</figure>
+					<p class="pt-2 pl-2 pr-2">
+						Overall, my employment by The Dow Chemical Company was rememberable and pleasant as the people and company culture have no doubt been paramount to the success found since the original founding in 1897.
+					</p>
+				</div>
+			</svelte:fragment>
+		</Experience>
+		<Experience
+			experience={experience(
 				'HoloLens 2 App Developer',
 				'Research and develop technologies to integrate interpreting & captioning services into the HoloLens 2 space.',
 				'Rochester Institute of Technology, NTID Research Center on Culture and Language',
@@ -85,6 +134,21 @@
 		>
 			<svelte:fragment slot="content">
 				<div class="flex flex-wrap mt-2">
+					<figure>
+						<img
+							src="experience/hololens2/TADFinnerty.jpg"
+							alt="Winners of the 2022 TAD Competition"
+							class="rounded shadow"
+						/>
+					</figure>
+					<p class="p-2 pb-4">
+						My team won the 2022 RIT Imagine <a
+							class="underline"
+							target="_blank"
+							href="https://www.rit.edu/news/three-student-teams-push-boundaries-improve-society-new-competition"
+							>TAD <em>(Technology, Art and Design)</em></a
+						> competition after a long day of presenting.
+					</p>
 					<figure class="sm:w-2/6">
 						<img
 							class="rounded shadow"
@@ -95,9 +159,9 @@
 					<div class="pl-2 pr-2 pt-2 sm:pl-4 sm:w-4/6">
 						<p>
 							I took this picture as a joke as it would often take several minutes for building and
-							deployment to finish. Therefore, my running gag was, "you gotta get comfy when working
-							on the HoloLens 2.". This gag is most applicative when building apps with Unity, not
-							so much standalone UWP.
+							deployment to finish. Therefore, my running gag was, "you gotta get comfy when
+							workingon the HoloLens 2.". This gag is most applicative when building apps with
+							Unity, not so much standalone UWP.
 						</p>
 						<p class="pt-2">
 							It was an iteresting experience and could often be frustrating as I had not much
@@ -157,15 +221,6 @@
 				</div>
 			</svelte:fragment>
 		</Experience>
-		<Experience
-			experience={experience(
-				'Human Resource IT Intern',
-				'Optimize HR interactions through automation by evaluating requirements and performing test in an isolated tenant.',
-				'The Dow Chemical Company, Human Resources IT Department',
-				'May 16th',
-				'August 5th'
-			)}
-		/>
 		<Experience
 			experience={experience(
 				'Teaching Assistant',
