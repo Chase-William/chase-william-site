@@ -14,7 +14,7 @@
 
 <main class="flex flex-col gap-8">
 	<div id="meetme" style="margin-top: 1em;">
-		<!-- <MeetMe
+		<MeetMe
 			src="me-base.jpg"
 			alt="Chase William Roth"
 			about="Hello, My name is Chase 👋 I'm a 2023 graduate of Rochester Institute of Technology with a bachelor's degree in Web & Mobile Computing."
@@ -33,7 +33,7 @@
 				{ alt: 'NextJS' },
 				{ alt: 'Three.js' }
 			]}
-		/> -->
+		/>
 	</div>
 
 	<div class="bg-base-100 shadow-md rounded-md max-w-4xl m-auto p-2 sm:p-4">
