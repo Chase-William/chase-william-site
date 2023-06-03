@@ -17,7 +17,7 @@
 	<WindowScrollProgress />
 
 	<div id="meetme" style="margin-top: 1em;">
-		<!-- <MeetMe
+		<MeetMe
 			src="me-base.jpg"
 			alt="Chase William Roth"
 			about="Hello, My name is Chase 👋 I'm a 2023 graduate of Rochester Institute of Technology with a bachelor's degree in Web & Mobile Computing."
@@ -36,25 +36,25 @@
 				{ alt: 'NextJS' },
 				{ alt: 'Three.js' }
 			]}
-		/> -->
+		/>
 	</div>
 
-	<div class="bg-base-100 shadow-md p-5 rounded-md max-w-4xl m-auto">
-		<p>
+	<div class="bg-base-100 shadow-md rounded-md max-w-4xl m-auto p-2 sm:p-4">
+		<p class="pl-2 pr-2 pb-4">
 			Feel free to read below to learn more about me and head to the <code>Blogs</code> page to see my
 			recent coding adventures.
 		</p>
-		<p class="text-2xl font-semibold mt-4">My Hobbies</p>
-		<ul class="list-disc p-4 pt-2">
-			<li><p>Weight Lifting 💪 / Calisthenics 🤸</p></li>
-			<li><p>Coding</p></li>
-			<li><p>Hiking</p></li>
-			<li><p>Reading <em>(am currently reading the Wheel of Time by Robert Jordan)</em></p></li>
-			<li><p>Playing the guitar 🎸</p></li>
-			<li><p>Memorizing powerful quotes</p></li>
+		<p class="text-2xl font-semibold">My Hobbies</p>
+		<ul class="list-disc pl-6 pr-2 pb-4">
+			<li>Weight Lifting 💪 / Calisthenics 🤸</li>
+			<li>Coding</li>
+			<li>Hiking</li>
+			<li>Reading <em>(am currently reading the Wheel of Time by Robert Jordan)</em></li>
+			<li>Playing the guitar 🎸</li>
+			<li>Memorizing powerful quotes</li>
 		</ul>
 		<p class="text-2xl font-semibold">Weight Lifting?</p>
-		<p>
+		<p class="pl-2 pr-2 pb-4">
 			Growing up I've always been that extremely skinny kid who looked like <em>skin and bones</em>.
 			Wanting to change this, during my fourth year of college a friend and I went to the weight
 			room together. I bought protein powder and started <em>*eating big to get big*</em>. It was
@@ -62,8 +62,8 @@
 			consistent labor became apparent. Therefore, I have been lifting ever since and exploring new
 			related avenues.
 		</p>
-		<p class="text-2xl font-semibold mt-4">The Wheel of Time? 📖</p>
-		<p class="pt-2">
+		<p class="text-2xl font-semibold">The Wheel of Time? 📖</p>
+		<p class="pl-2 pr-2 pb-4">
 			If you like <strong>The Lord of the Rings</strong> trilogy or <strong>The Hobbit</strong>, I
 			highly recommend checking out <strong>The Wheel of Time</strong> series by
 			<em>Robert Jordan</em>. Robert Jordan sheds a new light on the fantasy J. R. R. Tolkien
@@ -72,7 +72,7 @@
 		</p>
 	</div>
 
-	<Title text="Experience 💼" large={true} />
+	<Title text="My Experience 💼" large={true} />
 
 	<div class="max-w-4xl m-auto flex flex-col gap-8">
 		<Experience
@@ -85,7 +85,7 @@
 			)}
 		>
 			<svelte:fragment slot="content">
-				<div class="flex flex-wrap p-4">
+				<div class="flex flex-wrap mt-2">
 					<figure class="sm:w-2/6">
 						<img
 							class="rounded shadow"
@@ -93,16 +93,21 @@
 							alt="Chase wearing a hololens 2 covered by a beanie and also drinking coffee."
 						/>
 					</figure>
-					<div class="pt-4 sm:pl-4 sm:w-4/6">
+					<div class="pl-2 pr-2 pt-2 sm:pl-4 sm:w-4/6">
 						<p>
-							I took this picture as a joke as it would often take several minutes for building and deployment to finish. Therefore, my running gag was, "you gotta get comfy when working on the HoloLens 2.". This gag is most applicative when building apps with Unity, not so much standalone UWP.
+							I took this picture as a joke as it would often take several minutes for building and
+							deployment to finish. Therefore, my running gag was, "you gotta get comfy when working
+							on the HoloLens 2.". This gag is most applicative when building apps with Unity, not
+							so much standalone UWP.
 						</p>
 						<p class="pt-2">
-							It was an iteresting experience and could often be frustrating as I had not much experience prior with Unity, and moreover being "early adopters". If you want to know more, checkout my HoloLens 2 blog!
+							It was an iteresting experience and could often be frustrating as I had not much
+							experience prior with Unity, and moreover being "early adopters". If you want to know
+							more, checkout my HoloLens 2 blog!
 						</p>
 					</div>
 				</div>
-				<section>
+				<section class="mt-4">
 					<VideoPlayer
 						url="https://www.youtube.com/embed/Bv_y8Jvgq3A"
 						description="In this video I demonstrate live captioning where my computer acts as the sender and the HoloLens 2 the receiver. On my computer, I was running an RIT captioning program sending my captions to a server. The HoloLens 2 was connected to a session and received captions via a Socket.IO connection."
@@ -125,14 +130,16 @@
 			)}
 		>
 			<svelte:fragment slot="content">
-				<p class="text-3xl pt-2">Primary Features</p>
-				<ul>
-					<li>asasd</li>
-					<li>asasd</li>
-					<li>asasd</li>
+				<p class="text-3xl pt-4">Primary Features</p>
+				<ul class="list-disc pl-6 pr-2">
+					<li>Learn ASL signs in categories</li>
+					<li>Quiz your knowledge of each category</li>
+					<li>Receive a grade for each quiz taken</li>
+					<li>Choose your theme preference (light/dark)</li>
+					<li>Available for both Android & iOS</li>
 				</ul>
 				<p class="text-4xl text-center p-4">Final Product Screenshots</p>
-				<div class="flex flex-wrap">
+				<div class="flex flex-nowrap gap-2">
 					<Screenshot
 						src="experience/babyfingers/home_page.png"
 						alt="Babyfingers homepage."
@@ -211,7 +218,9 @@
 			<svelte:fragment slot="content">
 				<article class="prose">
 					<p>
-						DotDocs is an intuitive & reliable documentation generator library for C# projects. Currently it produces markdown files as documentation and support for website generation is planned.
+						DotDocs is an intuitive & reliable documentation generator library for C# projects.
+						Currently it produces markdown files as documentation and support for website generation
+						is planned.
 					</p>
 				</article>
 			</svelte:fragment>

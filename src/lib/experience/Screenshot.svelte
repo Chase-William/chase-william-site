@@ -4,7 +4,7 @@
   export let caption: string;
 </script>
 
-<div class="sm:w-2/6 p-2">
+<div class="sm:w-2/6">
   <figure>
     <img
       class="rounded shadow"
@@ -12,5 +12,5 @@
       alt={alt}
     />
   </figure>
-  <p class="mt-4">{caption}</p>
+  <p class="pl-2 pr-2 pt-2 pb-4">{caption}</p>
 </div>
