@@ -12,5 +12,5 @@
       alt={alt}
     />
   </figure>
-  <p class="pl-2 pr-2 pt-2 pb-4">{caption}</p>
+  <p class="pl-2 pr-2 pt-2 pb-4 text-center">{caption}</p>
 </div>

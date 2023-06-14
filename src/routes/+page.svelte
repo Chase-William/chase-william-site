@@ -37,9 +37,11 @@
 	</div>
 
 	<div class="bg-base-100 shadow-md rounded-md max-w-4xl m-auto p-2 sm:p-4">
-		<p class="pl-2 pr-2 pb-4">
-			Feel free to read below to learn more about me and head to the <code>Blogs</code> page to see my
-			recent coding adventures.
+		<p class="pl-2 pr-2 text-center pb-4">
+			<em>
+				Feel free to read below and learn more about me or head over to the <code>Blogs</code> page to
+				browse my recent coding adventures.
+			</em>
 		</p>
 		<p class="text-2xl font-semibold">My Hobbies</p>
 		<ul class="list-disc pl-6 pr-2 pb-4">
@@ -84,7 +86,11 @@
 			<svelte:fragment slot="content">
 				<div>
 					<figure class="pb-2">
-						<img class="max-w-md m-auto p-4 w-full" src="experience/dow/dow_logo.png" alt="Dow logo." />
+						<img
+							class="max-w-md m-auto p-4 w-full"
+							src="experience/dow/dow_logo.png"
+							alt="Dow logo."
+						/>
 						<figcaption class="pl-2 pr-2">
 							During the summer of 2022, I had the opportunity to be employed by The Dow Chemical
 							Company as a Human Resources IT Intern. Throughout my stay near Dow's head quarters in
@@ -92,6 +98,7 @@
 						</figcaption>
 					</figure>
 					<VideoPlayer
+						title="Product Tracking App"
 						description="During my intership, I participated in an event known as the createathon where 7 teams of interns presented their ideas on how to improve the company to an auidence with only 1 week to prepare. Only three teams could win, and my team was one of the three winning the popular vote."
 						url="https://youtube.com/embed/iviDBpIG-RA"
 					/>
@@ -115,10 +122,19 @@
 						</p>
 					</section>
 					<figure>
-						<img class="rounded shadow" src="experience/dow/dow_plant.jpg" alt="Dow's facility from a distance." />
+						<img
+							class="rounded shadow"
+							src="experience/dow/dow_plant.jpg"
+							alt="Dow's facility from a distance."
+						/>
+            <figcaption>
+              Taken in Midland, MI at the Dow Diamond overlooking distant Dow facilities.
+            </figcaption>
 					</figure>
 					<p class="pt-2 pl-2 pr-2">
-						Overall, my employment by The Dow Chemical Company was rememberable and pleasant as the people and company culture have no doubt been paramount to the success found since the original founding in 1897.
+						Overall, my employment by The Dow Chemical Company was rememberable and pleasant as the
+						people and company culture have no doubt been paramount to the success found since the
+						original founding in 1897.
 					</p>
 				</div>
 			</svelte:fragment>
@@ -133,22 +149,39 @@
 			)}
 		>
 			<svelte:fragment slot="content">
-				<div class="flex flex-wrap mt-2">
+				<section class="flex flex-wrap mt-2">
+					<p class="text-2xl font-semibold pt-16 pb-12 m-auto">Winning RIT Image 2022</p>
 					<figure>
 						<img
 							src="experience/hololens2/TADFinnerty.jpg"
 							alt="Winners of the 2022 TAD Competition"
 							class="rounded shadow"
 						/>
-					</figure>
-					<p class="p-2 pb-4">
-						My team won the 2022 RIT Imagine <a
+            <figcaption>
+              My team won the 2022 RIT Imagine <a
 							class="underline"
 							target="_blank"
 							href="https://www.rit.edu/news/three-student-teams-push-boundaries-improve-society-new-competition"
 							>TAD <em>(Technology, Art and Design)</em></a
 						> competition after a long day of presenting.
-					</p>
+            </figcaption>
+					</figure>
+				</section>
+				<p class="text-2xl font-semibold text-center pt-16 pb-12">HoloLens 2 Demo Videos</p>
+				<section class="mt-4">
+					<VideoPlayer
+						title="Captioning Demo"
+						url="https://www.youtube.com/embed/Bv_y8Jvgq3A"
+						description="In this video I demonstrate live captioning where my computer acts as the sender and the HoloLens 2 the receiver. On my computer, I was running an RIT captioning program sending my captions to a server. The HoloLens 2 was connected to a session and received captions via a Socket.IO connection."
+					/>
+					<VideoPlayer
+						title="Interpreting Demo"
+						invert={true}
+						url="https://www.youtube.com/embed/3VzgaB38mPw"
+						description="In this video I showcase a live interpreting demonstration through the HoloLens 2. This application was built using Unity and Microsoft's Mixed Reality Took Kit (MRTK). I reverse engineered Microsoft's debug panel which uses quaternions and expanded on it to create the functionality seen."
+					/>
+				</section>
+				<section class="pt-4 flex flex-wrap">
 					<figure class="sm:w-2/6">
 						<img
 							class="rounded shadow"
@@ -156,30 +189,21 @@
 							alt="Chase wearing a hololens 2 covered by a beanie and also drinking coffee."
 						/>
 					</figure>
-					<div class="pl-2 pr-2 pt-2 sm:pl-4 sm:w-4/6">
-						<p>
+					<div class="pr-2 pt-2 sm:pl-4 sm:w-4/6 m-auto">
+						<p class="text-xl font-semibold">Gotta Get Comfy</p>
+						<p class="pl-2">
 							I took this picture as a joke as it would often take several minutes for building and
-							deployment to finish. Therefore, my running gag was, "you gotta get comfy when
-							workingon the HoloLens 2.". This gag is most applicative when building apps with
-							Unity, not so much standalone UWP.
+							deployment to finish. Therefore, my running gag was, "<em
+								>you gotta get comfy when workingon the HoloLens 2.</em
+							>". This gag is most applicative when building apps with Unity, not so much standalone
+							UWP.
 						</p>
-						<p class="pt-2">
+						<p class="pt-2 pl-2">
 							It was an iteresting experience and could often be frustrating as I had not much
 							experience prior with Unity, and moreover being "early adopters". If you want to know
 							more, checkout my HoloLens 2 blog!
 						</p>
 					</div>
-				</div>
-				<section class="mt-4">
-					<VideoPlayer
-						url="https://www.youtube.com/embed/Bv_y8Jvgq3A"
-						description="In this video I demonstrate live captioning where my computer acts as the sender and the HoloLens 2 the receiver. On my computer, I was running an RIT captioning program sending my captions to a server. The HoloLens 2 was connected to a session and received captions via a Socket.IO connection."
-					/>
-					<VideoPlayer
-						invert={true}
-						url="https://www.youtube.com/embed/3VzgaB38mPw"
-						description="In this video I showcase a live interpreting demonstration through the HoloLens 2. This application was built using Unity and Microsoft's Mixed Reality Took Kit (MRTK). I reverse engineered Microsoft's debug panel which uses quaternions and expanded on it to create the functionality seen."
-					/>
 				</section>
 			</svelte:fragment>
 		</Experience>
@@ -193,7 +217,7 @@
 			)}
 		>
 			<svelte:fragment slot="content">
-				<p class="text-3xl pt-4">Primary Features</p>
+				<p class="text-xl pt-4">Primary Features</p>
 				<ul class="list-disc pl-6 pr-2">
 					<li>Learn ASL signs in categories</li>
 					<li>Quiz your knowledge of each category</li>
@@ -201,7 +225,7 @@
 					<li>Choose your theme preference (light/dark)</li>
 					<li>Available for both Android & iOS</li>
 				</ul>
-				<p class="text-4xl text-center p-4">Final Product Screenshots</p>
+				<p class="text-2xl font-semibold pt-16 pb-12 text-center">Final Project Screenshots</p>
 				<div class="flex flex-nowrap gap-2">
 					<Screenshot
 						src="experience/babyfingers/home_page.png"

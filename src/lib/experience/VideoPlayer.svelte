@@ -2,6 +2,7 @@
   export let url: string;
   export let invert: boolean = false;
   export let description: string
+  export let title: string
 </script>
 
 <div class={`pb-4 flex flex-wrap sm:flex-nowrap ${invert ? 'flex-row-reverse' : ''}`}>
@@ -14,5 +15,8 @@
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
     allowfullscreen
   />
-  <p class={`pt-2 pl-2 pr-2 sm:w-3/6 sm:${invert ? 'pr-4' : 'pl-4'}`}>{description}</p>
+  <div class={`pt-2 pr-2 sm:w-3/6 sm:${invert ? 'pr-4' : 'pl-4'} m-auto`}>
+    <p class="text-xl font-semibold">{title}</p>
+    <p class="pl-2">{description}</p>
+  </div>
 </div>

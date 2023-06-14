@@ -5,7 +5,7 @@
 </script>
 
 <div class="w-full bg-base-100 rounded-md shadow-md experience p-2 sm:p-4 sm:pb-4">
-	<p class="text-xl font-semibold">{experience.title}</p>
+	<p class="text-4xl font-semibold pt-8 pb-2">{experience.title}</p>
 	<div class="pl-2 pr-2">
 		<p>{experience.description}</p>
 		<p class="opacity-70">{experience.employer}</p>
